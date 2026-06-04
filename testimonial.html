@@ -238,6 +238,11 @@
             --color-on-surface-variant-rgb: 81 69 52;
             --color-surface-variant-rgb: 214 227 255;
             --color-surface-dim-rgb: 202 218 254;
+            --color-secondary-rgb: 67 94 143;
+            --color-on-secondary-rgb: 255 255 255;
+            --color-tertiary-rgb: 0 109 55;
+            --color-outline-rgb: 131 117 98;
+            --color-outline-variant-rgb: 213 196 174;
         }
         :root.dark {
             --color-background-rgb: 9 27 54;
@@ -251,6 +256,11 @@
             --color-on-surface-variant-rgb: 213 196 174;
             --color-surface-variant-rgb: 28 65 124;
             --color-surface-dim-rgb: 12 35 71;
+            --color-secondary-rgb: 172 199 254;
+            --color-on-secondary-rgb: 9 27 54;
+            --color-tertiary-rgb: 78 250 148;
+            --color-outline-rgb: 213 196 174;
+            --color-outline-variant-rgb: 81 69 52;
         }
         
         body {
@@ -278,6 +288,9 @@
         /* Custom Mobile Clip Path Menu animations */
         #mobileMenu {
             transition: clip-path 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        #mobileMenuDrawer {
+            background-color: rgb(var(--color-background-rgb)) !important;
         }
     </style>
     </head>
@@ -310,12 +323,7 @@
             <span class="material-symbols-outlined" id="darkModeIcon">dark_mode</span>
           </button>
           
-          <!-- WhatsApp Contact Button (Replaces Search) -->
-          <a href="https://wa.me/234800SOLAR" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full flex items-center justify-center text-green-600 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-950/20 transition-colors duration-200" title="WhatsApp Support">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.858.002-2.634-1.02-5.11-2.881-6.973-1.861-1.863-4.337-2.886-6.977-2.888-5.438 0-9.863 4.42-9.867 9.859 0 1.767.462 3.493 1.341 5.023l-.973 3.548 3.639-.954zM17.486 14.39c-.3-.149-1.776-.875-2.046-.974-.27-.099-.467-.149-.662.149-.195.298-.756.974-.927 1.17-.17.197-.341.22-.641.072-.3-.15-1.267-.467-2.414-1.493-.893-.797-1.495-1.782-1.67-2.08-.175-.299-.019-.461.13-.61.135-.133.3-.349.45-.523.15-.174.2-.298.3-.497.1-.198.05-.371-.025-.521-.075-.15-.662-1.597-.907-2.185-.238-.574-.5-.496-.662-.504-.17-.008-.364-.01-.559-.01-.195 0-.514.073-.783.371-.269.298-1.025 1.002-1.025 2.443 0 1.44 1.049 2.836 1.194 3.035.145.198 2.064 3.15 5.003 4.428.699.304 1.246.486 1.672.622.702.223 1.34.191 1.845.116.563-.083 1.776-.726 2.025-1.428.25-.702.25-1.303.175-1.428-.075-.125-.269-.199-.57-.348z"/>
-            </svg>
-          </a>
+
 
           <!-- Book a Call CTA Link -->
           <a href="https://calendly.com/webureaagency/30min" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex bg-gradient-to-r from-primary to-primary-fixed-dim text-white dark:text-on-primary-fixed font-label-md text-label-md px-md py-sm rounded-full hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-300">
@@ -323,7 +331,7 @@
           </a>
 
           <!-- Slick Interactive Menu Toggle -->
-          <button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface dark:text-background hover:bg-surface-container dark:hover:bg-on-surface/20 transition-colors duration-200 z-[120]" id="mobileMenuToggle" aria-label="Toggle Menu">
+          <button class="md:hidden w-10 h-10 rounded-full flex items-center justify-center text-on-background hover:bg-surface-container dark:hover:bg-on-surface/20 transition-colors duration-200 z-[120]" id="mobileMenuToggle" aria-label="Toggle Menu">
             <div class="relative w-6 h-5 flex flex-col justify-between items-center group cursor-pointer">
               <span id="menu-bar-1" class="w-6 h-0.5 bg-current rounded-full transition-all duration-300"></span>
               <span id="menu-bar-2" class="w-6 h-0.5 bg-current rounded-full transition-all duration-300"></span>
@@ -333,30 +341,47 @@
         </div>
       </div>
 
-      <!-- Slick Circular Ripple Expanding Overlay Mobile Navigation Panel -->
-      <div id="mobileMenu" class="fixed inset-0 bg-background/95 dark:bg-on-surface/98 backdrop-blur-xl z-[110] flex flex-col justify-center items-center pointer-events-none transition-all duration-500 ease-out" style="clip-path: circle(0% at calc(100% - 40px) 40px);">
-        <div class="flex flex-col items-center space-y-2 w-full max-w-sm px-margin-mobile text-center py-6 overflow-y-auto">
-          <a class="mobile-nav-link text-3xl font-bold text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200 transform translate-y-8 opacity-0" href="about.html">About</a>
-          <a class="mobile-nav-link text-3xl font-bold text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200 transform translate-y-8 opacity-0" href="services.html">Services</a>
-          <a class="mobile-nav-link text-3xl font-bold text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200 transform translate-y-8 opacity-0" href="portfolio.html">Gallery</a>
-          <a class="mobile-nav-link text-3xl font-bold text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200 transform translate-y-8 opacity-0" href="testimonial.html">Testimonials</a>
-          <a class="mobile-nav-link text-3xl font-bold text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200 transform translate-y-8 opacity-0" href="contact.html">Contact</a>
-          <div class="w-full pt-lg border-t border-outline-variant/30 flex flex-col gap-sm items-center transform translate-y-8 opacity-0 mobile-nav-link">
-            <a href="https://calendly.com/webureaagency/30min" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-gradient-to-r from-primary to-primary-fixed-dim text-white dark:text-on-primary-fixed font-headline-md py-3 rounded-full shadow-md hover:scale-105 active:scale-95 transition-all">
-              Book a Call
-            </a>
-            <a href="https://wa.me/234800SOLAR" target="_blank" rel="noopener noreferrer" class="w-full text-center border border-green-600 dark:border-green-400 text-green-600 dark:text-green-400 font-label-md py-2.5 rounded-full flex items-center justify-center gap-2 hover:bg-green-50 dark:hover:bg-green-950/20 transition-all">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.858.002-2.634-1.02-5.11-2.881-6.973-1.861-1.863-4.337-2.886-6.977-2.888-5.438 0-9.863 4.42-9.867 9.859 0 1.767.462 3.493 1.341 5.023l-.973 3.548 3.639-.954zM17.486 14.39c-.3-.149-1.776-.875-2.046-.974-.27-.099-.467-.149-.662.149-.195.298-.756.974-.927 1.17-.17.197-.341.22-.641.072-.3-.15-1.267-.467-2.414-1.493-.893-.797-1.495-1.782-1.67-2.08-.175-.299-.019-.461.13-.61.135-.133.3-.349.45-.523.15-.174.2-.298.3-.497.1-.198.05-.371-.025-.521-.075-.15-.662-1.597-.907-2.185-.238-.574-.5-.496-.662-.504-.17-.008-.364-.01-.559-.01-.195 0-.514.073-.783.371-.269.298-1.025 1.002-1.025 2.443 0 1.44 1.049 2.836 1.194 3.035.145.198 2.064 3.15 5.003 4.428.699.304 1.246.486 1.672.622.702.223 1.34.191 1.845.116.563-.083 1.776-.726 2.025-1.428.25-.702.25-1.303.175-1.428-.075-.125-.269-.199-.57-.348z"/></svg>
-              Chat on WhatsApp
+    </nav>
+
+    <!-- Slick Drawer Mobile Navigation Panel -->
+      <div id="mobileMenu" class="fixed inset-0 z-[110] pointer-events-none transition-all duration-300">
+        <!-- Backdrop -->
+        <div id="mobileMenuBackdrop" class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 pointer-events-none"></div>
+        <!-- Drawer content -->
+        <div id="mobileMenuDrawer" class="absolute top-0 right-0 h-full w-full max-w-[300px] border-l border-outline-variant/20 shadow-2xl p-md flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out pointer-events-auto" style="background-color: rgb(var(--color-background-rgb));">
+          <div class="space-y-md">
+            <!-- Header of drawer -->
+            <div class="flex items-center justify-between pb-sm border-b border-outline-variant/10">
+              <span class="text-headline-md font-bold tracking-tight text-on-surface flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">solar_power</span>
+                <span class="bg-gradient-to-r from-primary to-primary-fixed-dim bg-clip-text text-transparent">Menu</span>
+              </span>
+              <!-- Close toggle icon inside drawer -->
+              <button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container dark:hover:bg-on-surface/20 text-on-surface transition-colors" id="mobileMenuClose" aria-label="Close Menu">
+                <span class="material-symbols-outlined">close</span>
+              </button>
+            </div>
+            <!-- Menu links stacked vertically -->
+            <nav class="flex flex-col gap-xs py-md">
+              <a class="mobile-nav-link text-headline-md font-semibold text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-on-surface/10 px-4 py-3 rounded-lg transition-all" href="about.html">About</a>
+              <a class="mobile-nav-link text-headline-md font-semibold text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-on-surface/10 px-4 py-3 rounded-lg transition-all" href="services.html">Services</a>
+              <a class="mobile-nav-link text-headline-md font-semibold text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-on-surface/10 px-4 py-3 rounded-lg transition-all" href="portfolio.html">Gallery</a>
+              <a class="mobile-nav-link text-headline-md font-semibold text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-on-surface/10 px-4 py-3 rounded-lg transition-all" href="testimonial.html">Testimonials</a>
+              <a class="mobile-nav-link text-headline-md font-semibold text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-on-surface/10 px-4 py-3 rounded-lg transition-all" href="contact.html">Contact</a>
+            </nav>
+          </div>
+          <!-- Drawer CTA Button (Book a Call only, removed WhatsApp) -->
+          <div class="pt-md border-t border-outline-variant/10">
+            <a href="https://calendly.com/webureaagency/30min" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-gradient-to-r from-primary to-primary-fixed-dim text-white dark:text-on-primary-fixed font-headline-md py-3.5 rounded-full shadow-lg hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+              Book a Call <span class="material-symbols-outlined text-sm">arrow_forward</span>
             </a>
           </div>
         </div>
       </div>
-    </nav>
 <!-- 1. Hero Section -->
 <section class="relative pt-xl pb-xl px-margin-mobile md:px-margin-desktop overflow-hidden flex flex-col items-center text-center bg-inverse-surface text-surface">
 <div class="absolute inset-0 z-0 opacity-20">
-<img alt="Aerial view of a massive industrial solar farm gleaming under a bright midday sun. Rows of meticulously aligned photovoltaic panels stretch to the horizon. The lighting is harsh and technical, emphasizing the geometric precision of the array. The mood is powerful and forward-looking, perfectly matching the clean energy intelligence aesthetic." class="w-full h-full object-cover" data-alt="Aerial view of a massive industrial solar farm gleaming under a bright midday sun. Rows of meticulously aligned photovoltaic panels stretch to the horizon. The lighting is harsh and technical, emphasizing the geometric precision of the array. The mood is powerful and forward-looking, perfectly matching the clean energy intelligence aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM0MbWHo1KUWX8h-BLVyZ3f7y-kg4eGtBTWajS0pIDXRR4avpULHx1KpE6iFLdUugheGP4YicBlLKBqs0AGE8hJ2vjhOaL_ZxASKjAaicRX0lhkCCNjb7Ke8oRvGonfHqE1-xV-F7QrXDuSsygCuHEfSUu6UQAE56KXLcJGfVUH6dirSPmpoWu_LFoglWiaG7B_t_PcpPLlMs2HggFoM05SZwv9IJ43JbkBoymbQwRZ7GRvEA0Mv3xzLCrGfkrPxVikJTSYeTkMvA"/>
+<img alt="Aerial view of a massive industrial solar farm gleaming under a bright midday sun. Rows of meticulously aligned photovoltaic panels stretch to the horizon. The lighting is harsh and technical, emphasizing the geometric precision of the array. The mood is powerful and forward-looking, perfectly matching the clean energy intelligence aesthetic." class="w-full h-full object-cover" data-alt="Aerial view of a massive industrial solar farm gleaming under a bright midday sun. Rows of meticulously aligned photovoltaic panels stretch to the horizon. The lighting is harsh and technical, emphasizing the geometric precision of the array. The mood is powerful and forward-looking, perfectly matching the clean energy intelligence aesthetic." src="assets/images/Gemini_Generated_Image_ytb7lxytb7lxytb7.png"/>
 <div class="absolute inset-0 bg-inverse-surface mix-blend-multiply"></div>
 </div>
 <div class="relative z-10 max-w-4xl mx-auto space-y-md">
@@ -386,7 +411,7 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <!-- Video Card 1 -->
 <div class="group relative rounded-xl overflow-hidden card-shadow cursor-pointer">
-<img alt="Video thumbnail" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATzMXb3XA80R9YR1QzjEY5aqBDsqfxPCoihv083UrR8bFnMMzAe8ECv0xzfLR7tKx2Cc7uH2O-zmM1iGVBT2EyPx7foulc0BfpR8rNQANUinfl41wF1AwQEtKmnhC7WdYx1Bas5IHLdhm-1zugOuvBESPVZzWh5wBTrpLEc929aOCAT5QbS1a2CBS-5sey6h36WhyTLRkExw7xonKd2stkg3x_5FPjQolIoeIeGYg2mATCX8HlRJNoDCSAc7xrXQtPznTfcnY2Q4k"/>
+<img alt="Video thumbnail" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" src="assets/images/Gemini_Generated_Image_3klcja3klcja3klc.png"/>
 <div class="absolute inset-0 bg-inverse-surface/40 flex items-center justify-center">
 <div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
 <span class="material-symbols-outlined text-inverse-surface text-3xl fill">play_arrow</span>
@@ -399,7 +424,7 @@
 </div>
 <!-- Video Card 2 -->
 <div class="group relative rounded-xl overflow-hidden card-shadow cursor-pointer">
-<img alt="Video thumbnail" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-2y17G_-XSRQgP_6SKHaLTZrqx_OLMaes4nQAuIhFhF2I8Mud05EtoyydN-9YRugsJMDPP2h39BOvp2YALWvKuvUzHWsakZ_j0cM0v1-JHFTq4cfzaakK25gtf7mBPMcxA_CNBSrj5nInN7XflrKVScrbK6i7ZB_Z17xA3d0VWN2tnm2XTEvQeZSPbCq04GwiNBIUdQAAU-0j37SBVOGoJOF-dAqasoyb8OMPkTVPTb0xp7lxEmtCc89cmqRDE6xzOD_3C_nX7HM"/>
+<img alt="Video thumbnail" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" src="assets/images/Gemini_Generated_Image_8mj5828mj5828mj5.png"/>
 <div class="absolute inset-0 bg-inverse-surface/40 flex items-center justify-center">
 <div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
 <span class="material-symbols-outlined text-inverse-surface text-3xl fill">play_arrow</span>
@@ -987,7 +1012,7 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <!-- Case Study 1 -->
 <div onclick="window.location.href='blog.html?id=delta'" class="bg-surface-container-lowest rounded-xl overflow-hidden card-shadow border border-outline-variant/20 flex flex-col cursor-pointer transition-all hover:scale-[1.02] hover:shadow-lg">
-<img alt="Case Study 1" class="h-48 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfFNSuZwDanRCdnTw_qeN9uPvoU7-DE5F1zvjF141Sp222fpMieuBWbyOdW2IDheIEjgZFccdcokoDFgaOS-QfSv2wMVq7-zR1JvMqHdCUgM74vS1ad60cJplJW127ZuY885kR5rBRMa8TBhoh6yobeI8ndcK6apgxvk0B3sRqRBJgrnjhQbqbGcWqLSgw8Paz_5UH3pOIq_oQSUIeWcEmpcLkXX0GTk2sI1_YUIIZm0D7t5OL0CZF07op1eifqAzh9aHBYJHJsVo"/>
+<img alt="Case Study 1" class="h-48 w-full object-cover" src="assets/images/Gemini_Generated_Image_5c5epj5c5epj5c5e.png"/>
 <div class="p-md flex-grow flex flex-col">
 <div class="text-xs font-bold text-primary tracking-wider uppercase mb-xs">Commercial Warehouse</div>
 <h3 class="font-headline-md text-headline-md text-inverse-surface mb-sm">Delta Distribution</h3>
@@ -1003,7 +1028,7 @@
 </div>
 <!-- Case Study 2 -->
 <div onclick="window.location.href='blog.html?id=miller'" class="bg-surface-container-lowest rounded-xl overflow-hidden card-shadow border border-outline-variant/20 flex flex-col cursor-pointer transition-all hover:scale-[1.02] hover:shadow-lg">
-<img alt="Case Study 2" class="h-48 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6bIdL3nzVcZUtT2w3KEqFY8m3zyXkGpBKN0kjuqTZSz676mz3MG1Q3IzcZrayDM4kj95OIvpniofIWnOeOlxPwbHu_9J4eayKq851HLrBMfHz8yNxXUjJW3DCZGgw3dnPjG1sTUNJZDA9nYkQv2lLF62Yf3cAcNJV4Y7EEo2bA1nMnAtrVbLMYNmmDZqfV5RmR2148YwBHvQj5rIqdV0O2wlK9fadn8w1PELAUjXW50LfBSia_-hETxC4Hpic7MFJTCX5DseoEKA"/>
+<img alt="Case Study 2" class="h-48 w-full object-cover" src="assets/images/Gemini_Generated_Image_w057igw057igw057.png"/>
 <div class="p-md flex-grow flex flex-col">
 <div class="text-xs font-bold text-primary tracking-wider uppercase mb-xs">Residential Estate</div>
 <h3 class="font-headline-md text-headline-md text-inverse-surface mb-sm">The Miller Property</h3>
@@ -1019,7 +1044,7 @@
 </div>
 <!-- Case Study 3 -->
 <div onclick="window.location.href='blog.html?id=water'" class="bg-surface-container-lowest rounded-xl overflow-hidden card-shadow border border-outline-variant/20 flex flex-col cursor-pointer transition-all hover:scale-[1.02] hover:shadow-lg">
-<img alt="Case Study 3" class="h-48 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvxbH8yq1IUFq_0RyanIP9-7GrQ-a4fKRppCZuyTLclvbUDMudWevK3cNxEXThdaFiIN_uIS_AmdY4BY0qVo0MvC2eFM1F6YsSwaRR5tT-w7JPbMK9emnyr2eit3n0Ltv9v7DaWHCOiSoULWSBiKTdPEEMy8JEme-btj3axNtZOLSqoaGnqNvdykncCHSpdBcPsmkcsGQMrSH3ZJsihOg-4nimkdiGHRirPtdA7MwD_sd0gwz7-b_AOndMUy20SXva3FDS4Fs9b-s"/>
+<img alt="Case Study 3" class="h-48 w-full object-cover" src="assets/images/Gemini_Generated_Image_8mj5828mj5828mj5.png"/>
 <div class="p-md flex-grow flex flex-col">
 <div class="text-xs font-bold text-primary tracking-wider uppercase mb-xs">Municipal Facility</div>
 <h3 class="font-headline-md text-headline-md text-inverse-surface mb-sm">City Water Treatment</h3>
@@ -1264,54 +1289,47 @@
 
             const mobileMenuToggle = document.getElementById('mobileMenuToggle');
             const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
+            const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
+            const mobileMenuClose = document.getElementById('mobileMenuClose');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
             const menuBar1 = document.getElementById('menu-bar-1');
             const menuBar2 = document.getElementById('menu-bar-2');
             const menuBar3 = document.getElementById('menu-bar-3');
-            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
             if (mobileMenuToggle && mobileMenu) {
-                mobileMenuToggle.addEventListener('click', () => {
-                    const isOpen = mobileMenu.style.clipPath === 'circle(150% at calc(100% - 40px) 40px)';
+                const toggleMenu = () => {
+                    const isOpen = !mobileMenuDrawer.classList.contains('translate-x-full');
                     if (isOpen) {
-                        mobileMenu.style.clipPath = 'circle(0% at calc(100% - 40px) 40px)';
                         mobileMenu.classList.add('pointer-events-none');
+                        mobileMenuDrawer.classList.add('translate-x-full');
+                        mobileMenuBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+                        mobileMenuBackdrop.classList.add('opacity-0', 'pointer-events-none');
                         
                         menuBar1.style.transform = 'none';
                         menuBar2.style.opacity = '1';
                         menuBar3.style.transform = 'none';
-                        
-                        mobileLinks.forEach(link => {
-                            link.style.opacity = '0';
-                            link.style.transform = 'translateY(32px)';
-                        });
                     } else {
-                        mobileMenu.style.clipPath = 'circle(150% at calc(100% - 40px) 40px)';
                         mobileMenu.classList.remove('pointer-events-none');
+                        mobileMenuDrawer.classList.remove('translate-x-full');
+                        mobileMenuBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+                        mobileMenuBackdrop.classList.add('opacity-100', 'pointer-events-auto');
                         
                         menuBar1.style.transform = 'translateY(6px) rotate(45deg)';
                         menuBar2.style.opacity = '0';
                         menuBar3.style.transform = 'translateY(-6px) rotate(-45deg)';
-                        
-                        mobileLinks.forEach((link, idx) => {
-                            setTimeout(() => {
-                                link.style.opacity = '1';
-                                link.style.transform = 'translateY(0)';
-                            }, 100 + idx * 75);
-                        });
                     }
-                });
+                };
+
+                mobileMenuToggle.addEventListener('click', toggleMenu);
+                if (mobileMenuClose) mobileMenuClose.addEventListener('click', toggleMenu);
+                if (mobileMenuBackdrop) mobileMenuBackdrop.addEventListener('click', toggleMenu);
 
                 mobileLinks.forEach(link => {
                     link.addEventListener('click', () => {
-                        mobileMenu.style.clipPath = 'circle(0% at calc(100% - 40px) 40px)';
-                        mobileMenu.classList.add('pointer-events-none');
-                        menuBar1.style.transform = 'none';
-                        menuBar2.style.opacity = '1';
-                        menuBar3.style.transform = 'none';
-                        mobileLinks.forEach(l => {
-                            l.style.opacity = '0';
-                            l.style.transform = 'translateY(32px)';
-                        });
+                        if (!mobileMenuDrawer.classList.contains('translate-x-full')) {
+                            toggleMenu();
+                        }
                     });
                 });
             }
