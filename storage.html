@@ -191,35 +191,36 @@
         }
     </style>
     </head>
-<body class="bg-background text-on-background font-body-md text-body-md antialiased bg-background text-on-background dark:bg-on-background dark:text-background font-body-md antialiased transition-colors duration-300 pt-20">
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col transition-colors duration-300 pt-20">
 <!-- Top Navigation (Shared Component) -->
 
     <!-- Top Navigation -->
-    <nav class="bg-background/80 dark:bg-on-surface/80 backdrop-blur-md fixed top-0 left-0 w-full z-[100] border-b border-outline-variant/20 shadow-sm transition-all duration-300">
+    <nav class="bg-background/80 backdrop-blur-md fixed top-0 left-0 w-full z-[100] border-b border-outline-variant/20 shadow-sm transition-all duration-300">
       <div class="max-w-7xl mx-auto w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
         <!-- Logo -->
         <div class="flex items-center gap-md">
-          <a class="text-headline-md font-headline-md font-bold tracking-tight text-on-surface dark:text-background flex items-center gap-2 transition-colors" href="index.html">
+          <a class="text-headline-md font-headline-md font-bold tracking-tight text-on-surface flex items-center gap-2 transition-colors" href="index.html">
             <span class="material-symbols-outlined text-primary text-3xl" data-icon="solar_power" data-weight="fill" style="font-variation-settings: 'FILL' 1;">solar_power</span>
             <span class="bg-gradient-to-r from-primary to-primary-fixed-dim bg-clip-text text-transparent">SOLAREDGE</span>
           </a>
           <!-- Desktop Menu Links -->
-          <div class="hidden lg:flex items-center gap-sm ml-lg bg-surface-container-low dark:bg-on-surface/50 px-2 py-1 rounded-full border border-outline-variant/30 backdrop-blur-sm">
-            <a class="text-on-surface-variant dark:text-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="about.html">About</a>
-            <a class="text-on-surface-variant dark:text-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="services.html">Services</a>
-            <a class="text-on-surface-variant dark:text-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="portfolio.html">Gallery</a>
-            <a class="text-on-surface-variant dark:text-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="testimonial.html">Testimonials</a>
-            <a class="text-on-surface-variant dark:text-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="contact.html">Contact</a>
+          <div class="hidden lg:flex items-center gap-sm ml-lg bg-surface-container-low px-2 py-1 rounded-full border border-outline-variant/30 backdrop-blur-sm">
+            <a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="about.html">About</a>
+            <a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="services.html">Services</a>
+            <a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="portfolio.html">Gallery</a>
+            <a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="testimonial.html">Testimonials</a>
+            <a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="contact.html">Contact</a>
           </div>
         </div>
 
         <!-- Right Side Icons & CTA -->
         <div class="flex items-center gap-sm">
           <!-- Dark Mode Toggle -->
-          <button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-surface-container dark:hover:bg-on-surface/20 transition-colors duration-200" id="darkModeToggle" title="Toggle Theme">
+          <button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container dark:hover:bg-on-surface/20 transition-colors duration-200" id="darkModeToggle" title="Toggle Theme">
             <span class="material-symbols-outlined" id="darkModeIcon">dark_mode</span>
           </button>
           
+
 
 
           <!-- Book a Call CTA Link -->
@@ -245,7 +246,7 @@
         <!-- Backdrop -->
         <div id="mobileMenuBackdrop" class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 pointer-events-none"></div>
         <!-- Drawer content -->
-        <div id="mobileMenuDrawer" class="absolute top-0 right-0 h-full w-full max-w-[300px] border-l border-outline-variant/20 shadow-2xl p-md flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out pointer-events-auto" style="background-color: rgb(var(--color-background-rgb));">
+        <div id="mobileMenuDrawer" class="absolute top-0 right-0 h-full w-full max-w-[300px] bg-background border-l border-outline-variant/20 shadow-2xl p-md flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out pointer-events-auto">
           <div class="space-y-md">
             <!-- Header of drawer -->
             <div class="flex items-center justify-between pb-sm border-b border-outline-variant/10">
@@ -703,7 +704,7 @@ function switchIndustry(industryId) {
     
     <!-- Solutions -->
     <div>
-        <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Solutions</h4>
+        <h4 class="text-label-md font-label-md text-primary-container font-bold mb-md uppercase tracking-wider">Solutions</h4>
         <ul class="space-y-sm">
             <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="residential.html">Residential</a></li>
             <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="commercial.html">Commercial</a></li>
@@ -714,7 +715,7 @@ function switchIndustry(industryId) {
     
     <!-- Company -->
     <div>
-        <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Company</h4>
+        <h4 class="text-label-md font-label-md text-primary-container font-bold mb-md uppercase tracking-wider">Company</h4>
         <ul class="space-y-sm">
             <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="about.html">About Us</a></li>
             <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="portfolio.html">Gallery</a></li>
@@ -725,7 +726,7 @@ function switchIndustry(industryId) {
     
     <!-- Contact Info -->
     <div>
-        <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Contact</h4>
+        <h4 class="text-label-md font-label-md text-primary-container font-bold mb-md uppercase tracking-wider">Contact</h4>
         <ul class="space-y-sm text-surface-variant dark:text-on-surface-variant">
             <li class="flex gap-2 items-start">
                 <span class="material-symbols-outlined text-primary text-lg">location_on</span>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en"><head>
 <meta charset="utf-8"/>
@@ -214,6 +214,35 @@
         .card-hover:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(9, 27, 54, 0.08);
+        }
+        /* Dark-mode overrides for inverse-surface sections */
+        :root.dark .industrial-card {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border-color: rgba(255, 255, 255, 0.15) !important;
+        }
+        :root.dark .industrial-card:hover {
+            background: rgba(255, 255, 255, 0.14) !important;
+        }
+        :root.dark .industrial-card .ind-capacity {
+            color: rgb(213 196 174) !important;
+        }
+        :root.dark .industrial-card .ind-body {
+            color: rgb(249 249 255) !important;
+        }
+        :root.dark .industrial-card .ind-name {
+            color: rgb(249 249 255) !important;
+        }
+        :root.dark .industrial-card .ind-role {
+            color: rgb(213 196 174) !important;
+        }
+        :root.dark .industrial-card .ind-company {
+            color: #FFB300 !important;
+        }
+        :root.dark .industrial-card .ind-border {
+            border-color: rgba(255, 255, 255, 0.12) !important;
+        }
+        :root.dark .cta-inverse .cta-body {
+            color: rgba(249, 249, 255, 0.85) !important;
         }
     </style>
 
@@ -872,11 +901,11 @@
 <h2 class="font-headline-lg text-headline-lg text-surface-bright text-center">Industrial-Grade Deployments</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <!-- Ind Card 1 -->
-<div class="bg-surface/10 p-lg rounded-xl border border-surface/20 hover:bg-surface/20 transition-all card-hover flex flex-col justify-between">
+<div class="industrial-card bg-surface/10 p-lg rounded-xl border border-surface/20 hover:bg-surface/20 transition-all card-hover flex flex-col justify-between">
 <div>
 <div class="flex justify-between items-start mb-md">
 <div>
-<h3 class="font-headline-md text-headline-md text-primary-container">Global Logistics Co.</h3>
+<h3 class="ind-company font-headline-md text-headline-md text-primary-container">Global Logistics Co.</h3>
 <p class="text-sm text-surface-variant">Capacity: 2.4 MW Rooftop Array</p>
 </div>
 <span class="material-symbols-outlined text-surface" title="Verified via LinkedIn">work</span>
@@ -892,11 +921,11 @@
 </div>
 </div>
 <!-- Ind Card 2 -->
-<div class="bg-surface/10 p-lg rounded-xl border border-surface/20 hover:bg-surface/20 transition-all card-hover flex flex-col justify-between">
+<div class="industrial-card bg-surface/10 p-lg rounded-xl border border-surface/20 hover:bg-surface/20 transition-all card-hover flex flex-col justify-between">
 <div>
 <div class="flex justify-between items-start mb-md">
 <div>
-<h3 class="font-headline-md text-headline-md text-primary-container">AgriGrow Farms</h3>
+<h3 class="ind-company font-headline-md text-headline-md text-primary-container">AgriGrow Farms</h3>
 <p class="text-sm text-surface-variant">Capacity: 5.1 MW Ground Mount</p>
 </div>
 <span class="material-symbols-outlined text-surface" title="Verified via Twitter">tag</span>
@@ -912,11 +941,11 @@
 </div>
 </div>
 <!-- Ind Card 3 -->
-<div class="bg-surface/10 p-lg rounded-xl border border-surface/20 hover:bg-surface/20 transition-all card-hover flex flex-col justify-between">
+<div class="industrial-card bg-surface/10 p-lg rounded-xl border border-surface/20 hover:bg-surface/20 transition-all card-hover flex flex-col justify-between">
 <div>
 <div class="flex justify-between items-start mb-md">
 <div>
-<h3 class="font-headline-md text-headline-md text-primary-container">Apex Steelworks</h3>
+<h3 class="ind-company font-headline-md text-headline-md text-primary-container">Apex Steelworks</h3>
 <p class="text-sm text-surface-variant">Capacity: 8.2 MW Grid-Tied System</p>
 </div>
 <span class="material-symbols-outlined text-surface" title="Verified via LinkedIn">work</span>
@@ -932,11 +961,11 @@
 </div>
 </div>
 <!-- Ind Card 4 -->
-<div class="bg-surface/10 p-lg rounded-xl border border-surface/20 hover:bg-surface/20 transition-all card-hover flex flex-col justify-between">
+<div class="industrial-card bg-surface/10 p-lg rounded-xl border border-surface/20 hover:bg-surface/20 transition-all card-hover flex flex-col justify-between">
 <div>
 <div class="flex justify-between items-start mb-md">
 <div>
-<h3 class="font-headline-md text-headline-md text-primary-container">Pacifica Desalination</h3>
+<h3 class="ind-company font-headline-md text-headline-md text-primary-container">Pacifica Desalination</h3>
 <p class="text-sm text-surface-variant">Capacity: 4.0 MW Microgrid</p>
 </div>
 <span class="material-symbols-outlined text-surface" title="Verified via LinkedIn">work</span>
@@ -952,11 +981,11 @@
 </div>
 </div>
 <!-- Ind Card 5 -->
-<div class="bg-surface/10 p-lg rounded-xl border border-surface/20 hover:bg-surface/20 transition-all card-hover flex flex-col justify-between">
+<div class="industrial-card bg-surface/10 p-lg rounded-xl border border-surface/20 hover:bg-surface/20 transition-all card-hover flex flex-col justify-between">
 <div>
 <div class="flex justify-between items-start mb-md">
 <div>
-<h3 class="font-headline-md text-headline-md text-primary-container">Titan Data Centers</h3>
+<h3 class="ind-company font-headline-md text-headline-md text-primary-container">Titan Data Centers</h3>
 <p class="text-sm text-surface-variant">Capacity: 12.0 MW + 20 MWh Storage</p>
 </div>
 <span class="material-symbols-outlined text-surface" title="Verified via LinkedIn">work</span>
@@ -1097,7 +1126,7 @@
 </div>
 </section>
 <!-- 13. Final Quote Request CTA -->
-<section class="py-xl px-margin-mobile md:px-margin-desktop bg-inverse-surface text-surface text-center">
+<section class="cta-inverse py-xl px-margin-mobile md:px-margin-desktop bg-inverse-surface text-surface text-center">
 <div class="max-w-4xl mx-auto space-y-md">
 <h2 class="font-display-lg text-display-lg text-surface-bright">Ready to Write Your Success Story?</h2>
 <p class="font-body-lg text-body-lg text-surface-variant max-w-2xl mx-auto mb-lg">Join the thousands of partners who have secured their energy future with Solaris. Get a custom engineering assessment and financial model today.</p>

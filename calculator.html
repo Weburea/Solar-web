@@ -228,35 +228,36 @@
         }
     </style>
     </head>
-<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col bg-background text-on-background dark:bg-on-background dark:text-background font-body-md antialiased transition-colors duration-300 pt-20">
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased transition-colors duration-300 pt-20">
 <!-- TopNavBar (Shared Component) -->
 
     <!-- Top Navigation -->
-    <nav class="bg-background/80 dark:bg-on-surface/80 backdrop-blur-md fixed top-0 left-0 w-full z-[100] border-b border-outline-variant/20 shadow-sm transition-all duration-300">
+    <nav class="bg-background/80 backdrop-blur-md fixed top-0 left-0 w-full z-[100] border-b border-outline-variant/20 shadow-sm transition-all duration-300">
       <div class="max-w-7xl mx-auto w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
         <!-- Logo -->
         <div class="flex items-center gap-md">
-          <a class="text-headline-md font-headline-md font-bold tracking-tight text-on-surface dark:text-background flex items-center gap-2 transition-colors" href="index.html">
+          <a class="text-headline-md font-headline-md font-bold tracking-tight text-on-surface flex items-center gap-2 transition-colors" href="index.html">
             <span class="material-symbols-outlined text-primary text-3xl" data-icon="solar_power" data-weight="fill" style="font-variation-settings: 'FILL' 1;">solar_power</span>
             <span class="bg-gradient-to-r from-primary to-primary-fixed-dim bg-clip-text text-transparent">SOLAREDGE</span>
           </a>
           <!-- Desktop Menu Links -->
-          <div class="hidden lg:flex items-center gap-sm ml-lg bg-surface-container-low dark:bg-on-surface/50 px-2 py-1 rounded-full border border-outline-variant/30 backdrop-blur-sm">
-            <a class="text-on-surface-variant dark:text-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="about.html">About</a>
-            <a class="text-on-surface-variant dark:text-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="services.html">Services</a>
-            <a class="text-on-surface-variant dark:text-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="portfolio.html">Gallery</a>
-            <a class="text-on-surface-variant dark:text-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="testimonial.html">Testimonials</a>
-            <a class="text-on-surface-variant dark:text-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="contact.html">Contact</a>
+          <div class="hidden lg:flex items-center gap-sm ml-lg bg-surface-container-low px-2 py-1 rounded-full border border-outline-variant/30 backdrop-blur-sm">
+            <a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="about.html">About</a>
+            <a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="services.html">Services</a>
+            <a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="portfolio.html">Gallery</a>
+            <a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="testimonial.html">Testimonials</a>
+            <a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="contact.html">Contact</a>
           </div>
         </div>
 
         <!-- Right Side Icons & CTA -->
         <div class="flex items-center gap-sm">
           <!-- Dark Mode Toggle -->
-          <button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-surface-container dark:hover:bg-on-surface/20 transition-colors duration-200" id="darkModeToggle" title="Toggle Theme">
+          <button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container dark:hover:bg-on-surface/20 transition-colors duration-200" id="darkModeToggle" title="Toggle Theme">
             <span class="material-symbols-outlined" id="darkModeIcon">dark_mode</span>
           </button>
           
+
 
 
           <!-- Book a Call CTA Link -->
@@ -282,7 +283,7 @@
         <!-- Backdrop -->
         <div id="mobileMenuBackdrop" class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 pointer-events-none"></div>
         <!-- Drawer content -->
-        <div id="mobileMenuDrawer" class="absolute top-0 right-0 h-full w-full max-w-[300px] border-l border-outline-variant/20 shadow-2xl p-md flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out pointer-events-auto" style="background-color: rgb(var(--color-background-rgb));">
+        <div id="mobileMenuDrawer" class="absolute top-0 right-0 h-full w-full max-w-[300px] bg-background border-l border-outline-variant/20 shadow-2xl p-md flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out pointer-events-auto">
           <div class="space-y-md">
             <!-- Header of drawer -->
             <div class="flex items-center justify-between pb-sm border-b border-outline-variant/10">
@@ -356,21 +357,21 @@
 <div>
 <label class="block font-label-md text-label-md text-on-background mb-xs">Roof Material</label>
 <div class="grid grid-cols-2 gap-2">
-<button class="py-2 px-4 rounded-lg border border-primary bg-primary/5 text-primary font-label-md text-label-md text-center transition-colors">Composite Shingle</button>
-<button class="py-2 px-4 rounded-lg border border-outline-variant bg-surface text-on-surface-variant font-label-md text-label-md text-center hover:border-primary/50 transition-colors">Tile / Clay</button>
-<button class="py-2 px-4 rounded-lg border border-outline-variant bg-surface text-on-surface-variant font-label-md text-label-md text-center hover:border-primary/50 transition-colors">Metal</button>
-<button class="py-2 px-4 rounded-lg border border-outline-variant bg-surface text-on-surface-variant font-label-md text-label-md text-center hover:border-primary/50 transition-colors">Flat</button>
+<button class="py-2 px-4 rounded-lg border border-primary dark:border-primary-fixed-dim bg-primary/5 dark:bg-primary-fixed-dim/10 text-primary dark:text-primary-fixed-dim font-label-md text-label-md text-center transition-colors">Composite Shingle</button>
+<button class="py-2 px-4 rounded-lg border border-outline-variant bg-surface text-on-surface-variant font-label-md text-label-md text-center hover:border-primary/50 dark:hover:border-primary-fixed-dim/50 transition-colors">Tile / Clay</button>
+<button class="py-2 px-4 rounded-lg border border-outline-variant bg-surface text-on-surface-variant font-label-md text-label-md text-center hover:border-primary/50 dark:hover:border-primary-fixed-dim/50 transition-colors">Metal</button>
+<button class="py-2 px-4 rounded-lg border border-outline-variant bg-surface text-on-surface-variant font-label-md text-label-md text-center hover:border-primary/50 dark:hover:border-primary-fixed-dim/50 transition-colors">Flat</button>
 </div>
 </div>
 <!-- Sun Exposure -->
 <div>
 <label class="block font-label-md text-label-md text-on-background mb-xs">Sun Exposure</label>
 <div class="grid grid-cols-1 gap-2">
-<button class="py-2 px-4 rounded-lg border border-primary bg-primary/5 text-primary font-label-md text-label-md flex justify-between items-center transition-colors">
+<button class="py-2 px-4 rounded-lg border border-primary dark:border-primary-fixed-dim bg-primary/5 dark:bg-primary-fixed-dim/10 text-primary dark:text-primary-fixed-dim font-label-md text-label-md flex justify-between items-center transition-colors">
 <span>Full Sun</span>
-<span class="material-symbols-outlined text-primary-container fill" data-icon="light_mode">light_mode</span>
+<span class="material-symbols-outlined text-primary-container dark:text-primary-fixed-dim fill" data-icon="light_mode">light_mode</span>
 </button>
-<button class="py-2 px-4 rounded-lg border border-outline-variant bg-surface text-on-surface-variant font-label-md text-label-md flex justify-between items-center hover:border-primary/50 transition-colors">
+<button class="py-2 px-4 rounded-lg border border-outline-variant bg-surface text-on-surface-variant font-label-md text-label-md flex justify-between items-center hover:border-primary/50 dark:hover:border-primary-fixed-dim/50 transition-colors">
 <span>Partial Shade</span>
 <span class="material-symbols-outlined text-on-surface-variant" data-icon="partly_cloudy_day">partly_cloudy_day</span>
 </button>
@@ -399,43 +400,43 @@
 <div class="lg:col-span-4 flex flex-col gap-gutter">
 <!-- Results Panel (Sticky-ish) -->
 <div class="bg-inverse-surface rounded-xl p-md shadow-lg sticky top-24 flex flex-col gap-md">
-<h3 class="font-headline-md text-headline-md text-on-primary border-b border-outline/20 pb-2">Your Estimate</h3>
+<h3 class="font-headline-md text-headline-md text-white border-b border-outline/20 pb-2">Your Estimate</h3>
 <!-- Result Card 1 -->
-<div class="bg-on-background/50 rounded-lg p-sm border border-outline/10">
-<p class="font-label-md text-label-md text-surface-variant mb-1">Estimated Annual Savings</p>
-<p class="font-data-display text-data-display text-tertiary-container">$1,850</p>
-<p class="font-body-md text-sm text-surface-variant/70 mt-1">Based on current rates</p>
+<div class="bg-white/5 rounded-lg p-sm border border-white/10">
+<p class="font-label-md text-label-md text-white/60 mb-1">Estimated Annual Savings</p>
+<p class="font-data-display text-data-display text-tertiary-fixed">$1,850</p>
+<p class="font-body-md text-sm text-white/40 mt-1">Based on current rates</p>
 </div>
 <!-- Result Card 2 -->
-<div class="bg-on-background/50 rounded-lg p-sm border border-outline/10 flex justify-between items-center">
+<div class="bg-white/5 rounded-lg p-sm border border-white/10 flex justify-between items-center">
 <div>
-<p class="font-label-md text-label-md text-surface-variant mb-1">System Size Needed</p>
-<p class="font-headline-lg text-headline-lg text-primary-fixed">6.5 kW</p>
+<p class="font-label-md text-label-md text-white/60 mb-1">System Size Needed</p>
+<p class="font-headline-lg text-headline-lg text-primary-fixed-dim">6.5 kW</p>
 </div>
 <div class="w-12 h-12 rounded-full bg-primary-fixed-dim/20 flex items-center justify-center">
 <span class="material-symbols-outlined text-primary-fixed" data-icon="solar_power">solar_power</span>
 </div>
 </div>
 <!-- Result Card 3 -->
-<div class="bg-on-background/50 rounded-lg p-sm border border-outline/10">
+<div class="bg-white/5 rounded-lg p-sm border border-white/10">
 <div class="flex justify-between items-end">
 <div>
-<p class="font-label-md text-label-md text-surface-variant mb-1">Est. Payback Period</p>
-<p class="font-headline-lg text-headline-lg text-on-primary">6.2 Years</p>
+<p class="font-label-md text-label-md text-white/60 mb-1">Est. Payback Period</p>
+<p class="font-headline-lg text-headline-lg text-white">6.2 Years</p>
 </div>
 <span class="px-2 py-1 rounded-full bg-tertiary/20 text-tertiary-fixed text-xs font-bold uppercase tracking-wider">Excellent</span>
 </div>
 </div>
 <!-- Lead Gen Form inside Results -->
 <div class="mt-4 pt-4 border-t border-outline/20">
-<p class="font-label-md text-label-md text-on-primary mb-sm">Get a Detailed PDF Quote</p>
+<p class="font-label-md text-label-md text-white mb-sm">Get a Detailed PDF Quote</p>
 <div class="flex flex-col gap-sm">
-<input class="w-full px-4 py-3 rounded-lg border border-transparent bg-surface/10 text-on-primary placeholder-surface-variant/50 focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed outline-none transition-all font-body-md text-body-md" placeholder="Email Address" type="email">
+<input class="w-full px-4 py-3 rounded-lg border border-white/10 bg-white/5 text-white placeholder-white/40 focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed outline-none transition-all font-body-md text-body-md" placeholder="Email Address" type="email">
 <button class="w-full font-label-md text-label-md bg-primary-container text-on-primary-container py-3 px-6 rounded-lg hover:bg-primary hover:text-on-primary transition-colors shadow-sm flex items-center justify-center gap-2 group">
                                 Send My Report <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
 </button>
 </div>
-<p class="text-xs text-surface-variant/50 text-center mt-2 font-body-md">No spam, just solid data.</p>
+<p class="text-xs text-white/40 text-center mt-2 font-body-md">No spam, just solid data.</p>
 </div>
 </div>
 </div>
@@ -476,7 +477,7 @@
     
     <!-- Solutions -->
     <div>
-        <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Solutions</h4>
+        <h4 class="text-label-md font-label-md text-primary-container font-bold mb-md uppercase tracking-wider">Solutions</h4>
         <ul class="space-y-sm">
             <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="residential.html">Residential</a></li>
             <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="commercial.html">Commercial</a></li>
@@ -487,7 +488,7 @@
     
     <!-- Company -->
     <div>
-        <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Company</h4>
+        <h4 class="text-label-md font-label-md text-primary-container font-bold mb-md uppercase tracking-wider">Company</h4>
         <ul class="space-y-sm">
             <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="about.html">About Us</a></li>
             <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="portfolio.html">Gallery</a></li>
@@ -498,7 +499,7 @@
     
     <!-- Contact Info -->
     <div>
-        <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Contact</h4>
+        <h4 class="text-label-md font-label-md text-primary-container font-bold mb-md uppercase tracking-wider">Contact</h4>
         <ul class="space-y-sm text-surface-variant dark:text-on-surface-variant">
             <li class="flex gap-2 items-start">
                 <span class="material-symbols-outlined text-primary text-lg">location_on</span>
