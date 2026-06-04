@@ -153,37 +153,30 @@
 </head>
 <body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
 <!-- TopNavBar (Shared Component) -->
-<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm border-b border-outline-variant/10">
-<div class="flex justify-between items-center h-20 px-margin-desktop max-w-screen-2xl mx-auto hidden md:flex">
-<!-- Brand -->
-<div class="font-display-lg text-headline-md font-bold tracking-tighter text-primary">
-                SolarPulse
-            </div>
-<!-- Navigation Links -->
-<div class="flex space-x-gutter">
-<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#">Residential</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low transition-all duration-300 px-2 py-1 rounded" href="#">Commercial</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low transition-all duration-300 px-2 py-1 rounded" href="#">Storage</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low transition-all duration-300 px-2 py-1 rounded" href="#">Financials</a>
+<nav class="bg-background/80 dark:bg-on-surface/80 backdrop-blur-md fixed top-0 left-0 w-full z-[100] border-b border-outline-variant/20 shadow-sm transition-all">
+<div class="max-w-7xl mx-auto w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+<div class="flex items-center gap-md">
+<a class="text-headline-md font-headline-md font-bold tracking-tight text-on-surface flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary" data-icon="solar_power" data-weight="fill" style="font-variation-settings: 'FILL' 1;">solar_power</span>
+                SOLAREDGE
+            </a>
+<div class="hidden md:flex items-center gap-sm ml-lg bg-surface-container-low px-2 py-1 rounded-full border border-outline-variant/30">
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="about.html">About</a>
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="services.html">Services</a>
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="portfolio.html">Gallery</a>
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="testimonial.html">Testimonial</a>
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="admin.html">Dashboard</a>
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="contact.html">Contact</a>
 </div>
-<!-- Actions -->
-<div class="flex items-center space-x-sm">
-<button class="font-label-md text-label-md bg-primary-container text-on-primary-container px-4 py-2 rounded-lg hover:bg-primary hover:text-on-primary transition-colors scale-95 active:scale-90 transition-transform shadow-sm">
-                    Get a Quote
-                </button>
-<button class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-container-low">
-<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</div>
+<div class="flex items-center gap-md">
+<button class="hidden md:flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
 </button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-md hover:bg-primary hover:text-on-primary shadow-sm hover:shadow-md transition-all scale-95 active:opacity-80">
+                Get a Quote
+            </button>
 </div>
-</div>
-<!-- Mobile Nav Variant (Simplified) -->
-<div class="flex md:hidden justify-between items-center h-16 px-margin-mobile w-full">
-<div class="font-display-lg text-headline-md font-bold tracking-tighter text-primary">
-                SolarPulse
-            </div>
-<button class="text-on-surface-variant p-2">
-<span class="material-symbols-outlined">menu</span>
-</button>
 </div>
 </nav>
 <!-- Main Content -->
@@ -323,17 +316,81 @@
 </button>
 </div>
 <!-- Footer (Shared Component) -->
-<footer class="w-full rounded-t-xl bg-on-background text-surface-container-lowest px-margin-desktop py-xl mt-auto grid grid-cols-1 md:grid-cols-4 gap-md">
-<div class="col-span-1 md:col-span-1">
-<div class="font-headline-lg text-headline-lg text-primary-fixed mb-sm">SolarPulse</div>
-<p class="font-body-md text-body-md text-surface-variant/70 mb-4">© 2024 SolarPulse Intelligence. All rights reserved.</p>
-</div>
-<div class="col-span-1 md:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-md">
-<!-- Footer Links mapped from JSON -->
-<a class="font-body-md text-body-md text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 block" href="#">Privacy Policy</a>
-<a class="font-body-md text-body-md text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 block" href="#">Terms of Service</a>
-<a class="font-body-md text-body-md text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 block" href="#">Sustainability Report</a>
-<a class="font-body-md text-body-md text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 block" href="#">Investor Relations</a>
+<footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-xl px-margin-mobile md:px-margin-desktop text-body-md font-body-md border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter">
+    <!-- Brand Info -->
+    <div class="lg:col-span-2 space-y-md">
+        <div class="text-headline-lg font-headline-lg text-surface-bright dark:text-on-surface font-bold tracking-tight flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-3xl" data-icon="solar_power" data-weight="fill" style="font-variation-settings: 'FILL' 1;">solar_power</span>
+            SOLAREDGE
+        </div>
+        <p class="text-surface-variant dark:text-on-surface-variant max-w-sm">
+            Empowering communities and enterprise operations with high-yield, smart solar technology. Architecting sustainable power systems for next-generation intelligence.
+        </p>
+        <div class="flex gap-sm pt-2">
+            <a href="#" class="w-10 h-10 rounded-full bg-surface-container-low dark:bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all duration-300">
+                <span class="material-symbols-outlined text-lg">public</span>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-surface-container-low dark:bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all duration-300">
+                <span class="material-symbols-outlined text-lg">share</span>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-surface-container-low dark:bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all duration-300">
+                <span class="material-symbols-outlined text-lg">mail</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Solutions -->
+    <div>
+        <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Solutions</h4>
+        <ul class="space-y-sm">
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#residential">Residential</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#commercial">Commercial</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#industrial">Industrial</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#storage">Storage Systems</a></li>
+        </ul>
+    </div>
+    
+    <!-- Company -->
+    <div>
+        <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Company</h4>
+        <ul class="space-y-sm">
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="about.html">About Us</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="portfolio.html">Gallery</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="admin.html">Dashboard</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <!-- Contact Info -->
+    <div>
+        <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Contact</h4>
+        <ul class="space-y-sm text-surface-variant dark:text-on-surface-variant">
+            <li class="flex gap-2 items-start">
+                <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                <span>100 Clean Energy Way, Lagos, Nigeria</span>
+            </li>
+            <li class="flex gap-2 items-center">
+                <span class="material-symbols-outlined text-primary text-lg">call</span>
+                <span>+234 800 SOLAR</span>
+            </li>
+            <li class="flex gap-2 items-center">
+                <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                <span>support@solaredge.com</span>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Bottom copyright -->
+    <div class="col-span-1 md:col-span-2 lg:col-span-5 mt-xl pt-lg border-t border-surface-variant/20 flex flex-col md:flex-row justify-between items-center gap-md text-surface-variant dark:text-on-surface-variant text-sm">
+        <div>
+            © 2026 SolarEdge Energy Solutions. All rights reserved. Precision Engineering & Intelligence.
+        </div>
+        <div class="flex gap-md">
+            <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+        </div>
+    </div>
 </div>
 </footer>
 <!-- Simple Interaction Script -->

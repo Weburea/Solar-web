@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>In-Depth Case Study | SolarPulse</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#2a4676",
+                      "surface": "#f9f9ff",
+                      "on-surface-variant": "#514534",
+                      "surface-dim": "#cadafe",
+                      "primary-fixed-dim": "#ffba43",
+                      "on-error-container": "#93000a",
+                      "surface-variant": "#d6e3ff",
+                      "inverse-surface": "#0B2D5B",
+                      "on-secondary-fixed": "#001b3f",
+                      "background": "#f9f9ff",
+                      "primary-fixed": "#ffddaf",
+                      "surface-container-highest": "#d6e3ff",
+                      "surface-bright": "#f9f9ff",
+                      "on-surface": "#091b36",
+                      "on-tertiary-container": "#005a2c",
+                      "on-error": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "primary": "#805600",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary": "#435e8f",
+                      "on-primary-fixed-variant": "#614000",
+                      "error": "#ba1a1a",
+                      "tertiary": "#006d37",
+                      "secondary-fixed-dim": "#acc7fe",
+                      "tertiary-fixed-dim": "#61de8a",
+                      "outline": "#837562",
+                      "outline-variant": "#d5c4ae",
+                      "on-secondary-container": "#375282",
+                      "tertiary-container": "#59d784",
+                      "on-tertiary-fixed": "#00210c",
+                      "inverse-primary": "#f9b233",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed": "#281800",
+                      "on-primary-container": "#6a4700",
+                      "surface-tint": "#805600",
+                      "surface-container": "#e8eeff",
+                      "surface-container-low": "#f0f3ff",
+                      "secondary-fixed": "#d7e2ff",
+                      "inverse-on-surface": "#ecf0ff",
+                      "primary-container": "#f9b233",
+                      "on-tertiary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#acc7fe",
+                      "surface-container-high": "#dfe8ff",
+                      "on-tertiary-fixed-variant": "#005228",
+                      "on-background": "#091b36",
+                      "tertiary-fixed": "#7efba4"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "lg": "48px",
+                      "xl": "80px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "md": "24px",
+                      "xs": "4px"
+              },
+              "fontFamily": {
+                      "label-md": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "data-display": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                      "data-display": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(9, 27, 54, 0.04);
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(9, 27, 54, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-20">
+
+<!-- TopNavBar -->
+<nav class="bg-background/80 dark:bg-on-surface/80 backdrop-blur-md fixed top-0 left-0 w-full z-[100] border-b border-outline-variant/20 shadow-sm transition-all">
+<div class="max-w-7xl mx-auto w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+<div class="flex items-center gap-md">
+<a class="text-headline-md font-headline-md font-bold tracking-tight text-on-surface flex items-center gap-2" href="index.html">
+<span class="material-symbols-outlined text-primary" data-icon="solar_power" data-weight="fill" style="font-variation-settings: 'FILL' 1;">solar_power</span>
+                SOLAREDGE
+            </a>
+<div class="hidden md:flex items-center gap-sm ml-lg bg-surface-container-low px-2 py-1 rounded-full border border-outline-variant/30">
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="about.html">About</a>
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="services.html">Services</a>
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="portfolio.html">Portfolio</a>
+<a class="bg-primary text-white font-medium px-4 py-2 rounded-full hover:bg-primary-container hover:text-inverse-surface transition-colors duration-200" href="testimonial.html">Testimonials</a>
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="contact.html">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors duration-200" id="darkModeToggle">
+<span class="material-symbols-outlined" id="darkModeIcon">dark_mode</span>
+</button>
+<a class="hidden sm:inline-flex bg-primary text-white font-label-md text-label-md px-md py-sm rounded-lg hover:bg-primary-container hover:text-inverse-surface transition-all duration-200 shadow-md hover:shadow-lg" href="contact.html">
+            Get Assessment
+        </a>
+<button class="md:hidden w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors duration-200" id="mobileMenuToggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Panel -->
+<div class="hidden fixed inset-0 top-20 bg-background/95 backdrop-blur-md z-[90] flex-col p-6 space-y-4 border-t border-outline-variant/10 shadow-xl transition-all" id="mobileMenu">
+<a class="text-headline-md text-on-surface-variant hover:text-primary py-2" href="about.html">About</a>
+<a class="text-headline-md text-on-surface-variant hover:text-primary py-2" href="services.html">Services</a>
+<a class="text-headline-md text-on-surface-variant hover:text-primary py-2" href="portfolio.html">Portfolio</a>
+<a class="text-headline-md text-primary font-bold py-2" href="testimonial.html">Testimonials</a>
+<a class="text-headline-md text-on-surface-variant hover:text-primary py-2" href="contact.html">Contact</a>
+<a class="w-full text-center bg-primary text-white font-headline-md py-3 rounded-lg shadow-md hover:bg-primary-container hover:text-inverse-surface" href="contact.html">
+            Get Free Quote
+        </a>
+</div>
+</nav>
+
+<!-- Main Container -->
+<main class="min-h-screen py-lg px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-4xl mx-auto space-y-lg">
+        
+        <!-- Back button -->
+        <div>
+            <a href="testimonial.html" class="inline-flex items-center text-primary hover:text-primary-container font-label-md transition-colors gap-1">
+                <span class="material-symbols-outlined text-sm">arrow_back</span> Back to Testimonials
+            </a>
+        </div>
+
+        <!-- Dynamic Content Area -->
+        <article id="case-study-content" class="bg-surface-container-lowest rounded-2xl card-shadow border border-outline-variant/20 overflow-hidden">
+            <!-- Loading State / Content will be injected here -->
+            <div class="p-xl text-center">
+                <div class="animate-pulse space-y-4">
+                    <div class="h-8 bg-surface-container-high rounded w-3/4 mx-auto"></div>
+                    <div class="h-64 bg-surface-container-high rounded w-full"></div>
+                    <div class="h-4 bg-surface-container-high rounded w-5/6 mx-auto"></div>
+                    <div class="h-4 bg-surface-container-high rounded w-4/5 mx-auto"></div>
+                </div>
+            </div>
+        </article>
+
+        <!-- More Case Studies -->
+        <section class="space-y-md border-t border-outline-variant/30 pt-lg">
+            <h3 class="font-headline-md text-headline-md text-inverse-surface">Explore Other Success Stories</h3>
+            <div id="other-case-studies-grid" class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <!-- Injected dynamically based on current ID -->
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-xl px-margin-mobile md:px-margin-desktop text-body-md font-body-md border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter">
+    <!-- Brand Info -->
+    <div class="lg:col-span-2 space-y-md">
+        <div class="text-headline-lg font-headline-lg text-surface-bright dark:text-on-surface font-bold tracking-tight flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-3xl" data-icon="solar_power" data-weight="fill" style="font-variation-settings: 'FILL' 1;">solar_power</span>
+            SOLAREDGE
+        </div>
+        <p class="text-surface-variant dark:text-on-surface-variant max-w-sm">
+            Empowering communities and enterprise operations with high-yield, smart solar technology. Architecting sustainable power systems for next-generation intelligence.
+        </p>
+        <div class="flex gap-sm pt-2">
+            <a href="#" class="w-10 h-10 rounded-full bg-surface-container-low dark:bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all duration-300">
+                <span class="material-symbols-outlined text-lg">public</span>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-surface-container-low dark:bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all duration-300">
+                <span class="material-symbols-outlined text-lg">share</span>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-surface-container-low dark:bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all duration-300">
+                <span class="material-symbols-outlined text-lg">mail</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Solutions -->
+    <div>
+        <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Solutions</h4>
+        <ul class="space-y-sm">
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#residential">Residential</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#commercial">Commercial</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#industrial">Industrial</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#storage">Storage Systems</a></li>
+        </ul>
+    </div>
+    
+    <!-- Company -->
+    <div>
+        <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Company</h4>
+        <ul class="space-y-sm">
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="about.html">About Us</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="portfolio.html">Gallery</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="admin.html">Dashboard</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <!-- Contact Info -->
+    <div>
+        <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Contact</h4>
+        <ul class="space-y-sm text-surface-variant dark:text-on-surface-variant">
+            <li class="flex gap-2 items-start">
+                <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                <span>100 Clean Energy Way, Lagos, Nigeria</span>
+            </li>
+            <li class="flex gap-2 items-center">
+                <span class="material-symbols-outlined text-primary text-lg">call</span>
+                <span>+234 800 SOLAR</span>
+            </li>
+            <li class="flex gap-2 items-center">
+                <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                <span>support@solaredge.com</span>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Bottom copyright -->
+    <div class="col-span-1 md:col-span-2 lg:col-span-5 mt-xl pt-lg border-t border-surface-variant/20 flex flex-col md:flex-row justify-between items-center gap-md text-surface-variant dark:text-on-surface-variant text-sm">
+        <div>
+            © 2026 SolarEdge Energy Solutions. All rights reserved. Precision Engineering & Intelligence.
+        </div>
+        <div class="flex gap-md">
+            <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+        </div>
+    </div>
+</div>
+</footer>
+
+<script>
+    // Case study data store
+    const caseStudies = {
+        delta: {
+            title: "Delta Distribution Centers",
+            category: "Commercial Warehouse",
+            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCfFNSuZwDanRCdnTw_qeN9uPvoU7-DE5F1zvjF141Sp222fpMieuBWbyOdW2IDheIEjgZFccdcokoDFgaOS-QfSv2wMVq7-zR1JvMqHdCUgM74vS1ad60cJplJW127ZuY885kR5rBRMa8TBhoh6yobeI8ndcK6apgxvk0B3sRqRBJgrnjhQbqbGcWqLSgw8Paz_5UH3pOIq_oQSUIeWcEmpcLkXX0GTk2sI1_YUIIZm0D7t5OL0CZF07op1eifqAzh9aHBYJHJsVo",
+            stats: [
+                { label: "Annual Savings", value: "$120,000" },
+                { label: "Peak Demand Offset", value: "60%" },
+                { label: "System Size", value: "500 kW Solar" },
+                { label: "Storage", value: "250 kWh Battery" }
+            ],
+            problem: "Delta Distribution's multi-site warehouse operations faced volatile grid electricity prices and high peak demand charges. During peak hours, their heavy automated picking and HVAC systems drew maximum current, causing power bills to increase by 45%.",
+            solution: "SolarEdge engineered a fully customized 500 kW rooftop solar array paired with a smart 250 kWh industrial battery storage system. The intelligent control software automatically charges the batteries when utility rates are low or solar production is high, discharging them during peak hours to eliminate demand charges.",
+            impact: "Within the first year of operation, Delta Distribution recorded a $120,000 reduction in utility expenses. Peak demand charges decreased by 60%, and the system is on track to pay for itself in under 4 years. Additionally, the battery system protects the facility from short-term grid outages, avoiding expensive supply chain delays.",
+            testimonial: {
+                quote: "SolarEdge modeled our facilities with extreme precision. The commercial tax incentives were clearly structured, and the battery system works automatically in the background.",
+                author: "Sarah Jenkins",
+                role: "Director of Supply Chain"
+            }
+        },
+        miller: {
+            title: "The Miller Estate & Retreat",
+            category: "Residential Estate",
+            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC6bIdL3nzVcZUtT2w3KEqFY8m3zyXkGpBKN0kjuqTZSz676mz3MG1Q3IzcZrayDM4kj95OIvpniofIWnOeOlxPwbHu_9J4eayKq851HLrBMfHz8yNxXUjJW3DCZGgw3dnPjG1sTUNJZDA9nYkQv2lLF62Yf3cAcNJV4Y7EEo2bA1nMnAtrVbLMYNmmDZqfV5RmR2148YwBHvQj5rIqdV0O2wlK9fadn8w1PELAUjXW50LfBSia_-hETxC4Hpic7MFJTCX5DseoEKA",
+            stats: [
+                { label: "Monthly Bill", value: "$0" },
+                { label: "Outage Protection", value: "100%" },
+                { label: "System Size", value: "15 kW Ground-Mount" },
+                { label: "Storage Capacity", value: "40 kWh Dual Backup" }
+            ],
+            problem: "Located in a rural area subject to frequent weather-related power outages, the Miller family required a secure, clean energy solution. Their large estate, featuring heating, cooling, and pool systems, suffered from grid vulnerability and climbing utility tariffs.",
+            solution: "SolarEdge deployed a beautiful 15 kW ground-mounted solar system using smart trackers to maximize winter yield. The system is connected to a 40 kWh dual smart battery backup configuration, isolating the estate from grid outages completely.",
+            impact: "The Millers now enjoy a zero-dollar net monthly electricity bill. During recent winter grid outages that lasted over 48 hours, the estate maintained full power, automatically transitioning to battery reserves with zero interruption. The family monitors their real-time production and usage via our sleek mobile application.",
+            testimonial: {
+                quote: "Adding battery storage was the absolute best decision. We didn't even notice the grid outage last week, and our monthly electricity bills have vanished.",
+                author: "Marcus Chen",
+                role: "Homeowner & Architect"
+            }
+        },
+        water: {
+            title: "City Water Treatment Plant",
+            category: "Municipal Facility",
+            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDvxbH8yq1IUFq_0RyanIP9-7GrQ-a4fKRppCZuyTLclvbUDMudWevK3cNxEXThdaFiIN_uIS_AmdY4BY0qVo0MvC2eFM1F6YsSwaRR5tT-w7JPbMK9emnyr2eit3n0Ltv9v7DaWHCOiSoULWSBiKTdPEEMy8JEme-btj3axNtZOLSqoaGnqNvdykncCHSpdBcPsmkcsGQMrSH3ZJsihOg-4nimkdiGHRirPtdA7MwD_sd0gwz7-b_AOndMUy20SXva3FDS4Fs9b-s",
+            stats: [
+                { label: "Carbon Offset", value: "35% reduction" },
+                { label: "Evaporation Saved", value: "1.2M Gallons" },
+                { label: "System Size", value: "1.2 MW Floating Solar" },
+                { label: "Annual Yield", value: "1.8 GWh" }
+            ],
+            problem: "The city council was mandated to reduce its municipal operations' carbon footprint by 30% by 2026. The water treatment facility was the single largest electricity consumer, requiring continuous power to run heavy filtration and pumping units.",
+            solution: "SolarEdge designed a state-of-the-art 1.2 MW floating solar array installed directly on the facility's treated water reservoirs. Floating systems lower water temperature, reducing algae growth and evaporation while increasing solar panel efficiency due to the cooling effect of the water.",
+            impact: "The plant exceeded its decarbonization mandate early, saving taxpayers hundreds of thousands of dollars annually in electrical bills. Furthermore, the floating array prevents over 1.2 million gallons of water evaporation annually. The project has set a national benchmark for sustainable infrastructure.",
+            testimonial: {
+                quote: "SolarEdge demonstrated unmatched engineering and technical rigor, navigating complex environmental permits and load requirements flawlessly.",
+                author: "Robert Vance",
+                role: "Chief Facilities Engineer"
+            }
+        }
+    };
+
+    // Render page content based on URL query
+    function renderCaseStudy() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id') || 'delta';
+        const study = caseStudies[id] || caseStudies.delta;
+
+        // Set page title
+        document.title = `${study.title} | SolarPulse Case Study`;
+
+        // Generate content HTML
+        const container = document.getElementById('case-study-content');
+        container.innerHTML = `
+            <div class="relative h-96 w-full bg-black">
+                <img src="${study.image}" alt="${study.title}" class="w-full h-full object-cover opacity-80" />
+                <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-transparent to-transparent flex flex-col justify-end p-xl text-white">
+                    <span class="text-xs font-bold text-primary-container tracking-wider uppercase mb-xs">${study.category}</span>
+                    <h1 class="font-display-lg text-display-lg leading-tight md:text-headline-lg-mobile font-bold">${study.title}</h1>
+                </div>
+            </div>
+            
+            <div class="p-xl space-y-xl">
+                <!-- Stats grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter bg-surface-container-low p-md rounded-xl border border-outline-variant/10">
+                    ${study.stats.map(s => `
+                        <div class="text-center">
+                            <div class="text-xs text-on-surface-variant font-medium">${s.label}</div>
+                            <div class="font-headline-md text-headline-md text-primary font-bold mt-xs">${s.value}</div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <!-- Text Blocks -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-xl">
+                    <div class="md:col-span-2 space-y-md">
+                        <div>
+                            <h2 class="font-headline-md text-headline-md text-inverse-surface mb-xs">Project Overview</h2>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                                Our sustainability partners at SolarEdge collaborated closely with the management team to architect a high-yield, smart solar ecosystem tailored to the specific constraints of the facility.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="font-label-md text-label-md uppercase text-primary mb-xs">The Challenge</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                ${study.problem}
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="font-label-md text-label-md uppercase text-primary mb-xs">The Solution</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                ${study.solution}
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="font-label-md text-label-md uppercase text-primary mb-xs">The Impact</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                ${study.impact}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Quote -->
+                    <div class="space-y-sm bg-primary-container/10 p-md rounded-xl border-l-4 border-primary h-fit">
+                        <span class="material-symbols-outlined text-primary text-4xl opacity-50 fill">format_quote</span>
+                        <blockquote class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">
+                            "${study.testimonial.quote}"
+                        </blockquote>
+                        <div class="pt-sm border-t border-outline-variant/20">
+                            <div class="font-label-md text-label-md text-inverse-surface">${study.testimonial.author}</div>
+                            <div class="text-xs text-on-surface-variant">${study.testimonial.role}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Render other case studies
+        const otherGrid = document.getElementById('other-case-studies-grid');
+        otherGrid.innerHTML = Object.keys(caseStudies)
+            .filter(key => key !== id)
+            .map(key => {
+                const s = caseStudies[key];
+                return `
+                    <div onclick="window.location.href='blog.html?id=${key}'" class="bg-surface-container-lowest rounded-xl overflow-hidden card-shadow border border-outline-variant/20 flex flex-col cursor-pointer transition-all hover:scale-[1.02] hover:shadow-lg">
+                        <img src="${s.image}" alt="${s.title}" class="h-40 w-full object-cover" />
+                        <div class="p-md flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-primary uppercase">${s.category}</span>
+                                <h4 class="font-headline-md text-headline-md text-inverse-surface mt-xs">${s.title}</h4>
+                            </div>
+                            <span class="text-primary font-label-md flex items-center mt-sm">
+                                View Case Study <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+                            </span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+    }
+
+    // Toggle menu
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+
+    // Dark mode logic
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const darkModeIcon = document.getElementById('darkModeIcon');
+    
+    // Check dark mode preference
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        if (darkModeIcon) darkModeIcon.textContent = 'light_mode';
+    } else {
+        document.documentElement.classList.remove('dark');
+        if (darkModeIcon) darkModeIcon.textContent = 'dark_mode';
+    }
+
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+                if (darkModeIcon) darkModeIcon.textContent = 'dark_mode';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                if (darkModeIcon) darkModeIcon.textContent = 'light_mode';
+            }
+        });
+    }
+
+    // Initialize
+    window.addEventListener('DOMContentLoaded', renderCaseStudy);
+</script>
+</body>
+</html>
