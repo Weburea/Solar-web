@@ -1,289 +1,417 @@
-<!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SolarPulse | Intelligent Solar Solutions</title>
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SolarPulse | Premium Solar Energy Intelligence</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
         tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "background": "#f9f9ff",
-                        "on-surface": "#091b36",
-                        "on-primary-fixed": "#281800",
-                        "tertiary": "#006d37",
-                        "surface-container-high": "#dfe8ff",
-                        "inverse-on-surface": "#ecf0ff",
-                        "surface-container": "#e8eeff",
-                        "surface-container-low": "#f0f3ff",
-                        "on-secondary-fixed-variant": "#2a4676",
-                        "tertiary-fixed-dim": "#61de8a",
-                        "secondary-container": "#acc7fe",
-                        "surface-dim": "#cadafe",
-                        "surface-bright": "#f9f9ff",
-                        "tertiary-container": "#59d784",
-                        "on-primary": "#ffffff",
-                        "on-secondary-fixed": "#001b3f",
-                        "on-primary-fixed-variant": "#614000",
-                        "surface-variant": "#d6e3ff",
-                        "surface-tint": "#805600",
-                        "surface-container-highest": "#d6e3ff",
-                        "outline-variant": "#d5c4ae",
-                        "on-error-container": "#93000a",
-                        "tertiary-fixed": "#7efba4",
-                        "surface-container-lowest": "#ffffff",
-                        "on-background": "#091b36",
-                        "primary-fixed-dim": "#ffba43",
-                        "error-container": "#ffdad6",
-                        "on-tertiary-fixed": "#00210c",
-                        "on-primary-container": "#6a4700",
-                        "secondary-fixed-dim": "#acc7fe",
-                        "outline": "#837562",
-                        "primary": "#805600",
-                        "on-surface-variant": "#514534",
-                        "on-secondary-container": "#375282",
-                        "on-tertiary": "#ffffff",
-                        "inverse-surface": "#20314d",
-                        "on-tertiary-fixed-variant": "#005228",
-                        "on-secondary": "#ffffff",
-                        "on-tertiary-container": "#005a2c",
-                        "surface": "#f9f9ff",
-                        "on-error": "#ffffff",
-                        "secondary": "#435e8f",
-                        "secondary-fixed": "#d7e2ff",
-                        "inverse-primary": "#ffba43",
-                        "error": "#ba1a1a",
-                        "primary-fixed": "#ffddaf",
-                        "primary-container": "#f9b233"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "md": "24px",
-                        "xs": "4px",
-                        "sm": "12px",
-                        "margin-desktop": "64px",
-                        "gutter": "24px",
-                        "xl": "80px",
-                        "lg": "48px",
-                        "margin-mobile": "16px",
-                        "base": "8px"
-                    },
-                    "fontFamily": {
-                        "headline-md": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "body-md": ["Inter"],
-                        "headline-lg": ["Inter"],
-                        "label-md": ["Inter"],
-                        "display-lg": ["Inter"],
-                        "data-display": ["Inter"],
-                        "headline-lg-mobile": ["Inter"]
-                    },
-                    "fontSize": {
-                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
-                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "data-display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }]
-                    }
-                }
-            }
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#59d784",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed-variant": "#2a4676",
+                      "tertiary-fixed": "#7efba4",
+                      "on-primary-fixed-variant": "#614000",
+                      "error-container": "#ffdad6",
+                      "inverse-surface": "#20314d",
+                      "surface-container": "#e8eeff",
+                      "primary-fixed-dim": "#ffba43",
+                      "secondary-container": "#acc7fe",
+                      "primary": "#805600",
+                      "surface-variant": "#d6e3ff",
+                      "on-tertiary-fixed": "#00210c",
+                      "on-primary-container": "#6a4700",
+                      "surface-container-high": "#dfe8ff",
+                      "secondary": "#435e8f",
+                      "on-secondary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-primary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-background": "#091b36",
+                      "surface-container-low": "#f0f3ff",
+                      "inverse-primary": "#ffba43",
+                      "on-surface-variant": "#514534",
+                      "surface-bright": "#f9f9ff",
+                      "on-secondary-container": "#375282",
+                      "surface-dim": "#cadafe",
+                      "tertiary": "#006d37",
+                      "inverse-on-surface": "#ecf0ff",
+                      "tertiary-fixed-dim": "#61de8a",
+                      "on-tertiary-container": "#005a2c",
+                      "on-surface": "#091b36",
+                      "outline": "#837562",
+                      "surface": "#f9f9ff",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-highest": "#d6e3ff",
+                      "secondary-fixed": "#d7e2ff",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed": "#001b3f",
+                      "surface-tint": "#805600",
+                      "on-primary-fixed": "#281800",
+                      "on-tertiary-fixed-variant": "#005228",
+                      "secondary-fixed-dim": "#acc7fe",
+                      "primary-container": "#f9b233",
+                      "primary-fixed": "#ffddaf",
+                      "outline-variant": "#d5c4ae",
+                      "background": "#f9f9ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "xs": "4px",
+                      "margin-desktop": "64px",
+                      "lg": "48px",
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "xl": "80px",
+                      "md": "24px"
+              },
+              "fontFamily": {
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "data-display": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "data-display": [
+                              "36px",
+                              {
+                                      "lineHeight": "44px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
         }
     </script>
 <style>
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+        .gradient-btn {
+            background: linear-gradient(180deg, #f9b233 0%, #e0a02e 100%);
         }
-        .bento-hover:hover {
+        .gradient-btn:hover {
+            background: linear-gradient(180deg, #e0a02e 0%, #c78f29 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(9, 27, 54, 0.1), 0 4px 6px -4px rgba(9, 27, 54, 0.1);
+        }
+        .soft-shadow {
+            box-shadow: 0 4px 20px 0 rgba(9, 27, 54, 0.04);
+        }
+        .interactive-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 20px 40px -10px rgba(9, 27, 54, 0.1);
+            box-shadow: 0 12px 24px -4px rgba(9, 27, 54, 0.08);
         }
     </style>
 </head>
-<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
-<!-- Top Navigation (Shared Component) -->
-<nav class="bg-background/80 dark:bg-on-surface/80 backdrop-blur-md fixed top-0 left-0 w-full z-[100] flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 border-b border-outline-variant/20 shadow-sm transition-all">
-<div class="flex items-center gap-md">
-<a class="text-headline-md font-headline-md font-bold tracking-tight text-on-surface flex items-center gap-2" href="#">
-<span class="material-symbols-outlined text-primary" data-icon="solar_power" data-weight="fill" style="font-variation-settings: 'FILL' 1;">solar_power</span>
-                SOLAREDGE
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 backdrop-blur-md dark:bg-on-background/90 fixed top-0 w-full z-50 border-b border-outline-variant/10 dark:border-outline/10 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
+<a class="font-display-lg text-headline-md font-bold tracking-tighter text-primary dark:text-primary-fixed hover:opacity-80 transition-opacity" href="#">
+                SolarPulse
             </a>
-<div class="hidden md:flex items-center gap-sm ml-lg bg-surface-container-low px-2 py-1 rounded-full border border-outline-variant/30">
-<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="#">Residential</a>
-<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="#">Commercial</a>
-<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="#">Storage</a>
-<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="#">Financials</a>
+<div class="hidden md:flex gap-md items-center">
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary pb-1 font-label-md text-label-md hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all duration-300 scale-95 active:scale-90 px-xs" href="#">Residential</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all duration-300 scale-95 active:scale-90 px-xs" href="#">Commercial</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all duration-300 scale-95 active:scale-90 px-xs" href="#">Storage</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all duration-300 scale-95 active:scale-90 px-xs" href="#">Financials</a>
 </div>
-</div>
-<div class="flex items-center gap-md">
-<button class="hidden md:flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
-<span class="material-symbols-outlined" data-icon="search">search</span>
+<div class="flex items-center gap-sm">
+<button class="hidden lg:flex items-center justify-center font-label-md text-label-md text-on-primary-container gradient-btn rounded-full px-sm py-xs transition-all duration-300">
+                    Get a Quote
+                </button>
+<button class="flex items-center justify-center p-xs rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all duration-300 scale-95 active:scale-90 text-primary dark:text-primary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
 </button>
-<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-md hover:bg-primary hover:text-on-primary shadow-sm hover:shadow-md transition-all scale-95 active:opacity-80">
-                Get a Quote
-            </button>
+</div>
 </div>
 </nav>
-<main class="pt-20">
+<main class="pt-[80px]">
 <!-- Hero Section -->
-<section class="relative min-h-[921px] flex items-center px-margin-mobile md:px-margin-desktop py-xl overflow-hidden">
-<div class="absolute inset-0 bg-gradient-to-br from-surface-container to-background -z-10"></div>
-<div class="absolute top-0 right-0 w-1/2 h-full bg-primary-container/5 rounded-bl-[100px] -z-10"></div>
-<div class="grid md:grid-cols-2 gap-xl items-center w-full">
-<div class="space-y-lg max-w-2xl">
-<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-md">
-<span class="material-symbols-outlined text-sm" data-icon="insights">insights</span>
-                        Next-Gen Solar Intelligence
-                    </div>
-<h1 class="text-display-lg md:text-[64px] leading-tight font-display-lg text-on-surface">
-                        Power Your Future with <span class="text-primary">Intelligent Solar</span>
-</h1>
-<p class="text-body-lg text-on-surface-variant md:max-w-lg">
-                        Transform your energy infrastructure with data-driven solar solutions designed for maximum efficiency, measurable ROI, and sustainable performance.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-4 pt-4">
-<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-label-md hover:bg-primary hover:text-on-primary shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2">
+<section class="relative min-h-[921px] flex items-center overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-surface-container-low via-surface-container-lowest to-surface-container-lowest opacity-70 pointer-events-none"></div>
+<div class="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 lg:grid-cols-2 gap-xl items-center relative z-10 py-xl">
+<div class="flex flex-col gap-lg animate-fade-in-up">
+<div class="flex flex-col gap-sm">
+<span class="font-label-md text-label-md text-tertiary uppercase tracking-widest flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">bolt</span> Intelligent Energy
+                        </span>
+<h1 class="font-display-lg text-display-lg text-on-background max-w-2xl">
+                            Power Your Future with <span class="text-primary">Intelligent</span> Solar Solutions
+                        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mt-sm">
+                            Transform your property's energy profile with high-efficiency photovoltaic systems driven by real-time analytics. Maximum ROI, zero emissions.
+                        </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-md">
+<button class="gradient-btn font-label-md text-label-md text-on-primary-container px-lg py-sm rounded-lg flex items-center justify-center gap-sm transition-all duration-300 w-full sm:w-auto">
                             Calculate Savings
-                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+                            <span class="material-symbols-outlined">arrow_forward</span>
 </button>
-<button class="bg-surface text-on-surface border border-outline-variant px-8 py-4 rounded-lg font-label-md hover:bg-surface-container-low transition-all flex items-center justify-center gap-2">
-<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+<button class="bg-surface-container border border-outline-variant/30 font-label-md text-label-md text-on-surface px-lg py-sm rounded-lg flex items-center justify-center gap-sm hover:bg-surface-container-high transition-all duration-300 w-full sm:w-auto">
+<span class="material-symbols-outlined">play_circle</span>
                             Watch Video
                         </button>
 </div>
+<div class="flex items-center gap-md mt-sm pt-sm border-t border-outline-variant/20">
+<div class="flex -space-x-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container border-2 border-surface-container-lowest flex items-center justify-center overflow-hidden">
+<img alt="Customer avatar" class="w-full h-full object-cover" data-alt="A close-up portrait of a professional business executive in a modern corporate setting. The lighting is bright and high-key, creating a clean, trustworthy atmosphere. The overall style is crisp and corporate, suitable for a high-end energy dashboard. Colors are natural with a slight emphasis on cool blues and warm skin tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkdvtt-m7M-jS7gxK3cKpdiF2rxs-W7Ag3uZmKSJ8lmKKtm4qb0DX7c5-q4zkQA8DoaOhjpnYhaOCwivoBx99eAS8oDGpFZjy6zEzr9B8PgPjMS2RUcAQwM5rGy6nJy0Zb39bS2z0W4s3SFkP1ZYcNenhgm9aaeZ9UCOWibniEWVuelzOXIlbSsredMNTIFR3FVKSMfpHtD-z0vAaaxRpDaevb5cR29XfqFc1JmWcL49NTyz4WEjjrjCUdRFQPo_F5t55dmLK66kk">
 </div>
-<div class="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group">
-<img alt="Solar panels" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A striking wide-angle shot of a massive, modern solar farm at sunrise. The sleek, dark blue photovoltaic panels stretch toward the horizon, reflecting the golden light of the early morning sun. The sky is clear, conveying a sense of clean, limitless energy. The aesthetic is highly technical, corporate, and optimistic, utilizing deep navies and bright ambers typical of an industrial dashboard aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWqZcu3YNygppjDQGxEq9Moum4uLz1DowBKbzC0U3tIxO4ebvVkcQLo-kA4iN63ZPEI_C_utSeUER5kDMS9nURQdfrdNgEWBLmUMZtioe0_jsuXuOcYr158ZdS_qWkRJfDOCb0zD-l2CWvLSV3H0eF85eu3MOM9qFQ8os2rJDihtVsT2GhZKV_9fVBfSFJotHDSIrBM40GGcH04kV8dZX6pmJhoFvV14AfQZlsYIQAogqSGXamq7vCdse1XE8GaHiKOHmXFlYXH_I"/>
-<!-- Floating Stat Card -->
-<div class="absolute bottom-6 left-6 right-6 glass-panel p-6 rounded-xl animate-fade-in-up">
-<div class="flex items-center justify-between">
-<div>
-<p class="text-label-md text-on-surface-variant uppercase tracking-wider mb-1">Current Output</p>
-<p class="text-data-display text-on-surface flex items-baseline gap-1">
-                                    84.2 <span class="text-headline-md text-primary">MW</span>
-</p>
+<div class="w-10 h-10 rounded-full bg-primary-container border-2 border-surface-container-lowest flex items-center justify-center overflow-hidden">
+<img alt="Customer avatar" class="w-full h-full object-cover" data-alt="A close-up portrait of a female professional in a modern office space. The lighting is natural and inviting, creating an approachable yet authoritative mood. The visual style is sharp and modern, perfectly fitting a sophisticated SaaS platform. The color palette focuses on neutral whites and subtle corporate blues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfW8Q8z6lAslS02i2gShLEX1kVPGBc5B4uCMCnk8_sxUGbSfkOR_pwLdP9lSDzy77-N1QY5Vn2B9LK35vyJ8R5d8X23nuiWptv9p9pF6ySuaYhHRuFthXSMbKkhF0YZa4cJKbm339FXBmwFGZFLWkVYJUq3joTVfFw-CKwA-GsC7vBmipnP-NdEpUdlxaLmtYKz-wjQeV8sWMgXE6yXbZvC43WdpwS_im1dkinyBg3ENdAcV9U6uXXn4j05iPRYH0ljxsg_R2ABpo">
 </div>
-<div class="w-16 h-16 rounded-full border-4 border-tertiary-container flex items-center justify-center bg-surface">
-<span class="material-symbols-outlined text-tertiary text-2xl" data-icon="trending_up">trending_up</span>
+<div class="w-10 h-10 rounded-full bg-tertiary-container border-2 border-surface-container-lowest flex items-center justify-center text-on-tertiary-container font-label-md text-xs">
+                                5k+
+                            </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Trusted by enterprise leaders worldwide.</p>
 </div>
 </div>
+<div class="relative h-[500px] lg:h-[700px] w-full rounded-[32px] overflow-hidden soft-shadow group">
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-transparent to-transparent z-10"></div>
+<img alt="Premium Solar Installation" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-angle, premium architectural photograph of a vast, modern solar panel array installed on a large industrial flat roof. The panels gleam under bright, clear sunlight against a crisp blue sky. The aesthetic is highly technical, clean, and futuristic, emphasizing precision and scale. Deep oceanic navies and bright solar reflections dominate the palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQWuFtfu9FB2rX9Pt41IUhYGBw1n1w0z3GTOH4clp_BhQkB3Rw2utCEHfiGvIzvpzZh7q6ksIezFvNxhTvl2jLNdVv_YD7cTZCWGfIuMB7qOsxVx4tzVqKErybeKnKRiSgiopnNyBT5K4lCsfKZUDOcs6c2-KERpA5t68wreZ4Xbu__bWmOiiuhXU8JAPvjlZ5T-hDytkpZZRSB9HG9_q2O1w4cn_FFsMxVs_w6fGC_eMLJewXIsZmzMEfgvWqCwo88WKUk3DaKu0">
+<!-- Floating Data Card -->
+<div class="absolute bottom-md right-md z-20 bg-surface-container-lowest/95 backdrop-blur-md p-md rounded-xl soft-shadow border border-outline-variant/10 max-w-xs animate-fade-in-up" style="animation-delay: 0.3s;">
+<div class="flex items-center gap-sm mb-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface">System Active</span>
+</div>
+<div class="font-data-display text-data-display text-primary flex items-baseline gap-1">
+                            84.2 <span class="font-label-md text-label-md text-on-surface-variant">kWh</span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant mt-1">Current Production Level</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="border-y border-outline-variant/20 bg-surface-bright py-lg">
+<div class="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row items-center justify-between gap-lg">
+<div class="flex gap-lg items-center divide-x divide-outline-variant/30 w-full md:w-auto">
+<div class="flex flex-col px-sm text-center md:text-left">
+<span class="font-data-display text-headline-lg text-on-background">1.2<span class="text-primary">GW</span></span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Installed</span>
+</div>
+<div class="flex flex-col pl-lg text-center md:text-left">
+<span class="font-data-display text-headline-lg text-on-background">98<span class="text-tertiary">%</span></span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Client Retention</span>
+</div>
+</div>
+<div class="flex flex-wrap justify-center gap-lg md:gap-xl opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<!-- Placeholder Logos using Material Icons for structure -->
+<div class="flex items-center gap-xs font-headline-md text-on-surface-variant"><span class="material-symbols-outlined text-[32px]">apartment</span> EcoCorp</div>
+<div class="flex items-center gap-xs font-headline-md text-on-surface-variant"><span class="material-symbols-outlined text-[32px]">factory</span> BuildTech</div>
+<div class="flex items-center gap-xs font-headline-md text-on-surface-variant"><span class="material-symbols-outlined text-[32px]">account_balance</span> GlobalGrid</div>
+<div class="hidden lg:flex items-center gap-xs font-headline-md text-on-surface-variant"><span class="material-symbols-outlined text-[32px]">language</span> NexusEnergy</div>
 </div>
 </div>
 </div>
 </section>
-<!-- Trust Indicators -->
-<section class="py-lg px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-y border-outline-variant/20">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-lg mb-lg divide-x divide-outline-variant/20">
-<div class="text-center px-4">
-<p class="text-data-display text-primary mb-2">1.2<span class="text-headline-md">GW</span></p>
-<p class="text-label-md text-on-surface-variant">Total Installed Capacity</p>
-</div>
-<div class="text-center px-4">
-<p class="text-data-display text-primary mb-2">98<span class="text-headline-md">%</span></p>
-<p class="text-label-md text-on-surface-variant">Client Retention Rate</p>
-</div>
-<div class="text-center px-4">
-<p class="text-data-display text-primary mb-2">24<span class="text-headline-md">/7</span></p>
-<p class="text-label-md text-on-surface-variant">Active Monitoring</p>
-</div>
-<div class="text-center px-4">
-<p class="text-data-display text-primary mb-2">15<span class="text-headline-md">+</span></p>
-<p class="text-label-md text-on-surface-variant">Years Experience</p>
-</div>
-</div>
-</section>
-<!-- Services Section (Bento Grid) -->
-<section class="py-xl px-margin-mobile md:px-margin-desktop bg-background">
+<!-- Service Overview (Bento Grid) -->
+<section class="py-xl bg-background">
+<div class="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="mb-lg max-w-2xl">
-<h2 class="text-headline-lg font-headline-lg text-on-surface mb-4">Engineered for Every Scale</h2>
-<p class="text-body-lg text-on-surface-variant">Precision-designed solar architectures tailored to residential, commercial, and utility-scale demands.</p>
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-sm">Comprehensive Energy Solutions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Scalable architectural integrations tailored for diverse operational demands. From domestic efficiency to industrial powerhouses.</p>
 </div>
-<div class="grid md:grid-cols-3 gap-gutter">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
 <!-- Residential Card -->
-<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 bento-hover transition-all duration-300 group cursor-pointer relative overflow-hidden">
-<div class="w-12 h-12 bg-primary-container/10 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
-<span class="material-symbols-outlined" data-icon="home">home</span>
+<div class="bg-surface-container-lowest rounded-2xl p-lg soft-shadow border border-outline-variant/10 interactive-card flex flex-col h-full group relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-md relative z-10">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
 </div>
-<h3 class="text-headline-md font-headline-md text-on-surface mb-3">Residential</h3>
-<p class="text-body-md text-on-surface-variant mb-6">Smart home integration with battery backup systems for complete energy independence and resilience.</p>
-<a class="inline-flex items-center gap-2 text-label-md font-label-md text-primary group-hover:translate-x-2 transition-transform" href="#">
-                        Explore Solutions <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-xs relative z-10">Residential</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow relative z-10">Smart home integrations focusing on aesthetic harmony and maximum roof space utilization. Seamless battery backup systems included.</p>
+<a class="font-label-md text-label-md text-primary flex items-center gap-xs group-hover:gap-sm transition-all mt-auto w-fit relative z-10" href="#">
+                            Explore Residential <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
 </div>
 <!-- Commercial Card -->
-<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 bento-hover transition-all duration-300 group cursor-pointer relative overflow-hidden ring-1 ring-primary-container shadow-md">
-<div class="w-12 h-12 bg-primary-container/10 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
-<span class="material-symbols-outlined" data-icon="business">business</span>
+<div class="bg-surface-container-lowest rounded-2xl p-lg soft-shadow border border-outline-variant/10 interactive-card flex flex-col h-full group relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container/30 flex items-center justify-center text-secondary mb-md relative z-10">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">domain</span>
 </div>
-<h3 class="text-headline-md font-headline-md text-on-surface mb-3">Commercial</h3>
-<p class="text-body-md text-on-surface-variant mb-6">High-yield rooftop and carport installations designed to offset operational costs and meet ESG goals.</p>
-<a class="inline-flex items-center gap-2 text-label-md font-label-md text-primary group-hover:translate-x-2 transition-transform" href="#">
-                        Explore Solutions <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-xs relative z-10">Commercial</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow relative z-10">High-yield arrays designed for flat roofs and carports. Offset operational costs and hit corporate sustainability targets with ease.</p>
+<a class="font-label-md text-label-md text-secondary flex items-center gap-xs group-hover:gap-sm transition-all mt-auto w-fit relative z-10" href="#">
+                            Explore Commercial <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
 </div>
 <!-- Industrial Card -->
-<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 bento-hover transition-all duration-300 group cursor-pointer relative overflow-hidden">
-<div class="w-12 h-12 bg-primary-container/10 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
-<span class="material-symbols-outlined" data-icon="factory">factory</span>
+<div class="bg-surface-container-lowest rounded-2xl p-lg soft-shadow border border-outline-variant/10 interactive-card flex flex-col h-full group relative overflow-hidden md:col-span-1">
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/30 flex items-center justify-center text-tertiary mb-md relative z-10">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">factory</span>
 </div>
-<h3 class="text-headline-md font-headline-md text-on-surface mb-3">Industrial</h3>
-<p class="text-body-md text-on-surface-variant mb-6">Utility-scale ground mounts and microgrids engineered for heavy industry and continuous operation.</p>
-<a class="inline-flex items-center gap-2 text-label-md font-label-md text-primary group-hover:translate-x-2 transition-transform" href="#">
-                        Explore Solutions <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-xs relative z-10">Industrial</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow relative z-10">Utility-scale installations for heavy energy consumers. Advanced grid-tie mechanics and micro-grid architecture for uninterrupted operations.</p>
+<a class="font-label-md text-label-md text-tertiary flex items-center gap-xs group-hover:gap-sm transition-all mt-auto w-fit relative z-10" href="#">
+                            Explore Industrial <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Calculator Preview -->
+<section class="py-xl bg-on-background text-surface-container-lowest relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
+<div class="max-w-screen-xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="bg-inverse-surface border border-outline-variant/20 rounded-3xl p-lg md:p-xl shadow-2xl flex flex-col md:flex-row items-center gap-xl">
+<div class="w-full md:w-1/2 flex flex-col gap-md">
+<h2 class="font-headline-lg text-headline-lg text-surface-container-lowest">Forecast Your ROI</h2>
+<p class="font-body-md text-body-md text-surface-variant/80">See your estimated monthly savings in 30 seconds. Our intelligence engine calculates potential yield based on regional irradiance data.</p>
+<div class="mt-sm flex flex-col gap-sm">
+<label class="font-label-md text-label-md text-surface-variant">Average Monthly Bill ($)</label>
+<div class="flex items-center gap-sm">
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary-container" max="1000" min="100" type="range" value="350">
+<span class="font-headline-md text-primary-fixed w-20 text-right">$350</span>
+</div>
+</div>
+<button class="gradient-btn font-label-md text-label-md text-on-primary-container px-lg py-sm rounded-lg mt-md w-fit">
+                            Generate Full Report
+                        </button>
+</div>
+<div class="w-full md:w-1/2 bg-on-secondary-fixed rounded-2xl p-lg border border-surface-variant/10 relative">
+<div class="absolute -top-4 -right-4 bg-tertiary text-on-tertiary font-label-md text-xs px-sm py-xs rounded-full shadow-lg">
+                            + High Accuracy
+                        </div>
+<div class="flex justify-between items-end mb-lg pb-sm border-b border-surface-variant/10">
+<div>
+<p class="font-label-md text-label-md text-surface-variant/70 uppercase mb-xs">Est. 20-Year Savings</p>
+<p class="font-data-display text-data-display text-tertiary-fixed">$42,850</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md text-surface-variant/70 uppercase mb-xs">Payback Period</p>
+<p class="font-headline-md text-headline-md text-surface-container-lowest">4.2 Yrs</p>
+</div>
+</div>
+<!-- Pseudo Bar Chart -->
+<div class="flex items-end gap-xs h-32 mt-md">
+<div class="w-1/6 bg-surface-variant/20 rounded-t-sm h-[30%] hover:bg-primary/50 transition-colors cursor-pointer relative group">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-surface-container-lowest text-on-surface text-xs py-1 px-2 rounded transition-opacity">Yr1</div>
+</div>
+<div class="w-1/6 bg-surface-variant/20 rounded-t-sm h-[45%] hover:bg-primary/50 transition-colors cursor-pointer relative group"></div>
+<div class="w-1/6 bg-surface-variant/20 rounded-t-sm h-[60%] hover:bg-primary/50 transition-colors cursor-pointer relative group"></div>
+<div class="w-1/6 bg-primary-container rounded-t-sm h-[75%] hover:bg-primary/80 transition-colors cursor-pointer relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary-container text-on-primary-container text-xs font-bold py-1 px-2 rounded shadow-md">ROI</div>
+</div>
+<div class="w-1/6 bg-tertiary/60 rounded-t-sm h-[85%] hover:bg-tertiary transition-colors cursor-pointer relative group"></div>
+<div class="w-1/6 bg-tertiary/80 rounded-t-sm h-[100%] hover:bg-tertiary transition-colors cursor-pointer relative group"></div>
+</div>
+</div>
 </div>
 </div>
 </section>
 </main>
-<!-- Footer (Shared Component) -->
-<footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-xl px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter text-body-md font-body-md flat no shadows">
-<div class="md:col-span-1 space-y-4">
-<div class="text-headline-lg font-headline-lg text-surface-bright dark:text-on-surface font-bold tracking-tight mb-4">
-                SOLAREDGE
-            </div>
-<p class="text-surface-variant dark:text-on-surface-variant">Driving the transition to sustainable, intelligent energy solutions worldwide.</p>
+<!-- SideNavBar (WhatsApp CTA) -->
+<div class="fixed bottom-8 right-8 rounded-full p-4 bg-tertiary-container dark:bg-tertiary text-on-tertiary-container dark:text-on-tertiary font-label-md text-label-md shadow-xl hover:scale-110 hover:shadow-2xl transition-all animate-bounce-slow cursor-pointer z-50 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
 </div>
-<div>
-<h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-4 uppercase tracking-wider">Solutions</h4>
-<ul class="space-y-3">
-<li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary transition-all underline opacity-90 hover:opacity-100" href="#">Residential</a></li>
-<li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary transition-all underline opacity-90 hover:opacity-100" href="#">Commercial</a></li>
-<li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary transition-all underline opacity-90 hover:opacity-100" href="#">Storage</a></li>
-</ul>
+<!-- Footer -->
+<footer class="bg-on-background dark:bg-surface-container-lowest text-primary-fixed dark:text-primary font-body-md text-body-md w-full rounded-t-xl grid grid-cols-1 md:grid-cols-4 gap-md px-margin-desktop py-xl w-full">
+<div class="col-span-1 md:col-span-4 flex flex-col md:flex-row justify-between items-start md:items-center border-b border-surface-variant/10 pb-lg mb-md">
+<span class="font-headline-lg text-headline-lg text-primary-fixed">SolarPulse</span>
+<span class="text-surface-variant/70 text-sm mt-sm md:mt-0">© 2024 SolarPulse Intelligence. All rights reserved.</span>
 </div>
-<div>
-<h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-4 uppercase tracking-wider">Company</h4>
-<ul class="space-y-3">
-<li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary transition-all underline opacity-90 hover:opacity-100" href="#">Financials</a></li>
-<li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary transition-all underline opacity-90 hover:opacity-100" href="#">About Us</a></li>
-<li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary transition-all underline opacity-90 hover:opacity-100" href="#">Careers</a></li>
-</ul>
+<div class="flex flex-col gap-sm">
+<a class="text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
 </div>
-<div>
-<h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-4 uppercase tracking-wider">Legal</h4>
-<ul class="space-y-3">
-<li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary transition-all underline opacity-90 hover:opacity-100" href="#">Privacy Policy</a></li>
-<li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary transition-all underline opacity-90 hover:opacity-100" href="#">Terms of Service</a></li>
-</ul>
+<div class="flex flex-col gap-sm">
+<a class="text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
 </div>
-<div class="col-span-1 md:col-span-4 mt-lg pt-lg border-t border-surface-variant/20 text-center text-surface-variant dark:text-on-surface-variant text-sm">
-            © 2025 SolarEdge. All rights reserved. Green Energy Website By PSM Marketing
-        </div>
+<div class="flex flex-col gap-sm">
+<a class="text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 transition-opacity" href="#">Sustainability Report</a>
+</div>
+<div class="flex flex-col gap-sm">
+<a class="text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 transition-opacity" href="#">Investor Relations</a>
+</div>
 </footer>
 </body></html>
