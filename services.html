@@ -158,12 +158,14 @@
 <!-- Using placeholder as instructed -->
 <img alt="Hero background" class="w-full h-full object-cover opacity-40" data-alt="A sprawling utility-scale solar farm stretching out to the horizon under a clear, bright blue sky. The scene is bathed in brilliant midday sunlight, reflecting sharply off the sleek, geometric blue panels. The aesthetic is highly technical, industrial, and optimistic, emphasizing clean energy infrastructure. The color palette features intense blues, crisp whites, and deep, structured shadows, conveying an atmosphere of scale, precision, and modern engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA47wVZDd8uoocdpSw6n3N0WLjNDgUzr27sGEZF83t6zILd3H8lWRn0SCgre-wcVNEj0oZXqSYdIs9zfJ5gddiOKjSxc8cDrm1JC4rpoqE7EqOIdaoi49S5bC6m_6dtIBiEJ9vRs8cJH3Y8tVkc9adpVwxa6Hm-gwhgfkyIs0-IJIZQuGVHpdpORYmvYYcIMUfejCrNY3yctH7xdngWOKPaWb6z7gATCzp-QdmWiv_C2XGpwiyeuHoGt6Eo20oe3VEHFL3RjzFmnzs"/>
 </div>
-<div class="relative z-10 max-w-4xl">
+<div class="max-w-7xl mx-auto w-full relative z-10">
+<div class="max-w-4xl">
 <h1 class="font-display-lg text-display-lg md:text-[64px] text-on-primary leading-tight mb-md">Tailored Energy Ecosystems for Every Scale</h1>
 <p class="font-body-lg text-body-lg text-surface-variant mb-lg max-w-2xl">From residential autonomy to utility-scale infrastructure, we engineer precision solar solutions designed for maximum yield and operational resilience.</p>
 <div class="flex flex-wrap gap-sm">
-<button class="bg-primary-container text-on-primary-container font-label-md text-label-md px-lg py-md rounded-lg shadow-sm hover:shadow-md hover:bg-[#e6a22c] transition-all transform hover:-translate-y-1">Request Consultation</button>
-<button class="bg-transparent border-2 border-surface-variant text-on-primary font-label-md text-label-md px-lg py-md rounded-lg hover:bg-surface-variant/10 transition-all">Explore Services</button>
+<button onclick="document.getElementById('residential').scrollIntoView({behavior: 'smooth'})" class="bg-primary-container text-on-primary-container font-label-md text-label-md px-lg py-md rounded-lg shadow-sm hover:shadow-md hover:bg-[#e6a22c] transition-all transform hover:-translate-y-1">Request Consultation</button>
+<button onclick="document.getElementById('residential').scrollIntoView({behavior: 'smooth'})" class="bg-transparent border-2 border-surface-variant text-on-primary font-label-md text-label-md px-lg py-md rounded-lg hover:bg-surface-variant/10 transition-all">Explore Services</button>
+</div>
 </div>
 </div>
 </section>
@@ -172,7 +174,7 @@
 <div class="max-w-7xl mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
 <!-- Card 1 -->
-<div class="bg-surface p-md rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-surface-container-high group cursor-pointer">
+<div onclick="document.getElementById('residential').scrollIntoView({behavior: 'smooth'})" class="bg-surface p-md rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-surface-container-high group cursor-pointer">
 <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-md group-hover:bg-primary-container transition-colors">
 <span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-primary-container transition-colors" data-icon="home">home</span>
 </div>
@@ -180,7 +182,7 @@
 <p class="font-body-md text-body-md text-on-surface-variant">Complete energy independence for your home.</p>
 </div>
 <!-- Card 2 -->
-<div class="bg-surface p-md rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-surface-container-high group cursor-pointer">
+<div onclick="document.getElementById('commercial').scrollIntoView({behavior: 'smooth'})" class="bg-surface p-md rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-surface-container-high group cursor-pointer">
 <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-md group-hover:bg-primary-container transition-colors">
 <span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-primary-container transition-colors" data-icon="domain">domain</span>
 </div>
@@ -188,7 +190,7 @@
 <p class="font-body-md text-body-md text-on-surface-variant">Operational cost reduction at scale.</p>
 </div>
 <!-- Card 3 -->
-<div class="bg-surface p-md rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-surface-container-high group cursor-pointer">
+<div onclick="document.getElementById('industrial').scrollIntoView({behavior: 'smooth'})" class="bg-surface p-md rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-surface-container-high group cursor-pointer">
 <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-md group-hover:bg-primary-container transition-colors">
 <span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-primary-container transition-colors" data-icon="factory">factory</span>
 </div>
@@ -196,7 +198,7 @@
 <p class="font-body-md text-body-md text-on-surface-variant">Heavy-duty infrastructure engineering.</p>
 </div>
 <!-- Card 4 -->
-<div class="bg-surface p-md rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-surface-container-high group cursor-pointer">
+<div onclick="document.getElementById('storage').scrollIntoView({behavior: 'smooth'})" class="bg-surface p-md rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border border-surface-container-high group cursor-pointer">
 <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-md group-hover:bg-primary-container transition-colors">
 <span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-primary-container transition-colors" data-icon="battery_charging_full">battery_charging_full</span>
 </div>
@@ -207,103 +209,194 @@
 </div>
 </section>
 <!-- 3. Residential Solar Solutions -->
-<section class="py-xl px-margin-mobile md:px-margin-desktop bg-surface-bright">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-xl items-center">
-<div class="flex-1">
-<div class="inline-flex items-center gap-xs px-sm py-xs bg-surface-container rounded-full mb-md">
+<section id="residential" class="py-xl px-margin-mobile md:px-margin-desktop bg-surface-bright scroll-mt-20">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-xl items-center">
+<div class="flex-1 space-y-md">
+<div class="inline-flex items-center gap-xs px-sm py-xs bg-surface-container rounded-full">
 <span class="w-2 h-2 rounded-full bg-primary-container"></span>
-<span class="font-label-md text-[12px] text-on-surface-variant">Home Solutions</span>
+<span class="font-label-md text-[12px] text-on-surface-variant uppercase tracking-wider">Home Energy Ecosystems</span>
 </div>
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-md">Residential Solar Solutions</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">Achieve true energy independence. Our residential ecosystems are designed to seamlessly integrate with your home's architecture while drastically reducing utility dependence.</p>
-<ul class="space-y-sm mb-lg">
-<li class="flex items-start gap-sm">
-<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
-<div>
-<span class="block font-label-md text-label-md text-on-surface">Zero Upfront Cost Options</span>
-<span class="font-body-md text-body-md text-on-surface-variant">Flexible financing tailored to your household.</span>
+<h2 class="font-display-lg text-display-lg text-on-surface">Residential Solar &amp; Autonomy</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+    Gain complete power security and escape rising utility rates. Solaris engineers premium rooftop solar arrays tailored to your architectural structure and daily energy demands. We utilize tier-one double-sided solar technology to deliver maximum yield in all weather conditions.
+</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md pt-2">
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+        <div>
+            <h4 class="font-label-md text-on-surface">Zero-Down Smart Financing</h4>
+            <p class="font-body-md text-sm text-on-surface-variant">Access flexible lease-to-own models and state incentives.</p>
+        </div>
+    </div>
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+        <div>
+            <h4 class="font-label-md text-on-surface">Intelligent IoT Management</h4>
+            <p class="font-body-md text-sm text-on-surface-variant">Monitor generation and storage live with our web dashboard.</p>
+        </div>
+    </div>
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+        <div>
+            <h4 class="font-label-md text-on-surface">Automatic Grid Swapping</h4>
+            <p class="font-body-md text-sm text-on-surface-variant">Seamless power switching protecting your electronic devices.</p>
+        </div>
+    </div>
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+        <div>
+            <h4 class="font-label-md text-on-surface">Extended 25-Year Warranty</h4>
+            <p class="font-body-md text-sm text-on-surface-variant">Industry-leading guarantees on performance and workmanship.</p>
+        </div>
+    </div>
 </div>
-</li>
-<li class="flex items-start gap-sm">
-<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
-<div>
-<span class="block font-label-md text-label-md text-on-surface">Smart Home Integration</span>
-<span class="font-body-md text-body-md text-on-surface-variant">Real-time monitoring via our mobile app.</span>
 </div>
-</li>
-</ul>
-</div>
-<div class="flex-1 relative w-full aspect-square md:aspect-auto md:h-[500px]">
-<img alt="Residential Solar" class="w-full h-full object-cover rounded-2xl shadow-sm" data-alt="A modern, high-end suburban home featuring a sleek, integrated solar roof. The architecture is contemporary with clean lines and large glass windows. The lighting is warm and inviting, capturing late afternoon sunshine hitting the pristine black solar panels. The environment is lush and manicured, conveying a premium, eco-conscious residential lifestyle. The overall tone is sophisticated, clean, and affluent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJsaBs6i-u83MCbNJdg60wlylJNP04kT2_JvUQRrCR6bIASnAcBTZhWa2J61js__rKUs_m_y9jLYWldbHlWq71wR8RKnMnxGPNx5vMOTbIC3IpCxLudaoYENcANIa0Tx1AdU_NqMH_OVlDrqnhK3_VTkxeoaN-a727P68Nn50fh5FFgAa-RuNDcZAwh2sN2679Q2i-XPtTjIVd58-X0vHy8vyPNcjqo4cEaYEOrG1YcO1wNl_crzmS8T7Hj3Wx-DnQC82SEfITTss"/>
+<div class="flex-1 w-full relative aspect-[4/3] rounded-2xl overflow-hidden shadow-elevated border border-outline-variant/20">
+<img alt="Residential Solar" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="assets/images/service-residential.png"/>
 </div>
 </div>
 </section>
 <!-- 4. Commercial Solar Solutions -->
-<section class="py-xl px-margin-mobile md:px-margin-desktop bg-surface-container-low border-y border-surface-container-high">
-<div class="max-w-7xl mx-auto">
-<div class="text-center max-w-3xl mx-auto mb-xl">
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-md">Commercial Solar Solutions</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">Transform your real estate footprint into a revenue-generating asset. We provide data-driven energy strategies to lower operational costs and meet corporate sustainability goals.</p>
+<section id="commercial" class="py-xl px-margin-mobile md:px-margin-desktop bg-surface-container-low border-y border-surface-container-high scroll-mt-20">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse gap-xl items-center">
+<div class="flex-1 space-y-md">
+<div class="inline-flex items-center gap-xs px-sm py-xs bg-surface-container rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-md text-[12px] text-on-surface-variant uppercase tracking-wider">Corporate Sustainability</span>
 </div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
-<div class="bg-surface rounded-2xl overflow-hidden shadow-sm">
-<img alt="Commercial Installation" class="w-full h-[300px] object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtnVk6hv3aDjxA5Z54C8G9LT50nLyAu30IoVqD2SPDAVJTLeXBDndEPZN5tZ25ANRRZ2xJib3nVQPoTSvzAWumx7T3Ogw4D1L4rPXy2zsoG1xzWyhphF8mtgwZNRWnNtd-Wa1sZNfgY-h6OtXW_Klb1OFYLXPy2_Nc3ySmHItXeV7Q0ThNESkGrs2UPcwFF9gwFmd__MWVjtSjyVcCXoheVudpmWmXCkLxp6t6TEwHzVsDSDC3N7Xsj6Q"/>
-<div class="p-lg">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Corporate Campuses</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Scalable rooftop and carport solutions designed for high energy consumption facilities.</p>
+<h2 class="font-display-lg text-display-lg text-on-surface">Commercial Roof &amp; Canopy Arrays</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+    Lower your corporate carbon footprint while transforming operational real estate into revenue-generating space. We provide complete solar carports, parking awnings, and large flat-roof arrays tailored to commercial facilities, corporate parks, and office towers.
+</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md pt-2">
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="trending_down">trending_down</span>
+        <div>
+            <h4 class="font-label-md text-on-surface">40% OpEx Reduction</h4>
+            <p class="font-body-md text-sm text-on-surface-variant">Significantly decrease electricity costs and stabilize cash flow.</p>
+        </div>
+    </div>
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="eco">eco</span>
+        <div>
+            <h4 class="font-label-md text-on-surface">ESG Compliance Reporting</h4>
+            <p class="font-body-md text-sm text-on-surface-variant">Comprehensive dashboard reports detailing green offset metrics.</p>
+        </div>
+    </div>
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="account_balance">account_balance</span>
+        <div>
+            <h4 class="font-label-md text-on-surface">Tax Incentive Optimization</h4>
+            <p class="font-body-md text-sm text-on-surface-variant">Maximized corporate depreciation benefits and tax credits.</p>
+        </div>
+    </div>
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="electric_car">electric_car</span>
+        <div>
+            <h4 class="font-label-md text-on-surface">EV Charging Integration</h4>
+            <p class="font-body-md text-sm text-on-surface-variant">Integrate smart electric vehicle docks powered by solar surplus.</p>
+        </div>
+    </div>
 </div>
 </div>
-<div class="flex flex-col gap-gutter">
-<div class="bg-surface p-md rounded-2xl shadow-sm flex items-center gap-md">
-<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-on-secondary-container text-[32px]" data-icon="trending_down">trending_down</span>
-</div>
-<div>
-<span class="block font-data-display text-data-display text-on-surface">40%</span>
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Average OpEx Reduction</span>
-</div>
-</div>
-<div class="bg-surface p-md rounded-2xl shadow-sm flex items-center gap-md">
-<div class="w-16 h-16 rounded-full bg-tertiary-container flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-on-tertiary-container text-[32px]" data-icon="eco">eco</span>
-</div>
-<div>
-<span class="block font-data-display text-data-display text-on-surface">Tier 1</span>
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">ESG Compliance Reporting</span>
-</div>
-</div>
-<div class="bg-surface p-md rounded-2xl shadow-sm flex items-center gap-md">
-<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-on-primary-container text-[32px]" data-icon="account_balance">account_balance</span>
-</div>
-<div>
-<span class="block font-data-display text-data-display text-on-surface">Tax</span>
-<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Incentive Optimization</span>
-</div>
-</div>
-</div>
+<div class="flex-1 w-full relative aspect-[4/3] rounded-2xl overflow-hidden shadow-elevated border border-outline-variant/20">
+<img alt="Commercial Solar" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="assets/images/service-commercial.png"/>
 </div>
 </div>
 </section>
 <!-- 5. Industrial Solar Solutions -->
-<section class="py-xl px-margin-mobile md:px-margin-desktop bg-inverse-surface text-on-primary">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row-reverse gap-xl items-center">
-<div class="flex-1">
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary mb-md">Industrial Solar Solutions</h2>
-<p class="font-body-lg text-body-lg text-surface-variant mb-lg">Engineering-grade infrastructure for heavy manufacturing, logistics hubs, and utility-scale deployments. Built for extreme durability and uncompromising performance.</p>
-<div class="grid grid-cols-2 gap-md">
-<div class="border-l-2 border-primary-container pl-sm">
-<span class="block font-headline-md text-headline-md text-primary-fixed-dim">MW+</span>
-<span class="font-label-md text-label-md text-surface-variant">Scale Capacity</span>
+<section id="industrial" class="py-xl px-margin-mobile md:px-margin-desktop bg-inverse-surface text-on-primary scroll-mt-20">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-xl items-center">
+<div class="flex-1 space-y-md">
+<div class="inline-flex items-center gap-xs px-sm py-xs bg-surface-container/10 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim"></span>
+<span class="font-label-md text-[12px] text-surface-variant uppercase tracking-wider">Heavy Infrastructure</span>
 </div>
-<div class="border-l-2 border-primary-container pl-sm">
-<span class="block font-headline-md text-headline-md text-primary-fixed-dim">99.9%</span>
-<span class="font-label-md text-label-md text-surface-variant">Uptime SLA</span>
+<h2 class="font-display-lg text-display-lg text-on-primary">Industrial-Grade Clean Microgrids</h2>
+<p class="font-body-lg text-body-lg text-surface-variant leading-relaxed">
+    Support high-load manufacturing, massive logistics centers, and heavy processing machinery with continuous, robust clean power. Solaris constructs utility-scale ground mounts and durable rooftop microgrids engineered to withstand severe weather, high vibration, and heavy power demands.
+</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md pt-2">
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary-fixed-dim mt-1" data-icon="bolt">bolt</span>
+        <div>
+            <h4 class="font-label-md text-on-primary">Multi-Megawatt Systems</h4>
+            <p class="font-body-md text-sm text-surface-variant">High-capacity electrical architecture built for peak operations.</p>
+        </div>
+    </div>
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary-fixed-dim mt-1" data-icon="verified_user">verified_user</span>
+        <div>
+            <h4 class="font-label-md text-on-primary">99.9% Power Uptime SLA</h4>
+            <p class="font-body-md text-sm text-surface-variant">Contractual reliability guarantees backed by active engineering support.</p>
+        </div>
+    </div>
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary-fixed-dim mt-1" data-icon="grid_view">grid_view</span>
+        <div>
+            <h4 class="font-label-md text-on-primary">High-Voltage Substations</h4>
+            <p class="font-body-md text-sm text-surface-variant">Custom grid interconnects and substation step-up solutions.</p>
+        </div>
+    </div>
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary-fixed-dim mt-1" data-icon="analytics">analytics</span>
+        <div>
+            <h4 class="font-label-md text-on-primary">Power Quality Stabilization</h4>
+            <p class="font-body-md text-sm text-surface-variant">Active harmonic filtering and frequency correction systems.</p>
+        </div>
+    </div>
 </div>
 </div>
+<div class="flex-1 w-full relative aspect-[4/3] rounded-2xl overflow-hidden shadow-elevated border border-outline-variant/10">
+<img alt="Industrial Solar" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="assets/images/service-industrial.png"/>
 </div>
-<div class="flex-1 relative w-full aspect-[1.49] md:h-[500px]">
-<img alt="Industrial Engineering" class="w-full h-full object-cover rounded-2xl shadow-sm" src="https://lh3.googleusercontent.com/aida/AP1WRLswkiWAqROypcULVizFuy0sACUb7fbLB4nDLMoRZEhQmvxUwYfXWP44LMku8SHYVQqcBNGV5kVlBVkosIKosiNklWYX9uMn5n_u9f6QRNE1CLnxkt88dB4vwZ8LArTRZ9MFY81sjNSbxoDsoOWbQmSKa_QuxtnhMgWE_XzLcER0jti02W0K6P6Nmc8rTdz0DPfCD4_neDsGYwnjDVKcMxfnboqtNj6MJRAQ3JrOF8qu4P6QkUlDpeSLRG4"/>
+</div>
+</section>
+<!-- 6. Battery Storage Solutions -->
+<section id="storage" class="py-xl px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-b border-surface-container-high scroll-mt-20">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse gap-xl items-center">
+<div class="flex-1 space-y-md">
+<div class="inline-flex items-center gap-xs px-sm py-xs bg-surface-container rounded-full">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span class="font-label-md text-[12px] text-on-surface-variant uppercase tracking-wider">Storage &amp; Backup</span>
+</div>
+<h2 class="font-display-lg text-display-lg text-on-surface">Intelligent Battery Energy Storage (BESS)</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+    Ensure absolute business continuity and residential power reliability. Our smart battery storage configurations store excess clean energy during low-tariff hours and discharge it during peak demand intervals to maximize ROI and provide seamless backup.
+</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md pt-2">
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="battery_charging_full">battery_charging_full</span>
+        <div>
+            <h4 class="font-label-md text-on-surface">Instantaneous Failover (UPS)</h4>
+            <p class="font-body-md text-sm text-on-surface-variant">Micro-second automated switching protecting systems from spikes.</p>
+        </div>
+    </div>
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="schedule">schedule</span>
+        <div>
+            <h4 class="font-label-md text-on-surface">Peak Load Shaving</h4>
+            <p class="font-body-md text-sm text-on-surface-variant">Smart scheduled dispatch during periods of maximum tariff pricing.</p>
+        </div>
+    </div>
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="waves">waves</span>
+        <div>
+            <h4 class="font-label-md text-on-surface">Frequency Regulation</h4>
+            <p class="font-body-md text-sm text-on-surface-variant">Stable current delivery matching dynamic load configurations.</p>
+        </div>
+    </div>
+    <div class="flex items-start gap-sm">
+        <span class="material-symbols-outlined text-primary mt-1" data-icon="refresh">refresh</span>
+        <div>
+            <h4 class="font-label-md text-on-surface">Black-Start Recovery</h4>
+            <p class="font-body-md text-sm text-on-surface-variant">Self-healing grid configurations for complete offline boot-up.</p>
+        </div>
+    </div>
+</div>
+</div>
+<div class="flex-1 w-full relative aspect-[4/3] rounded-2xl overflow-hidden shadow-elevated border border-outline-variant/20">
+<img alt="Battery Storage Solutions" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="assets/images/service-storage.png"/>
 </div>
 </div>
 </section>
@@ -312,30 +405,86 @@
 <div class="max-w-3xl mx-auto">
 <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary mb-md">Take Control of Your Energy Future</h2>
 <p class="font-body-lg text-body-lg text-surface-variant mb-lg">Stop renting your power. Partner with SolarPulse to architect a resilient, cost-effective energy ecosystem.</p>
-<button class="bg-primary-container text-on-primary-container font-label-md text-label-md px-xl py-md rounded-lg shadow-sm hover:shadow-md hover:bg-[#e6a22c] transition-all text-lg">Start Your Journey</button>
+<button onclick="document.getElementById('residential').scrollIntoView({behavior: 'smooth'})" class="bg-primary-container text-on-primary-container font-label-md text-label-md px-xl py-md rounded-lg shadow-sm hover:shadow-md hover:bg-[#e6a22c] transition-all text-lg">Start Your Journey</button>
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="w-full py-xl px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-inverse-surface dark:bg-on-background border-t border-outline-variant/10">
-<div class="col-span-1 md:col-span-4 mb-md">
-<span class="font-display-lg text-headline-md font-bold text-primary-fixed">SolarPulse</span>
-</div>
-<div class="flex flex-col gap-sm">
-<a class="text-surface-variant/80 hover:text-primary-fixed transition-colors hover:underline opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">About Us</a>
-<a class="text-surface-variant/80 hover:text-primary-fixed transition-colors hover:underline opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Sustainability</a>
-<a class="text-surface-variant/80 hover:text-primary-fixed transition-colors hover:underline opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Investor Relations</a>
-</div>
-<div class="flex flex-col gap-sm">
-<a class="text-surface-variant/80 hover:text-primary-fixed transition-colors hover:underline opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Project Gallery</a>
-<a class="text-surface-variant/80 hover:text-primary-fixed transition-colors hover:underline opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Privacy Policy</a>
-</div>
-<div class="flex flex-col gap-sm">
-<a class="text-surface-variant/80 hover:text-primary-fixed transition-colors hover:underline opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Terms of Service</a>
-<a class="text-surface-variant/80 hover:text-primary-fixed transition-colors hover:underline opacity-80 hover:opacity-100 font-body-md text-body-md" href="#">Legal Disclaimer</a>
-</div>
-<div class="col-span-1 md:col-span-4 mt-lg border-t border-outline-variant/10 pt-md">
-<p class="font-body-md text-body-md text-surface-variant/80">© 2024 SolarPulse Energy Solutions. All rights reserved. Precision Energy Analytics.</p>
+<!-- Footer (Shared Component) -->
+<footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-xl px-margin-mobile md:px-margin-desktop text-body-md font-body-md border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter">
+    <!-- Brand Info -->
+    <div class="lg:col-span-2 space-y-md">
+        <div class="text-headline-lg font-headline-lg text-surface-bright dark:text-on-surface font-bold tracking-tight flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-3xl" data-icon="solar_power" data-weight="fill" style="font-variation-settings: 'FILL' 1;">solar_power</span>
+            SOLAREDGE
+        </div>
+        <p class="text-surface-variant dark:text-on-surface-variant max-w-sm">
+            Empowering communities and enterprise operations with high-yield, smart solar technology. Architecting sustainable power systems for next-generation intelligence.
+        </p>
+        <div class="flex gap-sm pt-2">
+            <a href="#" class="w-10 h-10 rounded-full bg-surface-container-low dark:bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all duration-300">
+                <span class="material-symbols-outlined text-lg">public</span>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-surface-container-low dark:bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all duration-300">
+                <span class="material-symbols-outlined text-lg">share</span>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-surface-container-low dark:bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all duration-300">
+                <span class="material-symbols-outlined text-lg">mail</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Solutions -->
+    <div>
+        <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Solutions</h4>
+        <ul class="space-y-sm">
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#residential">Residential</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#commercial">Commercial</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#industrial">Industrial</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#storage">Storage Systems</a></li>
+        </ul>
+    </div>
+    
+    <!-- Company -->
+    <div>
+        <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Company</h4>
+        <ul class="space-y-sm">
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="about.html">About Us</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="portfolio.html">Gallery</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="admin.html">Dashboard</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <!-- Contact Info -->
+    <div>
+        <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Contact</h4>
+        <ul class="space-y-sm text-surface-variant dark:text-on-surface-variant">
+            <li class="flex gap-2 items-start">
+                <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                <span>100 Clean Energy Way, Lagos, Nigeria</span>
+            </li>
+            <li class="flex gap-2 items-center">
+                <span class="material-symbols-outlined text-primary text-lg">call</span>
+                <span>+234 800 SOLAR</span>
+            </li>
+            <li class="flex gap-2 items-center">
+                <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                <span>support@solaredge.com</span>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Bottom copyright -->
+    <div class="col-span-1 md:col-span-2 lg:col-span-5 mt-xl pt-lg border-t border-surface-variant/20 flex flex-col md:flex-row justify-between items-center gap-md text-surface-variant dark:text-on-surface-variant text-sm">
+        <div>
+            © 2026 SolarEdge Energy Solutions. All rights reserved. Precision Engineering & Intelligence.
+        </div>
+        <div class="flex gap-md">
+            <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+        </div>
+    </div>
 </div>
 </footer>
 </body></html>
