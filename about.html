@@ -299,30 +299,166 @@
 <div class="text-center mb-lg">
 <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">Industries We Serve</h2>
 </div>
-<div class="grid grid-cols-2 md:grid-cols-5 gap-md text-center">
-<div class="p-sm bg-surface-container-lowest rounded-xl shadow-sm">
-<span class="material-symbols-outlined text-3xl text-secondary mb-xs">home</span>
-<div class="font-label-md text-label-md">Residential</div>
+
+<!-- Nav Pills -->
+<div class="flex flex-wrap justify-center gap-sm mb-lg">
+<button onclick="switchIndustry('residential')" id="btn-residential" class="industry-tab-btn flex items-center gap-2 px-6 py-3 rounded-full border border-primary/20 bg-primary-container text-on-primary-container transition-all font-medium active:scale-95">
+<span class="material-symbols-outlined text-lg">home</span>
+<span class="font-label-md text-label-md">Residential</span>
+</button>
+<button onclick="switchIndustry('commercial')" id="btn-commercial" class="industry-tab-btn flex items-center gap-2 px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-all font-medium active:scale-95">
+<span class="material-symbols-outlined text-lg">domain</span>
+<span class="font-label-md text-label-md">Commercial</span>
+</button>
+<button onclick="switchIndustry('healthcare')" id="btn-healthcare" class="industry-tab-btn flex items-center gap-2 px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-all font-medium active:scale-95">
+<span class="material-symbols-outlined text-lg">local_hospital</span>
+<span class="font-label-md text-label-md">Healthcare</span>
+</button>
+<button onclick="switchIndustry('education')" id="btn-education" class="industry-tab-btn flex items-center gap-2 px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-all font-medium active:scale-95">
+<span class="material-symbols-outlined text-lg">school</span>
+<span class="font-label-md text-label-md">Education</span>
+</button>
+<button onclick="switchIndustry('government')" id="btn-government" class="industry-tab-btn flex items-center gap-2 px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-all font-medium active:scale-95">
+<span class="material-symbols-outlined text-lg">account_balance</span>
+<span class="font-label-md text-label-md">Government</span>
+</button>
 </div>
-<div class="p-sm bg-surface-container-lowest rounded-xl shadow-sm">
-<span class="material-symbols-outlined text-3xl text-secondary mb-xs">domain</span>
-<div class="font-label-md text-label-md">Commercial</div>
+
+<!-- Tab Content Container -->
+<div class="bg-surface-container-lowest p-md md:p-lg rounded-2xl border border-outline-variant/20 shadow-elevated">
+<!-- Residential Panel -->
+<div id="panel-residential" class="industry-panel grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div class="h-[250px] md:h-[350px] rounded-xl overflow-hidden shadow-sm border border-outline-variant/10">
+<img src="industry-residential.png" class="w-full h-full object-cover" alt="Residential Solar">
 </div>
-<div class="p-sm bg-surface-container-lowest rounded-xl shadow-sm">
-<span class="material-symbols-outlined text-3xl text-secondary mb-xs">local_hospital</span>
-<div class="font-label-md text-label-md">Healthcare</div>
+<div class="space-y-md">
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase">Residential Energy Solutions</span>
+<h3 class="font-headline-md text-headline-md text-on-surface text-2xl">Powering Smart, Sustainable Homes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Solaris provides state-of-the-art rooftop solar systems customized for modern residential homes. Our high-efficiency tier-one panels, intelligent battery storage solutions, and real-time monitoring software allow homeowners to gain true energy independence, drastically reduce monthly utility bills, and build a sustainable future.
+                        </p>
+<div class="pt-2">
+<a href="contact.html" class="inline-flex items-center gap-2 text-primary font-medium hover:underline">
+<span>Get started for home</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
 </div>
-<div class="p-sm bg-surface-container-lowest rounded-xl shadow-sm">
-<span class="material-symbols-outlined text-3xl text-secondary mb-xs">school</span>
-<div class="font-label-md text-label-md">Education</div>
 </div>
-<div class="p-sm bg-surface-container-lowest rounded-xl shadow-sm">
-<span class="material-symbols-outlined text-3xl text-secondary mb-xs">account_balance</span>
-<div class="font-label-md text-label-md">Government</div>
+</div>
+
+<!-- Commercial Panel -->
+<div id="panel-commercial" class="industry-panel hidden grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div class="h-[250px] md:h-[350px] rounded-xl overflow-hidden shadow-sm border border-outline-variant/10">
+<img src="industry-commercial.png" class="w-full h-full object-cover" alt="Commercial Solar">
+</div>
+<div class="space-y-md">
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase">Commercial &amp; Industrial Systems</span>
+<h3 class="font-headline-md text-headline-md text-on-surface text-2xl">High-Yield Energy for Enterprises</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Lower your operational overhead and meet corporate sustainability targets with our scalable commercial solar installations. Designed for factories, office parks, warehouses, and shopping centers, our custom engineering ensures maximum power density and rapid return on investment.
+                        </p>
+<div class="pt-2">
+<a href="contact.html" class="inline-flex items-center gap-2 text-primary font-medium hover:underline">
+<span>Explore commercial scale</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+
+<!-- Healthcare Panel -->
+<div id="panel-healthcare" class="industry-panel hidden grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div class="h-[250px] md:h-[350px] rounded-xl overflow-hidden shadow-sm border border-outline-variant/10">
+<img src="industry-healthcare.png" class="w-full h-full object-cover" alt="Healthcare Solar">
+</div>
+<div class="space-y-md">
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase">Healthcare Facilities Solar</span>
+<h3 class="font-headline-md text-headline-md text-on-surface text-2xl">Uninterrupted Power for Critical Care</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Hospitals and clinics require absolute power reliability. Our hybrid microgrid systems combine high-efficiency solar arrays with advanced battery storage backups to ensure life-saving equipment remains operational 24/7, even during utility grid failures.
+                        </p>
+<div class="pt-2">
+<a href="contact.html" class="inline-flex items-center gap-2 text-primary font-medium hover:underline">
+<span>Review medical systems</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+
+<!-- Education Panel -->
+<div id="panel-education" class="industry-panel hidden grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div class="h-[250px] md:h-[350px] rounded-xl overflow-hidden shadow-sm border border-outline-variant/10">
+<img src="industry-education.png" class="w-full h-full object-cover" alt="Education Solar">
+</div>
+<div class="space-y-md">
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase">Solar for Schools &amp; Universities</span>
+<h3 class="font-headline-md text-headline-md text-on-surface text-2xl">Inspiring the Next Generation with Clean Power</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Convert educational campuses into sustainable learning environments. By deploying solar panel arrays on roofs, awnings, and parking canopies, schools can redirect savings from high utility bills back into classrooms while educating students on clean technology.
+                        </p>
+<div class="pt-2">
+<a href="contact.html" class="inline-flex items-center gap-2 text-primary font-medium hover:underline">
+<span>Learn about campus programs</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+
+<!-- Government Panel -->
+<div id="panel-government" class="industry-panel hidden grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div class="h-[250px] md:h-[350px] rounded-xl overflow-hidden shadow-sm border border-outline-variant/10">
+<img src="industry-government.png" class="w-full h-full object-cover" alt="Government Solar">
+</div>
+<div class="space-y-md">
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase">Civic &amp; Municipal Solar Programs</span>
+<h3 class="font-headline-md text-headline-md text-on-surface text-2xl">Secure &amp; Resilient Public Infrastructure</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Solaris partners with municipal, state, and federal bodies to deliver resilient energy solutions for public buildings, community grids, and security infrastructure. Our installations help government agencies meet environmental mandates and save taxpayer money.
+                        </p>
+<div class="pt-2">
+<a href="contact.html" class="inline-flex items-center gap-2 text-primary font-medium hover:underline">
+<span>Browse municipal resources</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
 </div>
 </div>
 </div>
 </section>
+
+<!-- Script for tab toggling -->
+<script>
+function switchIndustry(industryId) {
+    // Hide all panels
+    const panels = document.querySelectorAll('.industry-panel');
+    panels.forEach(panel => {
+        panel.classList.add('hidden');
+    });
+
+    // Remove active styles from all buttons
+    const buttons = document.querySelectorAll('.industry-tab-btn');
+    buttons.forEach(btn => {
+        btn.classList.remove('bg-primary-container', 'text-on-primary-container', 'border-primary/20');
+        btn.classList.add('bg-surface-container-lowest', 'text-on-surface-variant', 'border-outline-variant/30');
+    });
+
+    // Show the selected panel
+    const activePanel = document.getElementById('panel-' + industryId);
+    if (activePanel) {
+        activePanel.classList.remove('hidden');
+    }
+
+    // Add active styles to the selected button
+    const activeBtn = document.getElementById('btn-' + industryId);
+    if (activeBtn) {
+        activeBtn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant', 'border-outline-variant/30');
+        activeBtn.classList.add('bg-primary-container', 'text-on-primary-container', 'border-primary/20');
+    }
+}
+</script>
 <!-- Our Installation Process -->
 <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
 <div class="text-center mb-lg">
