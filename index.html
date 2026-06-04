@@ -14,31 +14,31 @@
             theme: {
                 extend: {
                     "colors": {
-                        "background": "#f9f9ff",
-                        "on-surface": "#091b36",
+                        "background": "rgb(var(--color-background-rgb) / <alpha-value>)",
+                        "on-surface": "rgb(var(--color-on-surface-rgb) / <alpha-value>)",
                         "on-primary-fixed": "#281800",
                         "tertiary": "#006d37",
-                        "surface-container-high": "#dfe8ff",
+                        "surface-container-high": "rgb(var(--color-surface-container-high-rgb) / <alpha-value>)",
                         "inverse-on-surface": "#ecf0ff",
-                        "surface-container": "#e8eeff",
-                        "surface-container-low": "#f0f3ff",
+                        "surface-container": "rgb(var(--color-surface-container-rgb) / <alpha-value>)",
+                        "surface-container-low": "rgb(var(--color-surface-container-low-rgb) / <alpha-value>)",
                         "on-secondary-fixed-variant": "#2a4676",
                         "tertiary-fixed-dim": "#61de8a",
                         "secondary-container": "#acc7fe",
-                        "surface-dim": "#cadafe",
-                        "surface-bright": "#f9f9ff",
+                        "surface-dim": "rgb(var(--color-surface-dim-rgb) / <alpha-value>)",
+                        "surface-bright": "rgb(var(--color-background-rgb) / <alpha-value>)",
                         "tertiary-container": "#59d784",
                         "on-primary": "#ffffff",
                         "on-secondary-fixed": "#001b3f",
                         "on-primary-fixed-variant": "#614000",
-                        "surface-variant": "#d6e3ff",
+                        "surface-variant": "rgb(var(--color-surface-variant-rgb) / <alpha-value>)",
                         "surface-tint": "#805600",
-                        "surface-container-highest": "#d6e3ff",
+                        "surface-container-highest": "rgb(var(--color-surface-container-highest-rgb) / <alpha-value>)",
                         "outline-variant": "#d5c4ae",
                         "on-error-container": "#93000a",
                         "tertiary-fixed": "#7efba4",
-                        "surface-container-lowest": "#ffffff",
-                        "on-background": "#091b36",
+                        "surface-container-lowest": "rgb(var(--color-surface-container-lowest-rgb) / <alpha-value>)",
+                        "on-background": "rgb(var(--color-on-background-rgb) / <alpha-value>)",
                         "primary-fixed-dim": "#ffba43",
                         "error-container": "#ffdad6",
                         "on-tertiary-fixed": "#00210c",
@@ -46,14 +46,14 @@
                         "secondary-fixed-dim": "#acc7fe",
                         "outline": "#837562",
                         "primary": "#805600",
-                        "on-surface-variant": "#514534",
+                        "on-surface-variant": "rgb(var(--color-on-surface-variant-rgb) / <alpha-value>)",
                         "on-secondary-container": "#375282",
                         "on-tertiary": "#ffffff",
                         "inverse-surface": "#20314d",
                         "on-tertiary-fixed-variant": "#005228",
                         "on-secondary": "#ffffff",
                         "on-tertiary-container": "#005a2c",
-                        "surface": "#f9f9ff",
+                        "surface": "rgb(var(--color-background-rgb) / <alpha-value>)",
                         "on-error": "#ffffff",
                         "secondary": "#435e8f",
                         "secondary-fixed": "#d7e2ff",
@@ -129,36 +129,144 @@
             transform: rotate(180deg);
         }
     </style>
-</head>
-<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+
+    <!-- Inline Theme Check & Theme Transition Style -->
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <style>
+        :root {
+            --color-background-rgb: 249 249 255;
+            --color-on-background-rgb: 9 27 54;
+            --color-surface-container-lowest-rgb: 255 255 255;
+            --color-surface-container-low-rgb: 240 243 255;
+            --color-surface-container-rgb: 232 238 255;
+            --color-surface-container-high-rgb: 223 232 255;
+            --color-surface-container-highest-rgb: 214 227 255;
+            --color-on-surface-rgb: 9 27 54;
+            --color-on-surface-variant-rgb: 81 69 52;
+            --color-surface-variant-rgb: 214 227 255;
+            --color-surface-dim-rgb: 202 218 254;
+        }
+        :root.dark {
+            --color-background-rgb: 9 27 54;
+            --color-on-background-rgb: 249 249 255;
+            --color-surface-container-lowest-rgb: 12 35 71;
+            --color-surface-container-low-rgb: 17 45 89;
+            --color-surface-container-rgb: 22 55 107;
+            --color-surface-container-high-rgb: 28 65 124;
+            --color-surface-container-highest-rgb: 34 76 142;
+            --color-on-surface-rgb: 249 249 255;
+            --color-on-surface-variant-rgb: 213 196 174;
+            --color-surface-variant-rgb: 28 65 124;
+            --color-surface-dim-rgb: 12 35 71;
+        }
+        
+        body {
+            background-color: rgb(var(--color-background-rgb)) !important;
+            color: rgb(var(--color-on-background-rgb)) !important;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom Mobile Clip Path Menu animations */
+        #mobileMenu {
+            transition: clip-path 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+    </style>
+    </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container bg-background text-on-background dark:bg-on-background dark:text-background font-body-md antialiased transition-colors duration-300 pt-20">
 <!-- Top Navigation (Shared Component) -->
-<nav class="bg-background/80 dark:bg-on-surface/80 backdrop-blur-md fixed top-0 left-0 w-full z-[100] border-b border-outline-variant/20 shadow-sm transition-all">
-<div class="max-w-7xl mx-auto w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
-<div class="flex items-center gap-md">
-<a class="text-headline-md font-headline-md font-bold tracking-tight text-on-surface flex items-center gap-2" href="#">
-<span class="material-symbols-outlined text-primary" data-icon="solar_power" data-weight="fill" style="font-variation-settings: 'FILL' 1;">solar_power</span>
-                SOLAREDGE
+
+    <!-- Top Navigation -->
+    <nav class="bg-background/80 dark:bg-on-surface/80 backdrop-blur-md fixed top-0 left-0 w-full z-[100] border-b border-outline-variant/20 shadow-sm transition-all duration-300">
+      <div class="max-w-7xl mx-auto w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+        <!-- Logo -->
+        <div class="flex items-center gap-md">
+          <a class="text-headline-md font-headline-md font-bold tracking-tight text-on-surface dark:text-background flex items-center gap-2 transition-colors" href="index.html">
+            <span class="material-symbols-outlined text-primary text-3xl" data-icon="solar_power" data-weight="fill" style="font-variation-settings: 'FILL' 1;">solar_power</span>
+            <span class="bg-gradient-to-r from-primary to-primary-fixed-dim bg-clip-text text-transparent">SOLAREDGE</span>
+          </a>
+          <!-- Desktop Menu Links -->
+          <div class="hidden lg:flex items-center gap-sm ml-lg bg-surface-container-low dark:bg-on-surface/50 px-2 py-1 rounded-full border border-outline-variant/30 backdrop-blur-sm">
+            <a class="text-on-surface-variant dark:text-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="about.html">About</a>
+            <a class="text-on-surface-variant dark:text-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="services.html">Services</a>
+            <a class="text-on-surface-variant dark:text-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="portfolio.html">Gallery</a>
+            <a class="text-on-surface-variant dark:text-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="testimonial.html">Testimonials</a>
+            <a class="text-on-surface-variant dark:text-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container/30 dark:hover:bg-on-surface/20 transition-all duration-200" href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Right Side Icons & CTA -->
+        <div class="flex items-center gap-sm">
+          <!-- Dark Mode Toggle -->
+          <button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-surface-container dark:hover:bg-on-surface/20 transition-colors duration-200" id="darkModeToggle" title="Toggle Theme">
+            <span class="material-symbols-outlined" id="darkModeIcon">dark_mode</span>
+          </button>
+          
+          <!-- WhatsApp Contact Button (Replaces Search) -->
+          <a href="https://wa.me/234800SOLAR" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full flex items-center justify-center text-green-600 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-950/20 transition-colors duration-200" title="WhatsApp Support">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.858.002-2.634-1.02-5.11-2.881-6.973-1.861-1.863-4.337-2.886-6.977-2.888-5.438 0-9.863 4.42-9.867 9.859 0 1.767.462 3.493 1.341 5.023l-.973 3.548 3.639-.954zM17.486 14.39c-.3-.149-1.776-.875-2.046-.974-.27-.099-.467-.149-.662.149-.195.298-.756.974-.927 1.17-.17.197-.341.22-.641.072-.3-.15-1.267-.467-2.414-1.493-.893-.797-1.495-1.782-1.67-2.08-.175-.299-.019-.461.13-.61.135-.133.3-.349.45-.523.15-.174.2-.298.3-.497.1-.198.05-.371-.025-.521-.075-.15-.662-1.597-.907-2.185-.238-.574-.5-.496-.662-.504-.17-.008-.364-.01-.559-.01-.195 0-.514.073-.783.371-.269.298-1.025 1.002-1.025 2.443 0 1.44 1.049 2.836 1.194 3.035.145.198 2.064 3.15 5.003 4.428.699.304 1.246.486 1.672.622.702.223 1.34.191 1.845.116.563-.083 1.776-.726 2.025-1.428.25-.702.25-1.303.175-1.428-.075-.125-.269-.199-.57-.348z"/>
+            </svg>
+          </a>
+
+          <!-- Book a Call CTA Link -->
+          <a href="https://calendly.com/webureaagency/30min" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex bg-gradient-to-r from-primary to-primary-fixed-dim text-white dark:text-on-primary-fixed font-label-md text-label-md px-md py-sm rounded-full hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-300">
+            Book a Call
+          </a>
+
+          <!-- Slick Interactive Menu Toggle -->
+          <button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface dark:text-background hover:bg-surface-container dark:hover:bg-on-surface/20 transition-colors duration-200 z-[120]" id="mobileMenuToggle" aria-label="Toggle Menu">
+            <div class="relative w-6 h-5 flex flex-col justify-between items-center group cursor-pointer">
+              <span id="menu-bar-1" class="w-6 h-0.5 bg-current rounded-full transition-all duration-300"></span>
+              <span id="menu-bar-2" class="w-6 h-0.5 bg-current rounded-full transition-all duration-300"></span>
+              <span id="menu-bar-3" class="w-6 h-0.5 bg-current rounded-full transition-all duration-300"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slick Circular Ripple Expanding Overlay Mobile Navigation Panel -->
+      <div id="mobileMenu" class="fixed inset-0 bg-background/95 dark:bg-on-surface/98 backdrop-blur-xl z-[110] flex flex-col justify-center items-center pointer-events-none transition-all duration-500 ease-out" style="clip-path: circle(0% at calc(100% - 40px) 40px);">
+        <div class="flex flex-col items-center space-y-2 w-full max-w-sm px-margin-mobile text-center py-6 overflow-y-auto">
+          <a class="mobile-nav-link text-3xl font-bold text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200 transform translate-y-8 opacity-0" href="about.html">About</a>
+          <a class="mobile-nav-link text-3xl font-bold text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200 transform translate-y-8 opacity-0" href="services.html">Services</a>
+          <a class="mobile-nav-link text-3xl font-bold text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200 transform translate-y-8 opacity-0" href="portfolio.html">Gallery</a>
+          <a class="mobile-nav-link text-3xl font-bold text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200 transform translate-y-8 opacity-0" href="testimonial.html">Testimonials</a>
+          <a class="mobile-nav-link text-3xl font-bold text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200 transform translate-y-8 opacity-0" href="contact.html">Contact</a>
+          <div class="w-full pt-lg border-t border-outline-variant/30 flex flex-col gap-sm items-center transform translate-y-8 opacity-0 mobile-nav-link">
+            <a href="https://calendly.com/webureaagency/30min" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-gradient-to-r from-primary to-primary-fixed-dim text-white dark:text-on-primary-fixed font-headline-md py-3 rounded-full shadow-md hover:scale-105 active:scale-95 transition-all">
+              Book a Call
             </a>
-<div class="hidden md:flex items-center gap-sm ml-lg bg-surface-container-low px-2 py-1 rounded-full border border-outline-variant/30">
-<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="about.html">About</a>
-<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="services.html">Services</a>
-<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="portfolio.html">Gallery</a>
-<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="testimonial.html">Testimonial</a>
-<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="admin.html">Dashboard</a>
-<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="contact.html">Contact</a>
-</div>
-</div>
-<div class="flex items-center gap-md">
-<button class="hidden md:flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
-<span class="material-symbols-outlined" data-icon="search">search</span>
-</button>
-<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-md hover:bg-primary hover:text-on-primary shadow-sm hover:shadow-md transition-all scale-95 active:opacity-80">
-                Get a Quote
-            </button>
-</div>
-</div>
-</nav>
-<main class="pt-20">
+            <a href="https://wa.me/234800SOLAR" target="_blank" rel="noopener noreferrer" class="w-full text-center border border-green-600 dark:border-green-400 text-green-600 dark:text-green-400 font-label-md py-2.5 rounded-full flex items-center justify-center gap-2 hover:bg-green-50 dark:hover:bg-green-950/20 transition-all">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.858.002-2.634-1.02-5.11-2.881-6.973-1.861-1.863-4.337-2.886-6.977-2.888-5.438 0-9.863 4.42-9.867 9.859 0 1.767.462 3.493 1.341 5.023l-.973 3.548 3.639-.954zM17.486 14.39c-.3-.149-1.776-.875-2.046-.974-.27-.099-.467-.149-.662.149-.195.298-.756.974-.927 1.17-.17.197-.341.22-.641.072-.3-.15-1.267-.467-2.414-1.493-.893-.797-1.495-1.782-1.67-2.08-.175-.299-.019-.461.13-.61.135-.133.3-.349.45-.523.15-.174.2-.298.3-.497.1-.198.05-.371-.025-.521-.075-.15-.662-1.597-.907-2.185-.238-.574-.5-.496-.662-.504-.17-.008-.364-.01-.559-.01-.195 0-.514.073-.783.371-.269.298-1.025 1.002-1.025 2.443 0 1.44 1.049 2.836 1.194 3.035.145.198 2.064 3.15 5.003 4.428.699.304 1.246.486 1.672.622.702.223 1.34.191 1.845.116.563-.083 1.776-.726 2.025-1.428.25-.702.25-1.303.175-1.428-.075-.125-.269-.199-.57-.348z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+<main class="">
 <!-- Hero Section -->
 <section class="relative min-h-[921px] flex items-center px-margin-mobile md:px-margin-desktop py-xl overflow-hidden">
 <div class="absolute inset-0 bg-gradient-to-br from-surface-container to-background -z-10"></div>
@@ -597,15 +705,16 @@
 <div class="relative z-10 max-w-3xl mx-auto">
 <h2 class="text-display-lg md:text-[48px] font-display-lg mb-6 leading-tight">Join the Clean Energy Revolution</h2>
 <p class="text-body-lg text-white/80 mb-10">Take control of your energy future today. Connect with our engineering team to explore custom solutions for your infrastructure.</p>
-<button class="bg-[#F9B233] text-[#071A35] px-10 py-5 rounded-lg font-label-md hover:bg-white transition-all shadow-lg text-lg flex items-center justify-center gap-2 mx-auto">
-            Get Your Free Quote
+<a href="https://calendly.com/webureaagency/30min" target="_blank" rel="noopener noreferrer" class="bg-[#F9B233] text-[#071A35]  px-10 py-5 rounded-lg font-label-md hover:bg-white transition-all shadow-lg text-lg flex items-center justify-center gap-2 mx-auto hover:scale-105 hover:shadow-lg transition-all inline-flex items-center justify-center" >
+            Book a Call
             <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</button>
+</a>
 </div>
 </section>
 </main>
 <!-- Footer (Shared Component) -->
-<footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-xl px-margin-mobile md:px-margin-desktop text-body-md font-body-md border-t border-outline-variant/10">
+
+<footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-xl px-margin-mobile md:px-margin-desktop text-body-md font-body-md border-t border-outline-variant/10 transition-colors duration-300">
 <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter">
     <!-- Brand Info -->
     <div class="lg:col-span-2 space-y-md">
@@ -617,13 +726,13 @@
             Empowering communities and enterprise operations with high-yield, smart solar technology. Architecting sustainable power systems for next-generation intelligence.
         </p>
         <div class="flex gap-sm pt-2">
-            <a href="#" class="w-10 h-10 rounded-full bg-surface-container-low dark:bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all duration-300">
-                <span class="material-symbols-outlined text-lg">public</span>
+            <a href="https://wa.me/234800SOLAR" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-surface-container-low dark:bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all duration-300" title="WhatsApp Chat">
+                <span class="material-symbols-outlined text-lg">chat</span>
             </a>
-            <a href="#" class="w-10 h-10 rounded-full bg-surface-container-low dark:bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all duration-300">
-                <span class="material-symbols-outlined text-lg">share</span>
+            <a href="https://calendly.com/webureaagency/30min" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-surface-container-low dark:bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all duration-300" title="Schedule Meeting">
+                <span class="material-symbols-outlined text-lg">calendar_month</span>
             </a>
-            <a href="#" class="w-10 h-10 rounded-full bg-surface-container-low dark:bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all duration-300">
+            <a href="mailto:support@solaredge.com" class="w-10 h-10 rounded-full bg-surface-container-low dark:bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all duration-300" title="Email Us">
                 <span class="material-symbols-outlined text-lg">mail</span>
             </a>
         </div>
@@ -633,10 +742,10 @@
     <div>
         <h4 class="text-label-md font-label-md text-primary-container dark:text-primary font-bold mb-md uppercase tracking-wider">Solutions</h4>
         <ul class="space-y-sm">
-            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#residential">Residential</a></li>
-            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#commercial">Commercial</a></li>
-            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#industrial">Industrial</a></li>
-            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="services.html#storage">Storage Systems</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="residential.html">Residential</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="commercial.html">Commercial</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="industrial.html">Industrial</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="storage.html">Storage Systems</a></li>
         </ul>
     </div>
     
@@ -646,7 +755,7 @@
         <ul class="space-y-sm">
             <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="about.html">About Us</a></li>
             <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="portfolio.html">Gallery</a></li>
-            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="admin.html">Dashboard</a></li>
+            <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="testimonial.html">Testimonials</a></li>
             <li><a class="text-surface-variant dark:text-on-surface-variant hover:text-primary transition-all opacity-90 hover:opacity-100" href="contact.html">Contact</a></li>
         </ul>
     </div>
@@ -682,6 +791,7 @@
     </div>
 </div>
 </footer>
+
 <script>
     // Custom Dropdown JS
     const dropdownBtn = document.getElementById('property-type-btn');
@@ -730,4 +840,88 @@
         dropdownArrow.style.transform = 'rotate(0deg)';
     });
 </script>
-</body></html>
+
+    <!-- Standard Navigation and Theme Controller -->
+    <script>
+        (function() {
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const darkModeIcon = document.getElementById('darkModeIcon');
+            
+            function applyTheme(theme) {
+                if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                    if (darkModeIcon) darkModeIcon.textContent = 'light_mode';
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    if (darkModeIcon) darkModeIcon.textContent = 'dark_mode';
+                }
+            }
+
+            const savedTheme = localStorage.getItem('theme') || 
+                               (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            applyTheme(savedTheme);
+
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener('click', () => {
+                    const currentTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+                    localStorage.setItem('theme', currentTheme);
+                    applyTheme(currentTheme);
+                });
+            }
+
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBar1 = document.getElementById('menu-bar-1');
+            const menuBar2 = document.getElementById('menu-bar-2');
+            const menuBar3 = document.getElementById('menu-bar-3');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+            if (mobileMenuToggle && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    const isOpen = mobileMenu.style.clipPath === 'circle(150% at calc(100% - 40px) 40px)';
+                    if (isOpen) {
+                        mobileMenu.style.clipPath = 'circle(0% at calc(100% - 40px) 40px)';
+                        mobileMenu.classList.add('pointer-events-none');
+                        
+                        menuBar1.style.transform = 'none';
+                        menuBar2.style.opacity = '1';
+                        menuBar3.style.transform = 'none';
+                        
+                        mobileLinks.forEach(link => {
+                            link.style.opacity = '0';
+                            link.style.transform = 'translateY(32px)';
+                        });
+                    } else {
+                        mobileMenu.style.clipPath = 'circle(150% at calc(100% - 40px) 40px)';
+                        mobileMenu.classList.remove('pointer-events-none');
+                        
+                        menuBar1.style.transform = 'translateY(6px) rotate(45deg)';
+                        menuBar2.style.opacity = '0';
+                        menuBar3.style.transform = 'translateY(-6px) rotate(-45deg)';
+                        
+                        mobileLinks.forEach((link, idx) => {
+                            setTimeout(() => {
+                                link.style.opacity = '1';
+                                link.style.transform = 'translateY(0)';
+                            }, 100 + idx * 75);
+                        });
+                    }
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.style.clipPath = 'circle(0% at calc(100% - 40px) 40px)';
+                        mobileMenu.classList.add('pointer-events-none');
+                        menuBar1.style.transform = 'none';
+                        menuBar2.style.opacity = '1';
+                        menuBar3.style.transform = 'none';
+                        mobileLinks.forEach(l => {
+                            l.style.opacity = '0';
+                            l.style.transform = 'translateY(32px)';
+                        });
+                    });
+                });
+            }
+        })();
+    </script>
+    </body></html>
