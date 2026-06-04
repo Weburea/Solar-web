@@ -1,245 +1,465 @@
-<!DOCTYPE html><html class="light" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>SolarPulse | About Us</title>
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Solaris Energy Intelligence</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<style>
-        .material-symbols-outlined {
-          font-variation-settings:
-          'FILL' 1,
-          'wght' 400,
-          'GRAD' 0,
-          'opsz' 24
-        }
-    </style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "tertiary-container": "#59d784",
-                      "on-tertiary": "#ffffff",
-                      "on-secondary-fixed-variant": "#2a4676",
-                      "tertiary-fixed": "#7efba4",
-                      "on-primary-fixed-variant": "#614000",
-                      "error-container": "#ffdad6",
-                      "inverse-surface": "#20314d",
-                      "surface-container": "#e8eeff",
-                      "primary-fixed-dim": "#ffba43",
-                      "secondary-container": "#acc7fe",
-                      "primary": "#805600",
-                      "surface-variant": "#d6e3ff",
-                      "on-tertiary-fixed": "#00210c",
-                      "on-primary-container": "#6a4700",
-                      "surface-container-high": "#dfe8ff",
-                      "secondary": "#435e8f",
-                      "on-secondary": "#ffffff",
-                      "on-error-container": "#93000a",
-                      "on-primary": "#ffffff",
-                      "error": "#ba1a1a",
-                      "on-background": "#091b36",
-                      "surface-container-low": "#f0f3ff",
-                      "inverse-primary": "#ffba43",
-                      "on-surface-variant": "#514534",
-                      "surface-bright": "#f9f9ff",
-                      "on-secondary-container": "#375282",
-                      "surface-dim": "#cadafe",
-                      "tertiary": "#006d37",
-                      "inverse-on-surface": "#ecf0ff",
-                      "tertiary-fixed-dim": "#61de8a",
-                      "on-tertiary-container": "#005a2c",
-                      "on-surface": "#091b36",
-                      "outline": "#837562",
-                      "surface": "#f9f9ff",
-                      "surface-container-lowest": "#ffffff",
-                      "surface-container-highest": "#d6e3ff",
-                      "secondary-fixed": "#d7e2ff",
-                      "on-error": "#ffffff",
-                      "on-secondary-fixed": "#001b3f",
-                      "surface-tint": "#805600",
-                      "on-primary-fixed": "#281800",
-                      "on-tertiary-fixed-variant": "#005228",
-                      "secondary-fixed-dim": "#acc7fe",
-                      "primary-container": "#f9b233",
-                      "primary-fixed": "#ffddaf",
-                      "outline-variant": "#d5c4ae",
-                      "background": "#f9f9ff"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "gutter": "24px",
-                      "sm": "12px",
-                      "xs": "4px",
-                      "margin-desktop": "64px",
-                      "lg": "48px",
-                      "margin-mobile": "16px",
-                      "base": "8px",
-                      "xl": "80px",
-                      "md": "24px"
-              },
-              "fontFamily": {
-                      "label-md": ["Inter"],
-                      "headline-md": ["Inter"],
-                      "body-md": ["Inter"],
-                      "display-lg": ["Inter"],
-                      "headline-lg-mobile": ["Inter"],
-                      "data-display": ["Inter"],
-                      "headline-lg": ["Inter"],
-                      "body-lg": ["Inter"]
-              },
-              "fontSize": {
-                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
-                      "data-display": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
-              }
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#d6e3ff",
+                        "secondary": "#435e8f",
+                        "on-tertiary-fixed-variant": "#005228",
+                        "tertiary-fixed-dim": "#61de8a",
+                        "background": "#f9f9ff",
+                        "on-tertiary-container": "#005a2c",
+                        "secondary-fixed-dim": "#acc7fe",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#ecf0ff",
+                        "tertiary-container": "#59d784",
+                        "on-primary-fixed": "#281800",
+                        "tertiary": "#006d37",
+                        "primary": "#805600",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#514534",
+                        "primary-container": "#f9b233",
+                        "surface-container-highest": "#d6e3ff",
+                        "primary-fixed-dim": "#ffba43",
+                        "on-secondary-fixed": "#001b3f",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#805600",
+                        "on-surface": "#091b36",
+                        "surface-container-low": "#f0f3ff",
+                        "secondary-fixed": "#d7e2ff",
+                        "secondary-container": "#acc7fe",
+                        "primary-fixed": "#ffddaf",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#614000",
+                        "tertiary-fixed": "#7efba4",
+                        "surface-container": "#e8eeff",
+                        "on-tertiary-fixed": "#00210c",
+                        "inverse-surface": "#20314d",
+                        "on-background": "#091b36",
+                        "on-secondary-fixed-variant": "#2a4676",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f9f9ff",
+                        "on-secondary-container": "#375282",
+                        "outline": "#837562",
+                        "surface-dim": "#cadafe",
+                        "on-primary-container": "#6a4700",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#d5c4ae",
+                        "inverse-primary": "#ffba43",
+                        "surface-container-high": "#dfe8ff",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f9f9ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "xl": "80px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "data-display": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "data-display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    },
+                    "boxShadow": {
+                        'ambient': '0 4px 20px rgba(7, 26, 53, 0.04)',
+                        'elevated': '0 8px 30px rgba(7, 26, 53, 0.08)',
+                    }
+                }
             }
-          }
         }
     </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .gradient-overlay {
+            background: linear-gradient(180deg, rgba(9, 27, 54, 0.2) 0%, rgba(9, 27, 54, 0.8) 100%);
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(180deg, #FFBA43 0%, #F9B233 100%);
+        }
+        .btn-gradient:hover {
+            background: linear-gradient(180deg, #F9B233 0%, #E0A02E 100%);
+        }
+        
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        input[type="checkbox"]:checked ~ .faq-content {
+            max-height: 200px;
+        }
+        
+        input[type="checkbox"]:checked ~ .faq-header .expand-icon {
+            transform: rotate(180deg);
+        }
+    </style>
 </head>
-<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
-<!-- TopNavBar (Shared Component) -->
-<header class="bg-surface/90 backdrop-blur-md dark:bg-on-background/90 text-primary dark:text-primary-fixed fixed top-0 w-full z-50 border-b border-outline-variant/10 dark:border-outline/10 shadow-sm font-label-md text-label-md">
-<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
-<div class="font-display-lg text-headline-md font-bold tracking-tighter text-primary dark:text-primary-fixed flex items-center gap-xs cursor-pointer scale-95 active:scale-90 transition-transform">
-<span class="material-symbols-outlined text-primary-container">solar_power</span>
-                SolarPulse
-            </div>
-<nav class="hidden md:flex items-center gap-md lg:gap-lg">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all duration-300 px-sm py-xs rounded-lg" href="#">Residential</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all duration-300 px-sm py-xs rounded-lg" href="#">Commercial</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all duration-300 px-sm py-xs rounded-lg" href="#">Storage</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all duration-300 px-sm py-xs rounded-lg" href="#">Financials</a>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation (Shared Component) -->
+<nav class="bg-background/80 dark:bg-on-surface/80 backdrop-blur-md fixed top-0 left-0 w-full z-[100] border-b border-outline-variant/20 shadow-sm transition-all">
+<div class="max-w-7xl mx-auto w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+<div class="flex items-center gap-md">
+<a class="text-headline-md font-headline-md font-bold tracking-tight text-on-surface flex items-center gap-2" href="index.html">
+<span class="material-symbols-outlined text-primary" data-icon="solar_power" data-weight="fill" style="font-variation-settings: 'FILL' 1;">solar_power</span>
+                SOLAREDGE
+            </a>
+<div class="hidden md:flex items-center gap-sm ml-lg bg-surface-container-low px-2 py-1 rounded-full border border-outline-variant/30">
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="about.html">About</a>
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="services.html">Services</a>
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="portfolio.html">Gallery</a>
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="index.html#testimonials">Testimonial</a>
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="admin.html">Dashboard</a>
+<a class="text-on-surface-variant font-medium px-4 py-2 rounded-full hover:text-primary transition-colors duration-200" href="contact.html">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<button class="hidden md:flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-md hover:bg-primary hover:text-on-primary shadow-sm hover:shadow-md transition-all scale-95 active:opacity-80">
+                Get a Quote
+            </button>
+</div>
+</div>
 </nav>
-<div class="flex items-center gap-sm">
-<button class="hidden md:flex items-center justify-center bg-gradient-to-b from-primary-container to-[#E5A32E] text-on-primary-container px-md py-sm rounded-lg hover:from-[#E5A32E] hover:to-[#D1952A] shadow-sm hover:shadow-md transition-all duration-300 scale-95 active:scale-90 transform -translate-y-px">
-                    Get a Quote
-                </button>
-<button class="text-on-surface-variant hover:text-primary transition-colors p-xs rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-high scale-95 active:scale-90">
-<span class="material-symbols-outlined">account_circle</span>
-</button>
-<button class="md:hidden text-on-surface-variant hover:text-primary transition-colors p-xs rounded-full hover:bg-surface-container-low">
-<span class="material-symbols-outlined">menu</span>
-</button>
+<main class="pt-20">
+<!-- 1. Hero Section -->
+<section class="relative min-h-[716px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Background" class="w-full h-full object-cover object-center" data-alt="A large, modern commercial office building in Lagos, Nigeria, with its entire rooftop covered in high-end sleek solar panels." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoXny7d4CXPX9H4CZ2YkWKCRROPONdbIOAYF_tIypb21_QSamODGWu7ht5LDAy92oVsSotZ8jHaV2vnwfRKWjKqjl0yvHQF0y3dCu9nCjXs4KJDZp15FKArQNsEWMBsNLHKlPsqrNzoyCLgLwdr-mBuB7UVMZBRoWGMMs11qy4Y8Vn0lHR581wmVPJppyUB7brcFtoZt5cZZVtvd8bqYmfgma7og8vHjTTeLfbvzUBxhSglV3J6SxaOhvZ-vK_4kvnbJtqn_WHEHk"/>
+<div class="absolute inset-0 gradient-overlay"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop text-center text-surface-container-lowest">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg mb-md text-white">Engineering Precision for a Sustainable Future</h1>
+<p class="font-body-lg text-body-lg text-surface-container-lowest/90 max-w-2xl mx-auto mb-lg">
+                    We are Solaris Energy Intelligence. Bridging the gap between traditional industrial power and modern, data-driven clean energy solutions across Africa.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-sm">
+<button class="w-full sm:w-auto font-label-md text-label-md btn-gradient text-on-primary-container px-8 py-3 rounded-full shadow-elevated transition-all hover:-translate-y-1">Contact Sales</button>
+<button class="w-full sm:w-auto font-label-md text-label-md bg-surface/10 backdrop-blur-sm border border-surface/20 text-white px-8 py-3 rounded-full hover:bg-surface/20 transition-all">Explore Our Work</button>
 </div>
 </div>
-</header>
-<main class="flex-grow pt-24 md:pt-32 pb-24">
-<!-- Hero Section -->
-<section class="max-w-screen-xl mx-auto px-margin-mobile md:px-margin-desktop py-xl md:py-24 text-center">
-<span class="inline-block bg-surface-container-high text-on-surface-variant px-sm py-xs rounded-full font-label-md text-label-md mb-md border border-outline-variant/30 uppercase tracking-widest text-xs">Our Mission</span>
-<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-background mb-lg max-w-4xl mx-auto text-balance">
-                Accelerating the global transition to <span class="text-primary-container relative inline-block">clean energy intelligence<svg class="absolute w-full h-3 -bottom-1 left-0 text-primary/20" preserveAspectRatio="none" viewBox="0 0 100 10"><path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" stroke-width="4"></path></svg></span> through data-driven solar solutions.
-            </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                We bridge the gap between industrial reliability and modern analytics, empowering enterprises to maximize ROI while reducing their carbon footprint.
-            </p>
 </section>
-<!-- Story Section (Bento/Asymmetric) -->
-<section class="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop py-lg">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-<div class="md:col-span-7 h-[400px] md:h-[600px] rounded-2xl overflow-hidden relative shadow-[0_4px_20px_rgba(9,27,54,0.04)] group">
-<img alt="Team at work" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A diverse team of engineers in hard hats examining blueprints on a solar farm at sunrise. The image features a bright, clean, and modern aesthetic with deep oceanic navies and energetic solar amber lighting. The atmosphere is professional, technical, and forward-looking, emphasizing data-driven energy solutions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA65xQZRi1Zum74NLKDZBnQKZVOQCxrGw6Nc21VW83aBjSaXtJrONZzknTP9mGa0_rkE-DxoIfGRRYu_wK2KHaVn6WwUf4VMTiP0YRjTWVyDCjKScjaOlZ4Pb9ca_DYV6eLH0VP33Q2Yx7DMo2mrs5E3nTu1-xO4mbnFqLKUMgc862K3-nqyJFLACYOI-oyfkahZWXWqhsU4Ey3AkoBgks7uPRVWPwZTaLkrVfCFQQw9LEAdpaXmGaXUYw7ZQEiviQTFGOlyxP_eg8">
-<div class="absolute inset-0 bg-gradient-to-t from-on-background/60 via-transparent to-transparent"></div>
-<div class="absolute bottom-md left-md right-md text-white">
-<div class="flex items-center gap-sm mb-xs">
-<span class="material-symbols-outlined text-primary-container">insights</span>
-<span class="font-label-md text-label-md">Facility Alpha, Nevada</span>
-</div>
-<p class="font-body-md text-sm opacity-80">Our engineering team reviewing real-time telemetry data.</p>
-</div>
-</div>
-<div class="md:col-span-5 flex flex-col gap-md md:pl-lg">
-<div class="bg-surface rounded-2xl p-lg shadow-[0_4px_20px_rgba(9,27,54,0.04)] border border-outline-variant/20 hover:-translate-y-1 transition-transform duration-300">
-<div class="flex items-center gap-sm mb-md text-primary">
-<span class="material-symbols-outlined text-3xl">history</span>
-<h3 class="font-headline-md text-headline-md text-on-background">Our History</h3>
-</div>
+<!-- 2. Company Story & 3. Mission/Vision -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-lg lg:gap-xl items-center">
+<div class="space-y-md">
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase">Our Story</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">From Traditional Power to Intelligent Energy</h2>
 <p class="font-body-md text-body-md text-on-surface-variant">
-                            Founded in 2018 by a consortium of energy grid experts and data scientists, SolarPulse was born from a simple observation: commercial solar deployments were historically opaque. We built our platform to provide unparalleled transparency and efficiency to large-scale operations.
-                        </p>
-</div>
-<div class="bg-surface-container-low rounded-2xl p-lg shadow-[0_4px_20px_rgba(9,27,54,0.04)] border border-outline-variant/20 hover:-translate-y-1 transition-transform duration-300">
-<div class="flex items-center gap-sm mb-md text-tertiary">
-<span class="material-symbols-outlined text-3xl">visibility</span>
-<h3 class="font-headline-md text-headline-md text-on-background">Our Vision</h3>
-</div>
+                        Founded on the principles of industrial reliability, Solaris began with a clear mandate: to bring technical excellence to the renewable sector. We recognized that the future of energy isn't just about generation; it's about intelligence, optimization, and absolute precision.
+                    </p>
 <p class="font-body-md text-body-md text-on-surface-variant">
-                            To create a world where energy generation is flawlessly predictable, universally measurable, and seamlessly integrated into the operational core of every major enterprise.
-                        </p>
+                        Today, we leverage advanced data analytics alongside tier-one hardware to deliver scalable solar infrastructures that power businesses, communities, and critical infrastructure with unwavering consistency.
+                    </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-ambient border-b border-outline-variant/10 hover:-translate-y-1 transition-transform">
+<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center mb-sm text-primary">
+<span class="material-symbols-outlined icon-fill">rocket_launch</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Our Mission</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">To democratize clean energy access through engineered precision and data-driven infrastructure.</p>
+</div>
+<div class="bg-inverse-surface p-md rounded-xl shadow-elevated hover:-translate-y-1 transition-transform">
+<div class="w-12 h-12 rounded-full bg-surface/10 flex items-center justify-center mb-sm text-primary-container">
+<span class="material-symbols-outlined icon-fill">visibility</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest mb-xs">Our Vision</h3>
+<p class="font-body-md text-body-md text-surface-variant text-sm">A highly connected, sustainable grid powering the next generation of industrial growth.</p>
 </div>
 </div>
 </div>
 </section>
-<!-- CTA Section -->
-<section class="max-w-screen-xl mx-auto px-margin-mobile md:px-margin-desktop py-xl">
-<div class="bg-on-secondary-fixed-variant rounded-3xl p-lg md:p-xl text-center relative overflow-hidden shadow-2xl">
-<!-- Abstract Decorative Elements -->
-<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/30 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-<div class="relative z-10 flex flex-col items-center">
-<h2 class="font-data-display text-data-display text-white mb-md">Join the clean energy revolution</h2>
-<p class="font-body-lg text-body-lg text-white/80 max-w-2xl mx-auto mb-lg">
-                         Discover how SolarPulse can transform your energy strategy with measurable ROI and absolute technical precision.
-                     </p>
-<button class="flex items-center gap-sm bg-gradient-to-b from-primary-container to-[#E5A32E] text-on-primary-container font-label-md text-label-md px-lg py-sm rounded-lg hover:from-[#E5A32E] hover:to-[#D1952A] shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                        Contact Sales
-                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+<!-- Core Values -->
+<section class="py-lg px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto border-t border-outline-variant/10">
+<div class="text-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">Our Core Values</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md text-center">
+<div class="p-md">
+<span class="material-symbols-outlined text-4xl text-primary mb-sm">verified</span>
+<h4 class="font-headline-md text-headline-md mb-xs">Integrity</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Unwavering ethical standards in every project.</p>
+</div>
+<div class="p-md">
+<span class="material-symbols-outlined text-4xl text-primary mb-sm">lightbulb</span>
+<h4 class="font-headline-md text-headline-md mb-xs">Innovation</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Forward-thinking solutions for modern challenges.</p>
+</div>
+<div class="p-md">
+<span class="material-symbols-outlined text-4xl text-primary mb-sm">precision_manufacturing</span>
+<h4 class="font-headline-md text-headline-md mb-xs">Precision</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Exacting standards in engineering and design.</p>
+</div>
+<div class="p-md">
+<span class="material-symbols-outlined text-4xl text-primary mb-sm">public</span>
+<h4 class="font-headline-md text-headline-md mb-xs">Impact</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Meaningful environmental and economic benefits.</p>
+</div>
+</div>
+</section>
+<!-- 5. Company Statistics (Stats Bar) -->
+<section class="bg-surface-container py-lg border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-md md:gap-lg text-center">
+<div>
+<div class="font-data-display text-data-display text-primary mb-xs">150+</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">MW Installed</div>
+</div>
+<div>
+<div class="font-data-display text-data-display text-primary mb-xs">2.4M</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Tons CO2 Offset</div>
+</div>
+<div>
+<div class="font-data-display text-data-display text-primary mb-xs">15+</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Years Experience</div>
+</div>
+<div>
+<div class="font-data-display text-data-display text-primary mb-xs">99.9%</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">System Uptime</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Leadership & Engineering Teams -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="text-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">The Minds Behind the Power</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="bg-surface-container-lowest rounded-xl shadow-ambient overflow-hidden">
+<img alt="Leadership Team" class="w-full h-64 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKy1AxFVoK8qVMbWqjlSY8_o2JmcPQ5V9wSlO_2OmKMUwvM-b8jrk-ndfJaZz98LmfjbxKYG8RNEjsVZhEs3D5_lKAq0tV_To-XSeibOA8y38S00yD6sWf0lfgTFdibUD6c5x5XspHD9RTZdq22aleZx9Jtnhc4kN1KwgJuhm9ipBxG_lNqfxnBnwd2JppHJ_u-ka8eK9SKtmvJBRgJYyi8vEn2kiCTBBpwYlDOntfh1BPBa3mOl50uu9MkWzCXCOw5xXiNxGaSdM"/>
+<div class="p-md">
+<h3 class="font-headline-md text-headline-md mb-xs">Executive Leadership</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Our board and leadership team bring decades of global experience in energy markets, corporate strategy, and infrastructure finance, driving Solaris's vision forward.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-ambient overflow-hidden">
+<img alt="Engineering Team" class="w-full h-64 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEsQgAjjzuOpzUKGIrdLHLqqd8JfIqOTc-l2Jj6PnU6jTgrDd-o1X63HgfDN8xpy1FdIM8qUtmRvbNB3kgacPZhE5V6F07KuM0k43zICHGFTvr3rWg8f00wnVYsEhD8NXQATtb9JwOdFOABmpKQKQJIxdjWPvVoGFxMPQ6na2ADxIYfmAYA33YvYKNXX3wl7h-J9hRJpwz2iv8i7KNPPSpvmblzFLN944NC1jLsTQBZPk4gnM648jnCiTIFQzTR4K3NJmDEB1nzhc"/>
+<div class="p-md">
+<h3 class="font-headline-md text-headline-md mb-xs">Engineering Excellence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Our technical squads are composed of top-tier electrical engineers and data scientists, ensuring every deployment meets uncompromising standards of precision.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Industries We Serve -->
+<section class="bg-surface py-xl border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">Industries We Serve</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-md text-center">
+<div class="p-sm bg-surface-container-lowest rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-3xl text-secondary mb-xs">home</span>
+<div class="font-label-md text-label-md">Residential</div>
+</div>
+<div class="p-sm bg-surface-container-lowest rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-3xl text-secondary mb-xs">domain</span>
+<div class="font-label-md text-label-md">Commercial</div>
+</div>
+<div class="p-sm bg-surface-container-lowest rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-3xl text-secondary mb-xs">local_hospital</span>
+<div class="font-label-md text-label-md">Healthcare</div>
+</div>
+<div class="p-sm bg-surface-container-lowest rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-3xl text-secondary mb-xs">school</span>
+<div class="font-label-md text-label-md">Education</div>
+</div>
+<div class="p-sm bg-surface-container-lowest rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-3xl text-secondary mb-xs">account_balance</span>
+<div class="font-label-md text-label-md">Government</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Installation Process -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="text-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">Our Installation Process</h2>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-start gap-md relative">
+<div class="hidden md:block absolute top-6 left-0 w-full h-0.5 bg-outline-variant/30 -z-10"></div>
+<div class="flex-1 text-center bg-surface-container-lowest p-sm rounded-lg md:bg-transparent md:p-0">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-sm font-bold">1</div>
+<h4 class="font-label-md text-label-md mb-xs">Survey</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Site analysis &amp; feasibility</p>
+</div>
+<div class="flex-1 text-center bg-surface-container-lowest p-sm rounded-lg md:bg-transparent md:p-0">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-sm font-bold">2</div>
+<h4 class="font-label-md text-label-md mb-xs">Design</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Custom engineering</p>
+</div>
+<div class="flex-1 text-center bg-surface-container-lowest p-sm rounded-lg md:bg-transparent md:p-0">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-sm font-bold">3</div>
+<h4 class="font-label-md text-label-md mb-xs">Procurement</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Tier-1 hardware sourcing</p>
+</div>
+<div class="flex-1 text-center bg-surface-container-lowest p-sm rounded-lg md:bg-transparent md:p-0">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-sm font-bold">4</div>
+<h4 class="font-label-md text-label-md mb-xs">Deployment</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Professional installation</p>
+</div>
+<div class="flex-1 text-center bg-surface-container-lowest p-sm rounded-lg md:bg-transparent md:p-0">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-sm font-bold">5</div>
+<h4 class="font-label-md text-label-md mb-xs">Maintenance</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Ongoing support &amp; analytics</p>
+</div>
+</div>
+</section>
+<!-- Certifications & Compliance -->
+<section class="bg-surface-container py-lg border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h3 class="font-headline-md text-headline-md mb-md text-on-surface">Certifications &amp; Compliance</h3>
+<div class="flex flex-wrap justify-center gap-lg opacity-60">
+<div class="font-display-lg text-2xl font-bold tracking-widest uppercase">ISO 9001</div>
+<div class="font-display-lg text-2xl font-bold tracking-widest uppercase">ISO 14001</div>
+<div class="font-display-lg text-2xl font-bold tracking-widest uppercase">OSHA Compliant</div>
+</div>
+</div>
+</section>
+<!-- Frequently Asked Questions -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop bg-background">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-8 text-center">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<div class="border border-outline-variant/30 rounded-lg bg-surface-container-lowest overflow-hidden">
+<label class="flex justify-between items-center p-6 cursor-pointer faq-header" for="faq-1">
+<span class="font-headline-md text-on-surface text-lg">What kind of warranty do you provide?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform expand-icon" data-icon="expand_more">expand_more</span>
+</label>
+<input class="hidden" id="faq-1" type="checkbox"/>
+<div class="faq-content bg-surface">
+<p class="p-6 pt-0 text-body-md text-on-surface-variant">We offer an industry-leading 25-year performance warranty on all tier-one solar panels, and a comprehensive 10-year workmanship guarantee on all installations.</p>
+</div>
+</div>
+<div class="border border-outline-variant/30 rounded-lg bg-surface-container-lowest overflow-hidden">
+<label class="flex justify-between items-center p-6 cursor-pointer faq-header" for="faq-2">
+<span class="font-headline-md text-on-surface text-lg">How do you handle maintenance and support?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform expand-icon" data-icon="expand_more">expand_more</span>
+</label>
+<input class="hidden" id="faq-2" type="checkbox"/>
+<div class="faq-content bg-surface">
+<p class="p-6 pt-0 text-body-md text-on-surface-variant">Our systems feature real-time 24/7 monitoring. We deploy preemptive maintenance protocols and offer rapid-response technical support to ensure maximum uptime.</p>
+</div>
+</div>
+<div class="border border-outline-variant/30 rounded-lg bg-surface-container-lowest overflow-hidden">
+<label class="flex justify-between items-center p-6 cursor-pointer faq-header" for="faq-3">
+<span class="font-headline-md text-on-surface text-lg">What are the logistical requirements for large commercial projects?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform expand-icon" data-icon="expand_more">expand_more</span>
+</label>
+<input class="hidden" id="faq-3" type="checkbox"/>
+<div class="faq-content bg-surface">
+<p class="p-6 pt-0 text-body-md text-on-surface-variant">Our specialized project management team handles end-to-end logistics, including site surveys, structural assessments, and seamless procurement, minimizing any operational downtime for your business.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 11. Final CTA Banner -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="bg-inverse-surface rounded-xl p-lg md:p-xl shadow-elevated text-center relative overflow-hidden">
+<!-- Decorative background elements -->
+<div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-surface-container-lowest mb-md">Let's Build Your Energy Legacy</h2>
+<p class="font-body-lg text-body-lg text-surface-variant mb-lg">
+                        Partner with our engineering team to design a robust, intelligent energy system tailored for your specific industrial or commercial requirements.
+                    </p>
+<button class="font-label-md text-label-md btn-gradient text-on-primary-container px-8 py-4 rounded-full shadow-ambient hover:shadow-elevated transition-all hover:-translate-y-1 inline-flex items-center gap-2">
+                        Get Started Today
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
 </button>
 </div>
 </div>
 </section>
 </main>
-<!-- Footer (Shared Component) -->
-<footer class="bg-on-background dark:bg-surface-container-lowest text-primary-fixed dark:text-primary w-full rounded-t-xl mt-auto border-t border-outline/10">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-md px-margin-mobile md:px-margin-desktop py-xl w-full max-w-screen-2xl mx-auto">
-<div class="flex flex-col gap-sm">
-<div class="font-headline-lg text-headline-lg text-primary-fixed flex items-center gap-xs">
-<span class="material-symbols-outlined text-primary-fixed">solar_power</span>
-                     SolarPulse
+<!-- Footer -->
+<footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-xl px-margin-mobile md:px-margin-desktop border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-md font-headline-lg text-primary-fixed mb-4">SOLARIS</div>
+<p class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant mb-4">
+                    Engineering Precision for a Sustainable Future.
+                </p>
+<div class="font-body-md text-body-md text-surface-variant/70 text-sm">
+                    © 2024 Solaris Energy Intelligence. All rights reserved.
                 </div>
-<p class="font-body-md text-sm text-surface-variant/70 mt-xs">
-                    Industrial reliability meets modern analytics.
-                </p>
 </div>
-<div class="flex flex-col gap-sm">
-<h4 class="font-label-md text-label-md text-primary-fixed mb-xs uppercase tracking-wider">Legal</h4>
-<a class="font-body-md text-body-md text-surface-variant/70 hover:text-primary-fixed hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 transition-all" href="#">Privacy Policy</a>
-<a class="font-body-md text-body-md text-surface-variant/70 hover:text-primary-fixed hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 transition-all" href="#">Terms of Service</a>
+<div>
+<h4 class="font-label-md text-label-md text-surface-container-lowest mb-md">Solutions</h4>
+<ul class="space-y-sm">
+<li><a class="font-label-md text-label-md text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim transition-all underline underline-offset-4 hover:translate-x-1 inline-block" href="#">Residential Solutions</a></li>
+<li><a class="font-label-md text-label-md text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim transition-all underline underline-offset-4 hover:translate-x-1 inline-block" href="#">Commercial Systems</a></li>
+<li><a class="font-label-md text-label-md text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim transition-all underline underline-offset-4 hover:translate-x-1 inline-block" href="#">Energy Storage</a></li>
+</ul>
 </div>
-<div class="flex flex-col gap-sm">
-<h4 class="font-label-md text-label-md text-primary-fixed mb-xs uppercase tracking-wider">Company</h4>
-<a class="font-body-md text-body-md text-surface-variant/70 hover:text-primary-fixed hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 transition-all" href="#">Sustainability Report</a>
-<a class="font-body-md text-body-md text-surface-variant/70 hover:text-primary-fixed hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 transition-all" href="#">Investor Relations</a>
+<div>
+<h4 class="font-label-md text-label-md text-surface-container-lowest mb-md">Company</h4>
+<ul class="space-y-sm">
+<li><a class="font-label-md text-label-md text-primary-fixed font-bold hover:text-primary-fixed-dim transition-all underline underline-offset-4 hover:translate-x-1 inline-block" href="#">About Us</a></li>
+<li><a class="font-label-md text-label-md text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim transition-all underline underline-offset-4 hover:translate-x-1 inline-block" href="#">Financial ROI</a></li>
+<li><a class="font-label-md text-label-md text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim transition-all underline underline-offset-4 hover:translate-x-1 inline-block" href="#">Impact Reports</a></li>
+<li><a class="font-label-md text-label-md text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim transition-all underline underline-offset-4 hover:translate-x-1 inline-block" href="#">Careers</a></li>
+</ul>
 </div>
-<div class="flex flex-col justify-end items-start md:items-end col-span-1 md:col-span-1 mt-md md:mt-0">
-<p class="font-body-md text-sm text-surface-variant/50">
-                    © 2024 SolarPulse Intelligence. All rights reserved.
-                </p>
+<div>
+<h4 class="font-label-md text-label-md text-surface-container-lowest mb-md">Support</h4>
+<ul class="space-y-sm">
+<li><a class="font-label-md text-label-md text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim transition-all underline underline-offset-4 hover:translate-x-1 inline-block" href="#">Contact Support</a></li>
+</ul>
 </div>
 </div>
 </footer>
-<!-- SideNavBar / FAB (Shared Component) -->
-<div class="fixed bottom-md right-md z-50">
-<div class="bg-tertiary-container dark:bg-tertiary text-on-tertiary-container dark:text-on-tertiary rounded-full p-4 shadow-xl hover:scale-110 hover:shadow-2xl transition-all animate-bounce-slow cursor-pointer flex items-center gap-sm group">
-<span class="material-symbols-outlined">chat</span>
-<span class="font-label-md text-label-md pr-sm w-0 overflow-hidden group-hover:w-auto opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">Start Chat</span>
-</div>
-</div>
 </body></html>
