@@ -1,0 +1,298 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SolarPulse - Projects Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#59d784",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#2a4676",
+                        "tertiary-fixed": "#7efba4",
+                        "on-primary-fixed-variant": "#614000",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#20314d",
+                        "surface-container": "#e8eeff",
+                        "primary-fixed-dim": "#ffba43",
+                        "secondary-container": "#acc7fe",
+                        "primary": "#805600",
+                        "surface-variant": "#d6e3ff",
+                        "on-tertiary-fixed": "#00210c",
+                        "on-primary-container": "#6a4700",
+                        "surface-container-high": "#dfe8ff",
+                        "secondary": "#435e8f",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-background": "#091b36",
+                        "surface-container-low": "#f0f3ff",
+                        "inverse-primary": "#ffba43",
+                        "on-surface-variant": "#514534",
+                        "surface-bright": "#f9f9ff",
+                        "on-secondary-container": "#375282",
+                        "surface-dim": "#cadafe",
+                        "tertiary": "#006d37",
+                        "inverse-on-surface": "#ecf0ff",
+                        "tertiary-fixed-dim": "#61de8a",
+                        "on-tertiary-container": "#005a2c",
+                        "on-surface": "#091b36",
+                        "outline": "#837562",
+                        "surface": "#f9f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#d6e3ff",
+                        "secondary-fixed": "#d7e2ff",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#001b3f",
+                        "surface-tint": "#805600",
+                        "on-primary-fixed": "#281800",
+                        "on-tertiary-fixed-variant": "#005228",
+                        "secondary-fixed-dim": "#acc7fe",
+                        "primary-container": "#f9b233",
+                        "primary-fixed": "#ffddaf",
+                        "outline-variant": "#d5c4ae",
+                        "background": "#f9f9ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "margin-desktop": "64px",
+                        "lg": "48px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "xl": "80px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "data-display": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "data-display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Subtle elevation and transitions */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 4px 20px rgba(9, 27, 54, 0.04);
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(9, 27, 54, 0.08);
+        }
+
+        .project-overlay {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background: linear-gradient(to top, rgba(9, 27, 54, 0.9) 0%, rgba(9, 27, 54, 0.4) 100%);
+        }
+        .group:hover .project-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 backdrop-blur-md dark:bg-on-background/90 text-primary dark:text-primary-fixed font-label-md text-label-md fixed top-0 w-full z-50 border-b border-outline-variant/10 dark:border-outline/10 shadow-sm flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto hidden md:flex">
+<div class="font-display-lg text-headline-md font-bold tracking-tighter text-primary dark:text-primary-fixed">
+            SolarPulse
+        </div>
+<div class="hidden md:flex space-x-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Residential</a>
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary pb-1" href="#">Commercial</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Storage</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Financials</a>
+</div>
+<div class="flex items-center space-x-md">
+<button class="bg-primary-container text-on-primary-container px-md py-sm rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all duration-300 scale-95 active:scale-90 shadow-sm">
+                Get a Quote
+            </button>
+<button class="text-primary dark:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all duration-300 rounded-full p-2 scale-95 active:scale-90">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="pt-24 pb-xl px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto space-y-xl">
+<!-- Header & Impact Stats (Bento Style) -->
+<header class="grid grid-cols-1 lg:grid-cols-3 gap-gutter items-stretch">
+<div class="lg:col-span-2 space-y-md py-lg">
+<h1 class="font-display-lg text-display-lg text-on-background">Engineered for Impact</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Explore our portfolio of high-performance solar installations. From vast commercial arrays to precision residential systems, we build energy infrastructure designed to outlast and outperform.
+                </p>
+</div>
+<div class="glass-card rounded-xl p-md flex flex-col justify-center space-y-md border border-outline-variant/30">
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-xs">Total Capacity Installed</p>
+<p class="font-data-display text-data-display text-primary flex items-baseline gap-2">
+                        1.4 <span class="font-headline-md text-headline-md text-on-surface-variant">GW</span>
+</p>
+</div>
+<div class="h-px bg-outline-variant/20 w-full"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-xs">CO2 Offset (Annual)</p>
+<p class="font-data-display text-data-display text-tertiary flex items-baseline gap-2">
+                        2.1M <span class="font-headline-md text-headline-md text-on-surface-variant">Tons</span>
+</p>
+</div>
+</div>
+</header>
+<!-- Filter Bar -->
+<section class="flex flex-col md:flex-row justify-between items-center gap-md border-b border-outline-variant/20 pb-md">
+<div class="flex flex-wrap gap-sm">
+<button class="bg-on-background text-surface-container-lowest px-md py-xs rounded-full font-label-md text-label-md transition-colors hover-lift">All Projects</button>
+<button class="bg-surface-container-lowest text-on-surface-variant border border-outline-variant/50 px-md py-xs rounded-full font-label-md text-label-md hover:border-primary hover:text-primary transition-colors hover-lift">Commercial</button>
+<button class="bg-surface-container-lowest text-on-surface-variant border border-outline-variant/50 px-md py-xs rounded-full font-label-md text-label-md hover:border-primary hover:text-primary transition-colors hover-lift">Industrial</button>
+<button class="bg-surface-container-lowest text-on-surface-variant border border-outline-variant/50 px-md py-xs rounded-full font-label-md text-label-md hover:border-primary hover:text-primary transition-colors hover-lift">Residential</button>
+</div>
+<div class="relative w-full md:w-auto">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">sort</span>
+<select class="w-full md:w-48 appearance-none bg-surface-container-lowest border border-outline-variant/50 rounded-lg py-2 pl-10 pr-4 font-body-md text-body-md text-on-background focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+<option>Most Recent</option>
+<option>Largest Capacity</option>
+<option>Highest Yield</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</section>
+<!-- Gallery Grid (Bento/Asymmetric) -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter auto-rows-[300px]">
+<!-- Large Featured Project -->
+<div class="group relative rounded-xl overflow-hidden hover-lift cursor-pointer md:col-span-2 lg:col-span-2 row-span-2">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A sprawling commercial solar panel array stretching across a vast, flat desert landscape under a clear blue sky. The scene is bright and highly detailed, emphasizing the modern, industrial scale of clean energy infrastructure. The sunlight reflects off the sleek blue panels, contrasting beautifully with the warm, earthy tones of the surrounding environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEJGLytB9vvGp9wLIFJ7C6VQLEeSlEqAgtOD1hDJ3RCKiV9ClVCXkaL1l6-Ee3s4d64Lxm6JGbheZe1X-PhOFXHb_EXxGkGWan2BTb2-YW7J71P3Xj-mCLdlYQ3VxJjxuC-QwaKnc9lWpU9TcVXuhzELj184JSat9qcsa7cjRe7X-FHomYZe7txW7d3Q6djGjtDRdLZX1vgyGiTd3DQGaxJUD-ZqxZe1bPAch0N8ROu68PEYhOE6twR9xuyT_RK-KZ-o12-yWF7qI')"></div>
+<div class="absolute inset-0 project-overlay flex flex-col justify-end p-lg">
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="inline-block bg-primary-container text-on-primary-container px-sm py-xs rounded-full font-label-md text-xs mb-sm">Commercial</span>
+<h3 class="font-headline-lg text-headline-lg text-surface-container-lowest mb-xs">Apex Logistics Hub</h3>
+<div class="flex items-center gap-md text-surface-variant font-body-md text-body-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[20px]">bolt</span> 4.2 MW</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[20px]">location_on</span> Nevada, USA</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Standard Project Card 1 -->
+<div class="group relative rounded-xl overflow-hidden hover-lift cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Close-up view of modern solar panels installed on a residential rooftop. The sleek, dark panels absorb the bright midday sun. The background is slightly blurred, focusing on the pristine, high-tech surface of the photovoltaic cells. The lighting is crisp and natural, highlighting the clean energy aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCky0Zh8SlkyzBf_0B0sC8sTwj1x5OHl8Fv8cf1OAi7TCaxLXYm50Zy-wDHRq_DCvSqEk8NmtVmuLOBxZ_yKSwhRMpjkkDQ5c91bNaP3HIK01msbVDxsA2LEhnrs81aObcVPRU3xaJotSldjskIPxCQnfnmbOb2iM1tnoN7xY7Ms2wkEJeKwCqpqgHdMfmXIeX3nFC3OuOjRdmpOeBWPEV_i3qLkS1GSFGFkguaXqy8JdPVFwBeyOE3VLlDIN2HdtJx-ZDwQfM5JQU')"></div>
+<div class="absolute inset-0 project-overlay flex flex-col justify-end p-md">
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="inline-block bg-secondary-container text-on-secondary-container px-sm py-xs rounded-full font-label-md text-xs mb-sm">Residential</span>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest mb-xs">Oakwood Estate</h3>
+<div class="flex items-center gap-sm text-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bolt</span> 15 kW</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Standard Project Card 2 -->
+<div class="group relative rounded-xl overflow-hidden hover-lift cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="An industrial solar farm seen from an elevated angle during golden hour. Rows upon rows of photovoltaic panels stretch towards the horizon, bathed in warm, amber sunlight. The scene conveys a sense of vast energy potential and modern engineering excellence. The sky is a gradient of soft oranges and deep blues." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDgm7efrl3PKp5EytWLObAwmG9RstXnmRey6oveOH3KGgGPKQbV-pTOUYGbMuzGhzVFA9fefkle3Y56d25YBFYUtutohFFUNgQvDPA0IAhgOE4pmtkRajEHbjqFAaIdEgJ6a_uXbF7xesVM4pqe5xyMcQn0HTN18IT8LbwJu8xDnY_knkPUQFogwKdA8x7E7I9y6fXMi3_TuI1Zw0286IktNyx7rdcaEv8i8rjyac6AdSFMdSFosLyU9nYAwIkgBcepww-L2wcdWzI')"></div>
+<div class="absolute inset-0 project-overlay flex flex-col justify-end p-md">
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="inline-block bg-tertiary-container text-on-tertiary-container px-sm py-xs rounded-full font-label-md text-xs mb-sm">Industrial</span>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest mb-xs">Horizon Data Center</h3>
+<div class="flex items-center gap-sm text-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bolt</span> 12.5 MW</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Wide Project Card -->
+<div class="group relative rounded-xl overflow-hidden hover-lift cursor-pointer md:col-span-2">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A modern office building with a massive solar canopy covering its parking lot. The architecture is clean and contemporary, utilizing glass and steel. The solar structures provide shade while generating power, illustrating dual-use commercial energy solutions. The lighting is bright, clear daylight with a professional corporate mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCuYTzHfCrZYOODtw3092CT3ePKE5d6qRVH89wF1gTKPvUgN6CiIi4flcoKdH6X1hXODqphLCGvKhkDNuF_mukDb9dZau0nFezGplZiBr_FmsmvkQP2DHdO0JbYVhVVWVpL50h5hhfCLZQUzpAndgSrknVSLNVCPJ8XtY3f9H9UTgo-zuKrxkngCGs0_u2OkfQIpdBf7WpqbFPo40bldkM1JTfTrbvIzJz2W71qq0z1uIiiBo3Vq8IOChXT7j-f2zNKFtRdfzbFEk')"></div>
+<div class="absolute inset-0 project-overlay flex flex-col justify-end p-md">
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="inline-block bg-primary-container text-on-primary-container px-sm py-xs rounded-full font-label-md text-xs mb-sm">Commercial</span>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest mb-xs">TechPark Canopy Array</h3>
+<div class="flex items-center gap-md text-surface-variant font-body-md text-body-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">bolt</span> 850 kW</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">location_on</span> Texas, USA</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Standard Project Card 3 -->
+<div class="group relative rounded-xl overflow-hidden hover-lift cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A residential solar installation on a modern, minimalist home. The roof is completely integrated with sleek, black solar tiles that blend seamlessly with the architecture. The surrounding environment is lush and green, emphasizing sustainable living. The lighting is soft and natural, creating an inviting, eco-friendly atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCeXTlmHeIgVplTBbOZsSjSmkaV92A7Guqosp3BhtTcr-sAOKr_gaSY5rL1zwk7mL9zlID42ZeME0DKjz7J5vnKai69mjSwyRTW_Wy2JXHzEpsIgu4bHl0URmEi8hnVnizfndwitZWlmus1DHaOlYLI8l905yApSaK7_55FUKqhF3KfAlvxQ9jQJ8cJXTBBuBwOcqFFKexPR1tnI5gac_K2cBvRm-nNH-SI6giv0BzJMoY6SagOBJoS4yzdxNTGrmHuitvMrggv9oI')"></div>
+<div class="absolute inset-0 project-overlay flex flex-col justify-end p-md">
+<div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="inline-block bg-secondary-container text-on-secondary-container px-sm py-xs rounded-full font-label-md text-xs mb-sm">Residential</span>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest mb-xs">Modern Eco-Villa</h3>
+<div class="flex items-center gap-sm text-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bolt</span> 22 kW</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pagination / Load More -->
+<div class="flex justify-center pt-lg border-t border-outline-variant/20">
+<button class="flex items-center gap-2 bg-transparent text-primary border border-primary px-lg py-sm rounded-full font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all duration-300 hover-lift">
+                Load More Projects
+                <span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-on-background dark:bg-surface-container-lowest text-primary-fixed dark:text-primary font-body-md text-body-md w-full rounded-t-xl flat no shadows grid grid-cols-1 md:grid-cols-4 gap-md px-margin-mobile md:px-margin-desktop py-xl w-full mt-xl">
+<div class="md:col-span-1">
+<div class="font-headline-lg text-headline-lg text-primary-fixed mb-md">
+                SolarPulse
+            </div>
+<p class="text-surface-variant/70 text-sm">
+                © 2024 SolarPulse Intelligence. All rights reserved.
+            </p>
+</div>
+<div class="md:col-span-3 flex flex-wrap justify-end gap-md md:gap-lg items-center">
+<a class="text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+<a class="text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 transition-opacity" href="#">Sustainability Report</a>
+<a class="text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 transition-opacity" href="#">Investor Relations</a>
+</div>
+</footer>
+</body></html>

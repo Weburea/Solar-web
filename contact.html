@@ -1,0 +1,290 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact Us - SolarPulse</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#59d784",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#2a4676",
+                        "tertiary-fixed": "#7efba4",
+                        "on-primary-fixed-variant": "#614000",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#20314d",
+                        "surface-container": "#e8eeff",
+                        "primary-fixed-dim": "#ffba43",
+                        "secondary-container": "#acc7fe",
+                        "primary": "#805600",
+                        "surface-variant": "#d6e3ff",
+                        "on-tertiary-fixed": "#00210c",
+                        "on-primary-container": "#6a4700",
+                        "surface-container-high": "#dfe8ff",
+                        "secondary": "#435e8f",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-background": "#091b36",
+                        "surface-container-low": "#f0f3ff",
+                        "inverse-primary": "#ffba43",
+                        "on-surface-variant": "#514534",
+                        "surface-bright": "#f9f9ff",
+                        "on-secondary-container": "#375282",
+                        "surface-dim": "#cadafe",
+                        "tertiary": "#006d37",
+                        "inverse-on-surface": "#ecf0ff",
+                        "tertiary-fixed-dim": "#61de8a",
+                        "on-tertiary-container": "#005a2c",
+                        "on-surface": "#091b36",
+                        "outline": "#837562",
+                        "surface": "#f9f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#d6e3ff",
+                        "secondary-fixed": "#d7e2ff",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#001b3f",
+                        "surface-tint": "#805600",
+                        "on-primary-fixed": "#281800",
+                        "on-tertiary-fixed-variant": "#005228",
+                        "secondary-fixed-dim": "#acc7fe",
+                        "primary-container": "#f9b233",
+                        "primary-fixed": "#ffddaf",
+                        "outline-variant": "#d5c4ae",
+                        "background": "#f9f9ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "margin-desktop": "64px",
+                        "lg": "48px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "xl": "80px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "data-display": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "data-display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .soft-shadow {
+            box-shadow: 0 4px 20px rgba(9, 27, 54, 0.04);
+        }
+        .gradient-btn {
+            background: linear-gradient(180deg, #F9B233 0%, #E5A32E 100%);
+        }
+        .gradient-btn:hover {
+            background: linear-gradient(180deg, #E5A32E 0%, #D19429 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface/90 backdrop-blur-md dark:bg-on-background/90 fixed top-0 w-full z-50 border-b border-outline-variant/10 shadow-sm transition-transform" id="top-nav">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
+<div class="font-display-lg text-headline-lg-mobile md:text-headline-md font-bold tracking-tighter text-primary">
+                SolarPulse
+            </div>
+<nav class="hidden md:flex gap-gutter">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md py-2" href="#">Residential</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md py-2" href="#">Commercial</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md py-2" href="#">Storage</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md py-2" href="#">Financials</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button class="hidden md:block bg-primary-container text-on-primary-container font-label-md text-label-md px-4 py-2 rounded-lg hover:bg-surface-container-low transition-all duration-300 scale-95 active:scale-90 shadow-sm gradient-btn">
+                    Get a Quote
+                </button>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-24 pb-xl px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto w-full">
+<!-- Hero & Form Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-xl mt-lg">
+<!-- Left Column: Hero & Info -->
+<div class="lg:col-span-5 flex flex-col justify-center">
+<h1 class="font-display-lg text-display-lg text-on-background mb-md">
+                    Let's Power Your Project
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-md">
+                    Connect with our energy intelligence team to design a scalable solar solution tailored to your infrastructure and financial goals.
+                </p>
+<!-- Contact Info Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-sm mb-lg">
+<div class="bg-surface rounded-xl p-md soft-shadow border border-outline-variant/10 hover:-translate-y-[2px] transition-transform">
+<span class="material-symbols-outlined text-primary mb-sm block text-[32px]">location_on</span>
+<h3 class="font-headline-md text-body-lg font-semibold mb-xs">Global HQ</h3>
+<p class="font-body-md text-on-surface-variant">100 Energy Way<br>Tech District, CA 94105</p>
+</div>
+<div class="bg-surface rounded-xl p-md soft-shadow border border-outline-variant/10 hover:-translate-y-[2px] transition-transform">
+<span class="material-symbols-outlined text-primary mb-sm block text-[32px]">call</span>
+<h3 class="font-headline-md text-body-lg font-semibold mb-xs">Direct Line</h3>
+<p class="font-body-md text-on-surface-variant">+1 (888) 555-SOLAR<br>Mon-Fri, 9am - 6pm</p>
+</div>
+</div>
+<!-- WhatsApp Secondary CTA -->
+<a class="flex items-center gap-sm bg-surface-container-low text-on-background p-md rounded-xl hover:bg-surface-container transition-colors soft-shadow border border-outline-variant/20 inline-flex w-fit" href="#">
+<div class="bg-tertiary-container text-on-tertiary-container p-2 rounded-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+</div>
+<div>
+<span class="font-label-md text-label-md block">Quick Inquiries?</span>
+<span class="font-body-md text-on-surface-variant text-sm">Chat with us on WhatsApp</span>
+</div>
+</a>
+</div>
+<!-- Right Column: Lead Form -->
+<div class="lg:col-span-7">
+<div class="bg-surface rounded-xl p-lg soft-shadow border border-outline-variant/20 h-full relative overflow-hidden">
+<!-- Decorative background element -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
+<div class="relative z-10">
+<h2 class="font-headline-md text-headline-md mb-md border-b border-outline-variant/10 pb-sm">Project Assessment</h2>
+<form class="space-y-md">
+<!-- Step 1: Project Type -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-sm">Project Type</label>
+<div class="grid grid-cols-2 gap-sm">
+<label class="relative flex cursor-pointer items-center justify-center rounded-lg border border-outline-variant bg-surface px-4 py-3 hover:bg-surface-container-low transition-colors has-[:checked]:border-primary has-[:checked]:bg-surface-container">
+<input checked="" class="peer sr-only" name="project_type" type="radio">
+<span class="font-label-md text-label-md text-on-background peer-checked:text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">home</span> Residential
+                                        </span>
+</label>
+<label class="relative flex cursor-pointer items-center justify-center rounded-lg border border-outline-variant bg-surface px-4 py-3 hover:bg-surface-container-low transition-colors has-[:checked]:border-primary has-[:checked]:bg-surface-container">
+<input class="peer sr-only" name="project_type" type="radio">
+<span class="font-label-md text-label-md text-on-background peer-checked:text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">domain</span> Commercial
+                                        </span>
+</label>
+</div>
+</div>
+<!-- Step 2: Estimated Bill -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-sm">Estimated Monthly Bill</label>
+<select class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 font-body-md text-on-background focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors appearance-none">
+<option>$100 - $300</option>
+<option>$301 - $500</option>
+<option>$501 - $1,000</option>
+<option>$1,000+</option>
+</select>
+</div>
+<!-- Step 3: Contact Details Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-sm">First Name</label>
+<input class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 font-body-md text-on-background focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors placeholder:text-on-surface-variant/50" placeholder="Jane" type="text">
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-sm">Last Name</label>
+<input class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 font-body-md text-on-background focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors placeholder:text-on-surface-variant/50" placeholder="Doe" type="text">
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-sm">Work Email</label>
+<input class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 font-body-md text-on-background focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors placeholder:text-on-surface-variant/50" placeholder="jane.doe@company.com" type="email">
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-sm">Property Address</label>
+<input class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 font-body-md text-on-background focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors placeholder:text-on-surface-variant/50" placeholder="123 Energy Blvd" type="text">
+</div>
+</div>
+<button class="w-full mt-md bg-primary-container text-on-primary-container font-label-md text-label-md py-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 gradient-btn flex items-center justify-center gap-2" type="button">
+                                Request Analysis <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Proof Bar -->
+<div class="flex flex-col items-center justify-center py-md border-y border-outline-variant/10 mb-xl bg-surface/50 rounded-xl">
+<p class="font-label-md text-label-md text-on-surface-variant mb-sm">Trusted by 5,000+ Forward-Thinking Enterprises</p>
+<div class="flex flex-wrap justify-center gap-lg opacity-60 grayscale mix-blend-multiply">
+<!-- Placeholders for partner logos -->
+<div class="font-display-lg text-headline-md font-bold tracking-tighter">AcmeCorp</div>
+<div class="font-display-lg text-headline-md font-bold tracking-tighter">GlobalEnergy</div>
+<div class="font-display-lg text-headline-md font-bold tracking-tighter">TechSun</div>
+<div class="font-display-lg text-headline-md font-bold tracking-tighter">EcoBuild</div>
+</div>
+</div>
+<!-- Map Section -->
+<div class="w-full h-[400px] rounded-xl overflow-hidden soft-shadow relative border border-outline-variant/10">
+<img alt="Grayscale abstract map view" class="w-full h-full object-cover grayscale opacity-80" data-alt="A clean, minimalist grayscale top-down map visualization showing a network of data points connected by thin, precise lines. The image should look like a high-end, dashboard-integrated map reflecting global connectivity or energy grid coverage. The style is highly technical, utilizing deep navy tones and soft grays, evoking a corporate, data-driven aesthetic without any naturalistic 'earthy' colors." data-location="Global Service Area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXJtfsWtAv4wj7cdHsdyq4IbAn2XUq36oZy59VDx3B7YY8STYNpC4l7IpX8WStpkk8xPt3gBOYyIS2b_bKihLP0jTZt46yIrufldEKVeJoNJOKEzLfLOW23d0pgONcL-rDBkCzjQm0Gah4eqv8gr2LWpEhAqe17wBM3mbvrbPQ8_SJGOI6myUV7aptMQi6g5A1D2tsQhPi2fSUnsOsACheqUPlas430yB4K2jsVD_zukbLuj56xcZlRPJUNtHCLLc82T174GenEb0">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-lg">
+<div class="glass-panel p-md rounded-xl max-w-sm">
+<h3 class="font-headline-md text-headline-md text-on-background mb-xs">Service Coverage</h3>
+<p class="font-body-md text-on-surface-variant">Operating across North America and Europe, providing tier-1 solar infrastructure implementation.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-on-background dark:bg-surface-container-lowest text-primary-fixed dark:text-primary w-full rounded-t-xl mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md px-margin-mobile md:px-margin-desktop py-xl w-full">
+<div class="col-span-1 md:col-span-4 mb-md">
+<div class="font-headline-lg text-headline-lg text-primary-fixed">SolarPulse</div>
+</div>
+<div class="col-span-1 md:col-span-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-md border-t border-surface-variant/20 pt-lg mt-md">
+<p class="font-body-md text-body-md text-surface-variant/70">
+                    © 2024 SolarPulse Intelligence. All rights reserved.
+                </p>
+<div class="flex flex-wrap gap-md font-body-md text-body-md">
+<a class="text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100" href="#">Sustainability Report</a>
+<a class="text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100" href="#">Investor Relations</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- SideNavBar (Shared Component - WhatsApp FAB) -->
+<div class="fixed bottom-md right-md z-50">
+<div class="bg-tertiary-container dark:bg-tertiary text-on-tertiary-container dark:text-on-tertiary font-label-md text-label-md shadow-xl hover:scale-110 hover:shadow-2xl transition-all animate-bounce-slow cursor-pointer rounded-full p-4 flex items-center justify-center w-14 h-14" title="Contact Support">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+</div>
+</div>
+</body></html>

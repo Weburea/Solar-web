@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SolarPulse Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#59d784",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#2a4676",
+                        "tertiary-fixed": "#7efba4",
+                        "on-primary-fixed-variant": "#614000",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#20314d",
+                        "surface-container": "#e8eeff",
+                        "primary-fixed-dim": "#ffba43",
+                        "secondary-container": "#acc7fe",
+                        "primary": "#805600",
+                        "surface-variant": "#d6e3ff",
+                        "on-tertiary-fixed": "#00210c",
+                        "on-primary-container": "#6a4700",
+                        "surface-container-high": "#dfe8ff",
+                        "secondary": "#435e8f",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-background": "#091b36",
+                        "surface-container-low": "#f0f3ff",
+                        "inverse-primary": "#ffba43",
+                        "on-surface-variant": "#514534",
+                        "surface-bright": "#f9f9ff",
+                        "on-secondary-container": "#375282",
+                        "surface-dim": "#cadafe",
+                        "tertiary": "#006d37",
+                        "inverse-on-surface": "#ecf0ff",
+                        "tertiary-fixed-dim": "#61de8a",
+                        "on-tertiary-container": "#005a2c",
+                        "on-surface": "#091b36",
+                        "outline": "#837562",
+                        "surface": "#f9f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#d6e3ff",
+                        "secondary-fixed": "#d7e2ff",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#001b3f",
+                        "surface-tint": "#805600",
+                        "on-primary-fixed": "#281800",
+                        "on-tertiary-fixed-variant": "#005228",
+                        "secondary-fixed-dim": "#acc7fe",
+                        "primary-container": "#f9b233",
+                        "primary-fixed": "#ffddaf",
+                        "outline-variant": "#d5c4ae",
+                        "background": "#f9f9ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "margin-desktop": "64px",
+                        "lg": "48px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "xl": "80px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "data-display": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "data-display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .shadow-ambient { box-shadow: 0 4px 20px rgba(9, 27, 54, 0.04); }
+        .shadow-elevated { box-shadow: 0 8px 30px rgba(9, 27, 54, 0.08); }
+        .gradient-btn { background: linear-gradient(180deg, #F9B233 0%, #E6A020 100%); }
+        .gradient-btn:hover { background: linear-gradient(180deg, #E6A020 0%, #D49010 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md flex h-screen overflow-hidden antialiased">
+<!-- Sidebar Navigation -->
+<aside class="w-64 bg-surface-container-lowest border-r border-outline-variant/20 flex flex-col hidden md:flex shrink-0">
+<div class="h-20 flex items-center px-md border-b border-outline-variant/10">
+<span class="font-headline-lg text-headline-lg font-bold tracking-tighter text-primary">SolarPulse</span>
+</div>
+<nav class="flex-1 py-md px-sm space-y-base overflow-y-auto">
+<!-- Active State -->
+<a class="flex items-center px-md py-sm rounded-lg bg-surface-container-high text-primary font-label-md text-label-md transition-colors" href="#">
+<span class="material-symbols-outlined mr-sm" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                Overview
+            </a>
+<a class="flex items-center px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined mr-sm">group</span>
+                Leads
+            </a>
+<a class="flex items-center px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined mr-sm">solar_power</span>
+                Projects
+            </a>
+<a class="flex items-center px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined mr-sm">article</span>
+                CMS
+            </a>
+<a class="flex items-center px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined mr-sm">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="p-md border-t border-outline-variant/10">
+<div class="flex items-center">
+<img alt="User Profile" class="w-10 h-10 rounded-full" data-alt="A professional headshot of a corporate executive, representing the admin user of a premium solar energy dashboard. Clean, bright, and modern style fitting a corporate environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOnqJz1cKlVeJGw46FV1A2VGXgIojgAsR_VSKwypj7NjuEyfdOZE3uHYJvpnK5LUa2HnMxgPmpfrzqeb5mc_TnaoSRZNcj5s2k0vlZxipK_bL1OzaZ69mCgY05S_X-SuVAYmd1YwOjXuDaMUjBp_DYuC1HOTrB3hb7Kd8OCYkb1O33vs8NT-E8vzdVl4ElhVNkdY80bhYf6RULYuuNBJE7CkcUIY4XAuNIEsM0p20jvgJCB2051R3cIy8TkCW0rrRBbIzSi8w7MKw">
+<div class="ml-sm">
+<p class="font-label-md text-label-md text-on-background">Jane Doe</p>
+<p class="font-body-md text-sm text-on-surface-variant">Admin</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-full overflow-hidden bg-background">
+<!-- Top App Bar (Dashboard Specific) -->
+<header class="h-20 bg-surface-container-lowest border-b border-outline-variant/10 flex items-center justify-between px-margin-desktop shrink-0 z-10 shadow-ambient">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-xl pr-md py-sm bg-surface-container-low border border-outline-variant/30 rounded-full focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary text-body-md font-body-md text-on-background placeholder-on-surface-variant/70 transition-all" placeholder="Search leads, projects, or documents..." type="text">
+</div>
+</div>
+<div class="flex items-center space-x-md ml-md">
+<button class="relative p-xs text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-primary-container rounded-full"></span>
+</button>
+<button class="gradient-btn text-on-primary-fixed px-md py-sm rounded-lg font-label-md text-label-md shadow-sm hover:shadow-md transition-all flex items-center hover:-translate-y-0.5">
+<span class="material-symbols-outlined mr-xs text-[18px]">add</span>
+                    New Quote
+                </button>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-margin-desktop pb-xl space-y-xl">
+<!-- Page Header -->
+<div>
+<h1 class="font-display-lg text-display-lg text-on-background mb-xs">Dashboard Overview</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Here is the latest data for your solar operations.</p>
+</div>
+<!-- Overview Cards (Bento Grid Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-ambient hover:-translate-y-0.5 transition-transform border border-outline-variant/10">
+<div class="flex justify-between items-start mb-md">
+<div class="p-sm bg-secondary-container/30 rounded-lg text-secondary">
+<span class="material-symbols-outlined">group_add</span>
+</div>
+<span class="font-label-md text-sm text-tertiary flex items-center bg-tertiary-container/20 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px] mr-1">trending_up</span> 12%
+                        </span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-xs">New Leads</p>
+<h3 class="font-data-display text-data-display text-on-background">142</h3>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-ambient hover:-translate-y-0.5 transition-transform border border-outline-variant/10">
+<div class="flex justify-between items-start mb-md">
+<div class="p-sm bg-primary-container/20 rounded-lg text-primary">
+<span class="material-symbols-outlined">solar_power</span>
+</div>
+<span class="font-label-md text-sm text-tertiary flex items-center bg-tertiary-container/20 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px] mr-1">trending_up</span> 5%
+                        </span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-xs">Active Projects</p>
+<h3 class="font-data-display text-data-display text-on-background">38</h3>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-ambient hover:-translate-y-0.5 transition-transform border border-outline-variant/10">
+<div class="flex justify-between items-start mb-md">
+<div class="p-sm bg-tertiary-container/20 rounded-lg text-tertiary">
+<span class="material-symbols-outlined">electric_bolt</span>
+</div>
+<span class="font-label-md text-sm text-tertiary flex items-center bg-tertiary-container/20 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px] mr-1">trending_up</span> 18%
+                        </span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-xs">MW Installed (MTD)</p>
+<h3 class="font-data-display text-data-display text-on-background">4.2</h3>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-ambient hover:-translate-y-0.5 transition-transform border border-outline-variant/10">
+<div class="flex justify-between items-start mb-md">
+<div class="p-sm bg-secondary-container/20 rounded-lg text-on-background">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="font-label-md text-sm text-on-surface-variant flex items-center bg-surface-variant/50 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px] mr-1">trending_flat</span> 0%
+                        </span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-xs">Revenue (MTD)</p>
+<h3 class="font-data-display text-data-display text-on-background">$1.2M</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+<!-- Leads Manager (Data Table) -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl shadow-ambient border border-outline-variant/10 overflow-hidden">
+<div class="p-md border-b border-outline-variant/10 flex justify-between items-center">
+<h2 class="font-headline-md text-headline-md text-on-background">Recent Leads</h2>
+<button class="text-secondary hover:text-primary transition-colors font-label-md text-label-md flex items-center">
+                            View All <span class="material-symbols-outlined text-[18px] ml-xs">arrow_forward</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="py-sm px-md font-label-md text-on-surface-variant font-medium border-b border-outline-variant/10">Client</th>
+<th class="py-sm px-md font-label-md text-on-surface-variant font-medium border-b border-outline-variant/10">System Size</th>
+<th class="py-sm px-md font-label-md text-on-surface-variant font-medium border-b border-outline-variant/10">Status</th>
+<th class="py-sm px-md font-label-md text-on-surface-variant font-medium border-b border-outline-variant/10">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="py-sm px-md border-b border-outline-variant/5 font-body-md text-on-background group-hover:translate-x-1 transition-transform">Acme Corp</td>
+<td class="py-sm px-md border-b border-outline-variant/5 font-body-md text-on-surface-variant">150 kW</td>
+<td class="py-sm px-md border-b border-outline-variant/5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-container/20 text-primary">New</span>
+</td>
+<td class="py-sm px-md border-b border-outline-variant/5 font-body-md text-on-surface-variant">Today</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="py-sm px-md border-b border-outline-variant/5 font-body-md text-on-background group-hover:translate-x-1 transition-transform">Globex Industries</td>
+<td class="py-sm px-md border-b border-outline-variant/5 font-body-md text-on-surface-variant">500 kW</td>
+<td class="py-sm px-md border-b border-outline-variant/5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary-container text-on-secondary-container">Proposal Sent</span>
+</td>
+<td class="py-sm px-md border-b border-outline-variant/5 font-body-md text-on-surface-variant">Yesterday</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="py-sm px-md border-b border-outline-variant/5 font-body-md text-on-background group-hover:translate-x-1 transition-transform">Stark Logistics</td>
+<td class="py-sm px-md border-b border-outline-variant/5 font-body-md text-on-surface-variant">75 kW</td>
+<td class="py-sm px-md border-b border-outline-variant/5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-surface-variant text-on-surface-variant">Contacted</span>
+</td>
+<td class="py-sm px-md border-b border-outline-variant/5 font-body-md text-on-surface-variant">Oct 24</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="py-sm px-md border-b border-outline-variant/5 font-body-md text-on-background group-hover:translate-x-1 transition-transform">Wayne Enterprises</td>
+<td class="py-sm px-md border-b border-outline-variant/5 font-body-md text-on-surface-variant">1.2 MW</td>
+<td class="py-sm px-md border-b border-outline-variant/5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-tertiary-container text-on-tertiary-container">Contract Signed</span>
+</td>
+<td class="py-sm px-md border-b border-outline-variant/5 font-body-md text-on-surface-variant">Oct 22</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Quick Actions / Project CMS Snippet -->
+<div class="lg:col-span-1 space-y-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-ambient border border-outline-variant/10 p-md flex flex-col justify-center items-center text-center h-48 hover:shadow-elevated transition-shadow cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 text-primary flex items-center justify-center mb-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">add_photo_alternate</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-background mb-xs">Add New Project</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Upload photos and specs to the CMS portfolio.</p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-ambient border border-outline-variant/10 p-md">
+<h3 class="font-label-md text-label-md text-on-background mb-sm border-b border-outline-variant/10 pb-xs">System Status</h3>
+<div class="space-y-sm">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-sm text-on-surface-variant">API Connection</span>
+<span class="flex items-center text-tertiary text-sm font-label-md"><span class="w-2 h-2 rounded-full bg-tertiary mr-xs"></span> Online</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-sm text-on-surface-variant">Database Sync</span>
+<span class="flex items-center text-tertiary text-sm font-label-md"><span class="w-2 h-2 rounded-full bg-tertiary mr-xs"></span> Updated just now</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

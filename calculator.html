@@ -1,0 +1,353 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Solar Calculator - SolarPulse</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#59d784",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#2a4676",
+                        "tertiary-fixed": "#7efba4",
+                        "on-primary-fixed-variant": "#614000",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#20314d",
+                        "surface-container": "#e8eeff",
+                        "primary-fixed-dim": "#ffba43",
+                        "secondary-container": "#acc7fe",
+                        "primary": "#805600",
+                        "surface-variant": "#d6e3ff",
+                        "on-tertiary-fixed": "#00210c",
+                        "on-primary-container": "#6a4700",
+                        "surface-container-high": "#dfe8ff",
+                        "secondary": "#435e8f",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-background": "#091b36",
+                        "surface-container-low": "#f0f3ff",
+                        "inverse-primary": "#ffba43",
+                        "on-surface-variant": "#514534",
+                        "surface-bright": "#f9f9ff",
+                        "on-secondary-container": "#375282",
+                        "surface-dim": "#cadafe",
+                        "tertiary": "#006d37",
+                        "inverse-on-surface": "#ecf0ff",
+                        "tertiary-fixed-dim": "#61de8a",
+                        "on-tertiary-container": "#005a2c",
+                        "on-surface": "#091b36",
+                        "outline": "#837562",
+                        "surface": "#f9f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#d6e3ff",
+                        "secondary-fixed": "#d7e2ff",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#001b3f",
+                        "surface-tint": "#805600",
+                        "on-primary-fixed": "#281800",
+                        "on-tertiary-fixed-variant": "#005228",
+                        "secondary-fixed-dim": "#acc7fe",
+                        "primary-container": "#f9b233",
+                        "primary-fixed": "#ffddaf",
+                        "outline-variant": "#d5c4ae",
+                        "background": "#f9f9ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "margin-desktop": "64px",
+                        "lg": "48px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "xl": "80px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "data-display": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "data-display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Custom Range Slider Styling */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #805600; /* primary */
+            cursor: pointer;
+            margin-top: -10px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #d6e3ff; /* surface-variant */
+            border-radius: 2px;
+        }
+        input[type=range]:focus::-webkit-slider-runnable-track {
+            background: #acc7fe; /* secondary-container */
+        }
+        
+        /* Subtle Shadow for Cards */
+        .ambient-shadow {
+            box-shadow: 0px 4px 20px rgba(9, 27, 54, 0.04);
+        }
+        
+        /* Interactive Lift */
+        .interactive-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .interactive-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 24px rgba(9, 27, 54, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm border-b border-outline-variant/10">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-screen-2xl mx-auto hidden md:flex">
+<!-- Brand -->
+<div class="font-display-lg text-headline-md font-bold tracking-tighter text-primary">
+                SolarPulse
+            </div>
+<!-- Navigation Links -->
+<div class="flex space-x-gutter">
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#">Residential</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low transition-all duration-300 px-2 py-1 rounded" href="#">Commercial</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low transition-all duration-300 px-2 py-1 rounded" href="#">Storage</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low transition-all duration-300 px-2 py-1 rounded" href="#">Financials</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center space-x-sm">
+<button class="font-label-md text-label-md bg-primary-container text-on-primary-container px-4 py-2 rounded-lg hover:bg-primary hover:text-on-primary transition-colors scale-95 active:scale-90 transition-transform shadow-sm">
+                    Get a Quote
+                </button>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+<!-- Mobile Nav Variant (Simplified) -->
+<div class="flex md:hidden justify-between items-center h-16 px-margin-mobile w-full">
+<div class="font-display-lg text-headline-md font-bold tracking-tighter text-primary">
+                SolarPulse
+            </div>
+<button class="text-on-surface-variant p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-[100px] pb-xl px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto w-full">
+<!-- Hero Section -->
+<section class="mb-xl text-center md:text-left max-w-3xl">
+<h1 class="font-display-lg text-display-lg text-on-background mb-sm">
+                How much can you save with solar?
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Use our data-driven calculator to estimate your system size, potential savings, and ROI based on your current energy profile.
+            </p>
+</section>
+<!-- Calculator Layout: Bento Grid Approach -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Input Steps (8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-gutter">
+<!-- Step 1: Electricity Bill -->
+<div class="bg-surface-container-lowest rounded-xl p-md ambient-shadow border-b border-outline-variant/10 interactive-card">
+<div class="flex items-center gap-sm mb-md">
+<div class="w-8 h-8 rounded-full bg-surface-container-low text-primary flex items-center justify-center font-label-md text-label-md">1</div>
+<h2 class="font-headline-md text-headline-md text-on-background">Average Monthly Bill</h2>
+</div>
+<div class="px-sm">
+<div class="flex justify-between items-end mb-4">
+<span class="font-label-md text-label-md text-on-surface-variant">Estimated Spend</span>
+<span class="font-data-display text-data-display text-primary">$<span id="billValueDisplay">150</span></span>
+</div>
+<input class="w-full" id="billSlider" max="500" min="50" step="10" type="range" value="150">
+<div class="flex justify-between mt-2 font-body-md text-body-md text-on-surface-variant/70 text-sm">
+<span>$50</span>
+<span>$500+</span>
+</div>
+</div>
+</div>
+<!-- Step 2: Roof & Orientation -->
+<div class="bg-surface-container-lowest rounded-xl p-md ambient-shadow border-b border-outline-variant/10 interactive-card">
+<div class="flex items-center gap-sm mb-md">
+<div class="w-8 h-8 rounded-full bg-surface-container-low text-primary flex items-center justify-center font-label-md text-label-md">2</div>
+<h2 class="font-headline-md text-headline-md text-on-background">Roof Details</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md px-sm">
+<!-- Roof Type -->
+<div>
+<label class="block font-label-md text-label-md text-on-background mb-xs">Roof Material</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 px-4 rounded-lg border border-primary bg-primary/5 text-primary font-label-md text-label-md text-center transition-colors">Composite Shingle</button>
+<button class="py-2 px-4 rounded-lg border border-outline-variant bg-surface text-on-surface-variant font-label-md text-label-md text-center hover:border-primary/50 transition-colors">Tile / Clay</button>
+<button class="py-2 px-4 rounded-lg border border-outline-variant bg-surface text-on-surface-variant font-label-md text-label-md text-center hover:border-primary/50 transition-colors">Metal</button>
+<button class="py-2 px-4 rounded-lg border border-outline-variant bg-surface text-on-surface-variant font-label-md text-label-md text-center hover:border-primary/50 transition-colors">Flat</button>
+</div>
+</div>
+<!-- Sun Exposure -->
+<div>
+<label class="block font-label-md text-label-md text-on-background mb-xs">Sun Exposure</label>
+<div class="grid grid-cols-1 gap-2">
+<button class="py-2 px-4 rounded-lg border border-primary bg-primary/5 text-primary font-label-md text-label-md flex justify-between items-center transition-colors">
+<span>Full Sun</span>
+<span class="material-symbols-outlined text-primary-container fill" data-icon="light_mode">light_mode</span>
+</button>
+<button class="py-2 px-4 rounded-lg border border-outline-variant bg-surface text-on-surface-variant font-label-md text-label-md flex justify-between items-center hover:border-primary/50 transition-colors">
+<span>Partial Shade</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="partly_cloudy_day">partly_cloudy_day</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 3: Location -->
+<div class="bg-surface-container-lowest rounded-xl p-md ambient-shadow border-b border-outline-variant/10 interactive-card">
+<div class="flex items-center gap-sm mb-md">
+<div class="w-8 h-8 rounded-full bg-surface-container-low text-primary flex items-center justify-center font-label-md text-label-md">3</div>
+<h2 class="font-headline-md text-headline-md text-on-background">Location Info</h2>
+</div>
+<div class="px-sm flex flex-col sm:flex-row gap-sm items-end">
+<div class="flex-grow w-full">
+<label class="block font-label-md text-label-md text-on-background mb-xs">ZIP / Postal Code</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all font-body-md text-body-md text-on-background placeholder-on-surface-variant/50" placeholder="e.g. 90210" type="text">
+</div>
+<button class="w-full sm:w-auto font-label-md text-label-md bg-surface-container-high text-on-surface py-3 px-6 rounded-lg hover:bg-secondary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="my_location">my_location</span> Use Current
+                        </button>
+</div>
+</div>
+</div>
+<!-- Right Column: Results & Lead Gen (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<!-- Results Panel (Sticky-ish) -->
+<div class="bg-inverse-surface rounded-xl p-md shadow-lg sticky top-24 flex flex-col gap-md">
+<h3 class="font-headline-md text-headline-md text-on-primary border-b border-outline/20 pb-2">Your Estimate</h3>
+<!-- Result Card 1 -->
+<div class="bg-on-background/50 rounded-lg p-sm border border-outline/10">
+<p class="font-label-md text-label-md text-surface-variant mb-1">Estimated Annual Savings</p>
+<p class="font-data-display text-data-display text-tertiary-container">$1,850</p>
+<p class="font-body-md text-sm text-surface-variant/70 mt-1">Based on current rates</p>
+</div>
+<!-- Result Card 2 -->
+<div class="bg-on-background/50 rounded-lg p-sm border border-outline/10 flex justify-between items-center">
+<div>
+<p class="font-label-md text-label-md text-surface-variant mb-1">System Size Needed</p>
+<p class="font-headline-lg text-headline-lg text-primary-fixed">6.5 kW</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary-fixed-dim/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="solar_power">solar_power</span>
+</div>
+</div>
+<!-- Result Card 3 -->
+<div class="bg-on-background/50 rounded-lg p-sm border border-outline/10">
+<div class="flex justify-between items-end">
+<div>
+<p class="font-label-md text-label-md text-surface-variant mb-1">Est. Payback Period</p>
+<p class="font-headline-lg text-headline-lg text-on-primary">6.2 Years</p>
+</div>
+<span class="px-2 py-1 rounded-full bg-tertiary/20 text-tertiary-fixed text-xs font-bold uppercase tracking-wider">Excellent</span>
+</div>
+</div>
+<!-- Lead Gen Form inside Results -->
+<div class="mt-4 pt-4 border-t border-outline/20">
+<p class="font-label-md text-label-md text-on-primary mb-sm">Get a Detailed PDF Quote</p>
+<div class="flex flex-col gap-sm">
+<input class="w-full px-4 py-3 rounded-lg border border-transparent bg-surface/10 text-on-primary placeholder-surface-variant/50 focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed outline-none transition-all font-body-md text-body-md" placeholder="Email Address" type="email">
+<button class="w-full font-label-md text-label-md bg-primary-container text-on-primary-container py-3 px-6 rounded-lg hover:bg-primary hover:text-on-primary transition-colors shadow-sm flex items-center justify-center gap-2 group">
+                                Send My Report <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<p class="text-xs text-surface-variant/50 text-center mt-2 font-body-md">No spam, just solid data.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- SideNavBar (Shared Component - Contextual Lead Gen/Support) -->
+<div class="fixed bottom-8 right-8 z-50">
+<button class="bg-tertiary-container text-on-tertiary-container rounded-full p-4 shadow-xl hover:scale-110 hover:shadow-2xl transition-all animate-bounce-slow cursor-pointer flex items-center gap-2 group">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="hidden group-hover:block font-label-md text-label-md pr-2 whitespace-nowrap">Start Chat</span>
+</button>
+</div>
+<!-- Footer (Shared Component) -->
+<footer class="w-full rounded-t-xl bg-on-background text-surface-container-lowest px-margin-desktop py-xl mt-auto grid grid-cols-1 md:grid-cols-4 gap-md">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-lg text-headline-lg text-primary-fixed mb-sm">SolarPulse</div>
+<p class="font-body-md text-body-md text-surface-variant/70 mb-4">© 2024 SolarPulse Intelligence. All rights reserved.</p>
+</div>
+<div class="col-span-1 md:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-md">
+<!-- Footer Links mapped from JSON -->
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 block" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 block" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 block" href="#">Sustainability Report</a>
+<a class="font-body-md text-body-md text-surface-variant/70 hover:text-primary-fixed transition-colors hover:underline decoration-primary-fixed opacity-80 hover:opacity-100 block" href="#">Investor Relations</a>
+</div>
+</footer>
+<!-- Simple Interaction Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const billSlider = document.getElementById('billSlider');
+            const billValueDisplay = document.getElementById('billValueDisplay');
+            
+            if(billSlider && billValueDisplay) {
+                billSlider.addEventListener('input', (e) => {
+                    billValueDisplay.textContent = e.target.value;
+                    // In a real app, this would trigger recalculations in the Results panel
+                });
+            }
+        });
+    </script>
+</body></html>
