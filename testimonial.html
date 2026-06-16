@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en"><head>
 <meta charset="utf-8"/>
@@ -208,41 +208,70 @@
         .animate-marquee:hover {
             animation-play-state: paused;
         }
-        .card-shadow {
-            box-shadow: 0 4px 20px rgba(9, 27, 54, 0.04);
+
+        /* ═══════════════════════════════════════════════════
+           COMPREHENSIVE DARK MODE OVERRIDES
+        ═══════════════════════════════════════════════════ */
+
+        /* 1. Residential marquee cards */
+        :root.dark .review-card {
+            background: rgb(var(--color-surface-container-rgb)) !important;
+            border-color: rgba(255, 255, 255, 0.08) !important;
         }
-        .card-hover:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(9, 27, 54, 0.08);
+        :root.dark .review-card .review-body {
+            color: rgba(213, 196, 174, 0.9) !important;
         }
-        /* Dark-mode overrides for inverse-surface sections */
+        :root.dark .review-card .review-verified {
+            color: rgba(213, 196, 174, 0.55) !important;
+        }
+        :root.dark .reviewer-name {
+            color: rgb(249, 249, 255) !important;
+        }
+
+        /* 2. Commercial Partnership cards */
+        :root.dark .comm-card {
+            background: rgb(var(--color-surface-container-rgb)) !important;
+            border-color: rgba(255, 255, 255, 0.08) !important;
+        }
+        :root.dark .comm-card .comm-header {
+            background: rgb(var(--color-surface-container-high-rgb)) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+        :root.dark .comm-card .comm-icon {
+            color: #FFB300 !important;
+        }
+        :root.dark .comm-card .comm-verify-icon {
+            color: rgb(213, 196, 174) !important;
+        }
+
+        /* 3. Industrial cards */
         :root.dark .industrial-card {
-            background: rgba(255, 255, 255, 0.08) !important;
-            border-color: rgba(255, 255, 255, 0.15) !important;
+            background: rgba(255, 255, 255, 0.07) !important;
+            border-color: rgba(255, 255, 255, 0.12) !important;
         }
         :root.dark .industrial-card:hover {
-            background: rgba(255, 255, 255, 0.14) !important;
-        }
-        :root.dark .industrial-card .ind-capacity {
-            color: rgb(213 196 174) !important;
-        }
-        :root.dark .industrial-card .ind-body {
-            color: rgb(249 249 255) !important;
-        }
-        :root.dark .industrial-card .ind-name {
-            color: rgb(249 249 255) !important;
-        }
-        :root.dark .industrial-card .ind-role {
-            color: rgb(213 196 174) !important;
+            background: rgba(255, 255, 255, 0.12) !important;
         }
         :root.dark .industrial-card .ind-company {
             color: #FFB300 !important;
         }
-        :root.dark .industrial-card .ind-border {
-            border-color: rgba(255, 255, 255, 0.12) !important;
+        :root.dark .industrial-card .ind-capacity {
+            color: rgb(213, 196, 174) !important;
         }
-        :root.dark .cta-inverse .cta-body {
-            color: rgba(249, 249, 255, 0.85) !important;
+        :root.dark .industrial-card .ind-body {
+            color: rgba(249, 249, 255, 0.92) !important;
+        }
+        :root.dark .industrial-card .ind-name {
+            color: rgb(249, 249, 255) !important;
+        }
+        :root.dark .industrial-card .ind-role {
+            color: rgb(213, 196, 174) !important;
+        }
+        :root.dark .industrial-card .ind-icon {
+            color: rgb(213, 196, 174) !important;
+        }
+        :root.dark .industrial-card .ind-border {
+            border-color: rgba(255, 255, 255, 0.1) !important;
         }
     </style>
 
@@ -410,12 +439,12 @@
 <!-- 1. Hero Section -->
 <section class="relative pt-xl pb-xl px-margin-mobile md:px-margin-desktop overflow-hidden flex flex-col items-center text-center bg-inverse-surface text-surface">
 <div class="absolute inset-0 z-0 opacity-20">
-<img alt="Aerial view of a massive industrial solar farm gleaming under a bright midday sun. Rows of meticulously aligned photovoltaic panels stretch to the horizon. The lighting is harsh and technical, emphasizing the geometric precision of the array. The mood is powerful and forward-looking, perfectly matching the clean energy intelligence aesthetic." class="w-full h-full object-cover" data-alt="Aerial view of a massive industrial solar farm gleaming under a bright midday sun. Rows of meticulously aligned photovoltaic panels stretch to the horizon. The lighting is harsh and technical, emphasizing the geometric precision of the array. The mood is powerful and forward-looking, perfectly matching the clean energy intelligence aesthetic." src="assets/images/Gemini_Generated_Image_ytb7lxytb7lxytb7.png"/>
+<img alt="Aerial view of a massive industrial solar farm gleaming under a bright midday sun. Rows of meticulously aligned photovoltaic panels stretch to the horizon. The lighting is harsh and technical, emphasizing the geometric precision of the array. The mood is powerful and forward-looking, perfectly matching the clean energy intelligence aesthetic." class="w-full h-full object-cover" data-alt="Aerial view of a massive industrial solar farm gleaming under a bright midday sun. Rows of meticulously aligned photovoltaic panels stretch to the horizon. The lighting is harsh and technical, emphasizing the geometric precision of the array. The mood is powerful and forward-looking, perfectly matching the clean energy intelligence aesthetic." src="assets/images/Gemini_Generated_Image_ytb7lxytb7lxytb.jpeg"/>
 <div class="absolute inset-0 bg-inverse-surface mix-blend-multiply"></div>
 </div>
 <div class="relative z-10 max-w-4xl mx-auto space-y-md">
-<h1 class="font-display-lg text-display-lg md:text-[56px] leading-tight text-surface-bright">The Power of Trust</h1>
-<p class="font-body-lg text-body-lg text-surface-variant max-w-2xl mx-auto">Discover how our industrial-grade precision and data-driven approach have unlocked energy independence and measurable ROI for thousands of partners worldwide.</p>
+<h1 class="font-display-lg text-display-lg md:text-[56px] leading-tight text-surface-bright dark:text-white">The Power of Trust</h1>
+<p class="font-body-lg text-body-lg text-surface-variant dark:text-slate-300 max-w-2xl mx-auto">Discover how our industrial-grade precision and data-driven approach have unlocked energy independence and measurable ROI for thousands of partners worldwide.</p>
 <div class="pt-sm">
 <button id="btn-view-success" class="bg-[#F9B233] hover:bg-white text-white hover:text-[#F9B233] border border-[#F9B233] font-label-md text-label-md px-lg py-sm rounded-lg shadow-lg transition-all flex items-center justify-center mx-auto space-x-2 font-bold">
 <span>View Success Stories</span>
@@ -435,12 +464,12 @@
 <section class="py-xl px-margin-mobile md:px-margin-desktop bg-surface">
 <div class="max-w-7xl mx-auto space-y-lg">
 <div class="text-center">
-<h2 class="font-headline-lg text-headline-lg text-inverse-surface mb-sm">Hear From Our Partners</h2>
+<h2 class="font-headline-lg text-headline-lg text-inverse-surface dark:text-white mb-sm">Hear From Our Partners</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <!-- Video Card 1 -->
 <div class="group relative rounded-xl overflow-hidden card-shadow cursor-pointer">
-<img alt="Video thumbnail" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" src="assets/images/Gemini_Generated_Image_3klcja3klcja3klc.png"/>
+<img alt="Video thumbnail" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" src="assets/images/Gemini_Generated_Image_3klcja3klcja3kl.jpeg"/>
 <div class="absolute inset-0 bg-inverse-surface/40 flex items-center justify-center">
 <div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
 <span class="material-symbols-outlined text-inverse-surface text-3xl fill">play_arrow</span>
@@ -453,7 +482,7 @@
 </div>
 <!-- Video Card 2 -->
 <div class="group relative rounded-xl overflow-hidden card-shadow cursor-pointer">
-<img alt="Video thumbnail" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" src="assets/images/Gemini_Generated_Image_8mj5828mj5828mj5.png"/>
+<img alt="Video thumbnail" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" src="assets/images/Gemini_Generated_Image_8mj5828mj5828mj.jpeg"/>
 <div class="absolute inset-0 bg-inverse-surface/40 flex items-center justify-center">
 <div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
 <span class="material-symbols-outlined text-inverse-surface text-3xl fill">play_arrow</span>
@@ -470,19 +499,19 @@
 <!-- 4. Residential Client Reviews -->
 <section id="residential-reviews" class="py-xl px-margin-mobile md:px-margin-desktop bg-surface-container-lowest overflow-hidden">
 <div class="max-w-7xl mx-auto space-y-lg">
-<h2 class="font-headline-lg text-headline-lg text-inverse-surface text-center">Residential Transformations</h2>
+<h2 class="font-headline-lg text-headline-lg text-inverse-surface dark:text-white text-center">Residential Transformations</h2>
 
 <div class="relative w-full overflow-hidden py-4">
     <!-- Sliding Track -->
     <div class="animate-marquee flex gap-gutter w-max">
         <!-- Card 1 (Facebook) -->
-        <div class="bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
+        <div class="review-card bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
             <div class="flex items-center mb-sm">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full mr-sm flex items-center justify-center bg-primary-container text-[#805600] hover:bg-[#805600] hover:text-white transition-all duration-300 shadow-sm border border-outline-variant/30">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H7v3h2v9h4v-9h3.6l.4-3H13V6c0-.5.5-1 1-1h3V1H13c-3.3 0-5 1.7-5 5v2z"/></svg>
                 </a>
                 <div>
-                    <div class="font-label-md text-label-md text-inverse-surface">Sarah Jenkins</div>
+                    <div class="reviewer-name font-label-md text-label-md text-inverse-surface">Sarah Jenkins</div>
                     <div class="text-xs text-on-surface-variant">System Size: 8.4 kW</div>
                 </div>
             </div>
@@ -493,20 +522,20 @@
                 <span class="material-symbols-outlined fill text-xl">star</span>
                 <span class="material-symbols-outlined fill text-xl">star</span>
             </div>
-            <p class="font-body-md text-body-md text-on-surface-variant flex-grow italic">"The installation was flawless. Our electric bill dropped by 85% in the first month. The Solaris team handled all the permits smoothly."</p>
-            <div class="mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
+            <p class="review-body font-body-md text-body-md text-on-surface-variant flex-grow italic">"The installation was flawless. Our electric bill dropped by 85% in the first month. The Solaris team handled all the permits smoothly."</p>
+            <div class="review-verified mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
                 Verified via Facebook
             </div>
         </div>
 
         <!-- Card 2 (Instagram) -->
-        <div class="bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
+        <div class="review-card bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
             <div class="flex items-center mb-sm">
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full mr-sm flex items-center justify-center bg-primary-container text-[#805600] hover:bg-[#805600] hover:text-white transition-all duration-300 shadow-sm border border-outline-variant/30">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                 </a>
                 <div>
-                    <div class="font-label-md text-label-md text-inverse-surface">Marcus Chen</div>
+                    <div class="reviewer-name font-label-md text-label-md text-inverse-surface">Marcus Chen</div>
                     <div class="text-xs text-on-surface-variant">System Size: 12.2 kW + Storage</div>
                 </div>
             </div>
@@ -517,20 +546,20 @@
                 <span class="material-symbols-outlined fill text-xl">star</span>
                 <span class="material-symbols-outlined fill text-xl">star</span>
             </div>
-            <p class="font-body-md text-body-md text-on-surface-variant flex-grow italic">"Adding battery storage was the best decision. We didn't even notice the grid outage last week. Incredible technology and service."</p>
-            <div class="mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
+            <p class="review-body font-body-md text-body-md text-on-surface-variant flex-grow italic">"Adding battery storage was the best decision. We didn't even notice the grid outage last week. Incredible technology and service."</p>
+            <div class="review-verified mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
                 Verified via Instagram
             </div>
         </div>
 
         <!-- Card 3 (Twitter/X) -->
-        <div class="bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
+        <div class="review-card bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
             <div class="flex items-center mb-sm">
                 <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full mr-sm flex items-center justify-center bg-primary-container text-[#805600] hover:bg-[#805600] hover:text-white transition-all duration-300 shadow-sm border border-outline-variant/30">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 </a>
                 <div>
-                    <div class="font-label-md text-label-md text-inverse-surface">Elena Rodriguez</div>
+                    <div class="reviewer-name font-label-md text-label-md text-inverse-surface">Elena Rodriguez</div>
                     <div class="text-xs text-on-surface-variant">System Size: 6.6 kW</div>
                 </div>
             </div>
@@ -541,20 +570,20 @@
                 <span class="material-symbols-outlined fill text-xl">star</span>
                 <span class="material-symbols-outlined fill text-xl">star</span>
             </div>
-            <p class="font-body-md text-body-md text-on-surface-variant flex-grow italic">"Transparent pricing, no hidden fees, and a beautifully designed app to track our production. Highly recommend Solaris to anyone."</p>
-            <div class="mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
+            <p class="review-body font-body-md text-body-md text-on-surface-variant flex-grow italic">"Transparent pricing, no hidden fees, and a beautifully designed app to track our production. Highly recommend Solaris to anyone."</p>
+            <div class="review-verified mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
                 Verified via X
             </div>
         </div>
 
         <!-- Card 4 (LinkedIn) -->
-        <div class="bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
+        <div class="review-card bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
             <div class="flex items-center mb-sm">
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full mr-sm flex items-center justify-center bg-primary-container text-[#805600] hover:bg-[#805600] hover:text-white transition-all duration-300 shadow-sm border border-outline-variant/30">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
                 <div>
-                    <div class="font-label-md text-label-md text-inverse-surface">David Thompson</div>
+                    <div class="reviewer-name font-label-md text-label-md text-inverse-surface">David Thompson</div>
                     <div class="text-xs text-on-surface-variant">System Size: 10.5 kW</div>
                 </div>
             </div>
@@ -565,20 +594,20 @@
                 <span class="material-symbols-outlined fill text-xl">star</span>
                 <span class="material-symbols-outlined fill text-xl">star</span>
             </div>
-            <p class="font-body-md text-body-md text-on-surface-variant flex-grow italic">"The team was professional, clean, and delivered exactly what was promised. Their ROI calculations were 100% accurate."</p>
-            <div class="mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
+            <p class="review-body font-body-md text-body-md text-on-surface-variant flex-grow italic">"The team was professional, clean, and delivered exactly what was promised. Their ROI calculations were 100% accurate."</p>
+            <div class="review-verified mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
                 Verified via LinkedIn
             </div>
         </div>
 
         <!-- Card 5 (YouTube) -->
-        <div class="bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
+        <div class="review-card bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
             <div class="flex items-center mb-sm">
                 <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full mr-sm flex items-center justify-center bg-primary-container text-[#805600] hover:bg-[#805600] hover:text-white transition-all duration-300 shadow-sm border border-outline-variant/30">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 00-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.507a3.003 3.003 0 00-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 002.11 2.11c1.87.507 9.388.507 9.388.507s7.518 0 9.388-.507a3.003 3.003 0 002.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                 </a>
                 <div>
-                    <div class="font-label-md text-label-md text-inverse-surface">Emily Watson</div>
+                    <div class="reviewer-name font-label-md text-label-md text-inverse-surface">Emily Watson</div>
                     <div class="text-xs text-on-surface-variant">System Size: 9.0 kW + Storage</div>
                 </div>
             </div>
@@ -589,20 +618,20 @@
                 <span class="material-symbols-outlined fill text-xl">star</span>
                 <span class="material-symbols-outlined fill text-xl">star</span>
             </div>
-            <p class="font-body-md text-body-md text-on-surface-variant flex-grow italic">"Our home is now a self-sustaining power station. Exceptional engineering and seamless integration with our home automation."</p>
-            <div class="mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
+            <p class="review-body font-body-md text-body-md text-on-surface-variant flex-grow italic">"Our home is now a self-sustaining power station. Exceptional engineering and seamless integration with our home automation."</p>
+            <div class="review-verified mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
                 Verified via YouTube
             </div>
         </div>
 
         <!-- Card 6 (TikTok) -->
-        <div class="bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
+        <div class="review-card bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
             <div class="flex items-center mb-sm">
                 <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full mr-sm flex items-center justify-center bg-primary-container text-[#805600] hover:bg-[#805600] hover:text-white transition-all duration-300 shadow-sm border border-outline-variant/30">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.59 4.23-1.02.02-2.05-.01-3.07.01v6.92c.01 1.9-.81 3.73-2.22 4.97-1.42 1.25-3.35 1.83-5.22 1.57-1.87-.27-3.52-1.39-4.43-3.05-1.12-2.02-.75-4.66.9-6.26 1.4-1.36 3.44-1.92 5.37-1.47v4.11c-.96-.34-2.04-.15-2.82.51-.78.66-1.13 1.76-.92 2.74.21.98.99 1.75 1.97 1.96.98.2 2.08-.14 2.74-.92.66-.78.85-1.86.51-2.82V.02zm8.01 4.98c.84-.04 1.68-.01 2.52-.02V0c-.84.01-1.68.01-2.52.02v4.98z"/></svg>
                 </a>
                 <div>
-                    <div class="font-label-md text-label-md text-inverse-surface">Michael O'Connor</div>
+                    <div class="reviewer-name font-label-md text-label-md text-inverse-surface">Michael O'Connor</div>
                     <div class="text-xs text-on-surface-variant">System Size: 7.2 kW</div>
                 </div>
             </div>
@@ -613,21 +642,21 @@
                 <span class="material-symbols-outlined fill text-xl">star</span>
                 <span class="material-symbols-outlined fill text-xl">star</span>
             </div>
-            <p class="font-body-md text-body-md text-on-surface-variant flex-grow italic">"Excellent customer support. They answered all my technical questions and optimized our roof space for maximum winter yield."</p>
-            <div class="mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
+            <p class="review-body font-body-md text-body-md text-on-surface-variant flex-grow italic">"Excellent customer support. They answered all my technical questions and optimized our roof space for maximum winter yield."</p>
+            <div class="review-verified mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
                 Verified via TikTok
             </div>
         </div>
 
         <!-- Clone set of 6 cards for seamless looping -->
         <!-- Clone Card 1 -->
-        <div class="bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
+        <div class="review-card bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
             <div class="flex items-center mb-sm">
                 <div class="w-12 h-12 rounded-full mr-sm flex items-center justify-center bg-primary-container text-[#805600] transition-all duration-300 shadow-sm border border-outline-variant/30">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H7v3h2v9h4v-9h3.6l.4-3H13V6c0-.5.5-1 1-1h3V1H13c-3.3 0-5 1.7-5 5v2z"/></svg>
                 </div>
                 <div>
-                    <div class="font-label-md text-label-md text-inverse-surface">Sarah Jenkins</div>
+                    <div class="reviewer-name font-label-md text-label-md text-inverse-surface">Sarah Jenkins</div>
                     <div class="text-xs text-on-surface-variant">System Size: 8.4 kW</div>
                 </div>
             </div>
@@ -638,20 +667,20 @@
                 <span class="material-symbols-outlined fill text-xl">star</span>
                 <span class="material-symbols-outlined fill text-xl">star</span>
             </div>
-            <p class="font-body-md text-body-md text-on-surface-variant flex-grow italic">"The installation was flawless. Our electric bill dropped by 85% in the first month. The Solaris team handled all the permits smoothly."</p>
-            <div class="mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
+            <p class="review-body font-body-md text-body-md text-on-surface-variant flex-grow italic">"The installation was flawless. Our electric bill dropped by 85% in the first month. The Solaris team handled all the permits smoothly."</p>
+            <div class="review-verified mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
                 Verified via Facebook
             </div>
         </div>
 
         <!-- Clone Card 2 -->
-        <div class="bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
+        <div class="review-card bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
             <div class="flex items-center mb-sm">
                 <div class="w-12 h-12 rounded-full mr-sm flex items-center justify-center bg-primary-container text-[#805600] transition-all duration-300 shadow-sm border border-outline-variant/30">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                 </div>
                 <div>
-                    <div class="font-label-md text-label-md text-inverse-surface">Marcus Chen</div>
+                    <div class="reviewer-name font-label-md text-label-md text-inverse-surface">Marcus Chen</div>
                     <div class="text-xs text-on-surface-variant">System Size: 12.2 kW + Storage</div>
                 </div>
             </div>
@@ -662,20 +691,20 @@
                 <span class="material-symbols-outlined fill text-xl">star</span>
                 <span class="material-symbols-outlined fill text-xl">star</span>
             </div>
-            <p class="font-body-md text-body-md text-on-surface-variant flex-grow italic">"Adding battery storage was the best decision. We didn't even notice the grid outage last week. Incredible technology and service."</p>
-            <div class="mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
+            <p class="review-body font-body-md text-body-md text-on-surface-variant flex-grow italic">"Adding battery storage was the best decision. We didn't even notice the grid outage last week. Incredible technology and service."</p>
+            <div class="review-verified mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
                 Verified via Instagram
             </div>
         </div>
 
         <!-- Clone Card 3 -->
-        <div class="bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
+        <div class="review-card bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
             <div class="flex items-center mb-sm">
                 <div class="w-12 h-12 rounded-full mr-sm flex items-center justify-center bg-primary-container text-[#805600] transition-all duration-300 shadow-sm border border-outline-variant/30">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 </div>
                 <div>
-                    <div class="font-label-md text-label-md text-inverse-surface">Elena Rodriguez</div>
+                    <div class="reviewer-name font-label-md text-label-md text-inverse-surface">Elena Rodriguez</div>
                     <div class="text-xs text-on-surface-variant">System Size: 6.6 kW</div>
                 </div>
             </div>
@@ -686,20 +715,20 @@
                 <span class="material-symbols-outlined fill text-xl">star</span>
                 <span class="material-symbols-outlined fill text-xl">star</span>
             </div>
-            <p class="font-body-md text-body-md text-on-surface-variant flex-grow italic">"Transparent pricing, no hidden fees, and a beautifully designed app to track our production. Highly recommend Solaris to anyone."</p>
-            <div class="mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
+            <p class="review-body font-body-md text-body-md text-on-surface-variant flex-grow italic">"Transparent pricing, no hidden fees, and a beautifully designed app to track our production. Highly recommend Solaris to anyone."</p>
+            <div class="review-verified mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
                 Verified via X
             </div>
         </div>
 
         <!-- Clone Card 4 -->
-        <div class="bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
+        <div class="review-card bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
             <div class="flex items-center mb-sm">
                 <div class="w-12 h-12 rounded-full mr-sm flex items-center justify-center bg-primary-container text-[#805600] transition-all duration-300 shadow-sm border border-outline-variant/30">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </div>
                 <div>
-                    <div class="font-label-md text-label-md text-inverse-surface">David Thompson</div>
+                    <div class="reviewer-name font-label-md text-label-md text-inverse-surface">David Thompson</div>
                     <div class="text-xs text-on-surface-variant">System Size: 10.5 kW</div>
                 </div>
             </div>
@@ -710,20 +739,20 @@
                 <span class="material-symbols-outlined fill text-xl">star</span>
                 <span class="material-symbols-outlined fill text-xl">star</span>
             </div>
-            <p class="font-body-md text-body-md text-on-surface-variant flex-grow italic">"The team was professional, clean, and delivered exactly what was promised. Their ROI calculations were 100% accurate."</p>
-            <div class="mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
+            <p class="review-body font-body-md text-body-md text-on-surface-variant flex-grow italic">"The team was professional, clean, and delivered exactly what was promised. Their ROI calculations were 100% accurate."</p>
+            <div class="review-verified mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
                 Verified via LinkedIn
             </div>
         </div>
 
         <!-- Clone Card 5 -->
-        <div class="bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
+        <div class="review-card bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
             <div class="flex items-center mb-sm">
                 <div class="w-12 h-12 rounded-full mr-sm flex items-center justify-center bg-primary-container text-[#805600] transition-all duration-300 shadow-sm border border-outline-variant/30">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 00-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.507a3.003 3.003 0 00-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 002.11 2.11c1.87.507 9.388.507 9.388.507s7.518 0 9.388-.507a3.003 3.003 0 002.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                 </div>
                 <div>
-                    <div class="font-label-md text-label-md text-inverse-surface">Emily Watson</div>
+                    <div class="reviewer-name font-label-md text-label-md text-inverse-surface">Emily Watson</div>
                     <div class="text-xs text-on-surface-variant">System Size: 9.0 kW + Storage</div>
                 </div>
             </div>
@@ -734,20 +763,20 @@
                 <span class="material-symbols-outlined fill text-xl">star</span>
                 <span class="material-symbols-outlined fill text-xl">star</span>
             </div>
-            <p class="font-body-md text-body-md text-on-surface-variant flex-grow italic">"Our home is now a self-sustaining power station. Exceptional engineering and seamless integration with our home automation."</p>
-            <div class="mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
+            <p class="review-body font-body-md text-body-md text-on-surface-variant flex-grow italic">"Our home is now a self-sustaining power station. Exceptional engineering and seamless integration with our home automation."</p>
+            <div class="review-verified mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
                 Verified via YouTube
             </div>
         </div>
 
         <!-- Clone Card 6 -->
-        <div class="bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
+        <div class="review-card bg-surface p-md rounded-xl card-shadow border border-outline-variant/20 flex flex-col h-full card-hover w-[350px] shrink-0">
             <div class="flex items-center mb-sm">
                 <div class="w-12 h-12 rounded-full mr-sm flex items-center justify-center bg-primary-container text-[#805600] transition-all duration-300 shadow-sm border border-outline-variant/30">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.59 4.23-1.02.02-2.05-.01-3.07.01v6.92c.01 1.9-.81 3.73-2.22 4.97-1.42 1.25-3.35 1.83-5.22 1.57-1.87-.27-3.52-1.39-4.43-3.05-1.12-2.02-.75-4.66.9-6.26 1.4-1.36 3.44-1.92 5.37-1.47v4.11c-.96-.34-2.04-.15-2.82.51-.78.66-1.13 1.76-.92 2.74.21.98.99 1.75 1.97 1.96.98.2 2.08-.14 2.74-.92.66-.78.85-1.86.51-2.82V.02zm8.01 4.98c.84-.04 1.68-.01 2.52-.02V0c-.84.01-1.68.01-2.52.02v4.98z"/></svg>
                 </div>
                 <div>
-                    <div class="font-label-md text-label-md text-inverse-surface">Michael O'Connor</div>
+                    <div class="reviewer-name font-label-md text-label-md text-inverse-surface">Michael O'Connor</div>
                     <div class="text-xs text-on-surface-variant">System Size: 7.2 kW</div>
                 </div>
             </div>
@@ -758,8 +787,8 @@
                 <span class="material-symbols-outlined fill text-xl">star</span>
                 <span class="material-symbols-outlined fill text-xl">star</span>
             </div>
-            <p class="font-body-md text-body-md text-on-surface-variant flex-grow italic">"Excellent customer support. They answered all my technical questions and optimized our roof space for maximum winter yield."</p>
-            <div class="mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
+            <p class="review-body font-body-md text-body-md text-on-surface-variant flex-grow italic">"Excellent customer support. They answered all my technical questions and optimized our roof space for maximum winter yield."</p>
+            <div class="review-verified mt-md pt-sm border-t border-outline-variant/20 flex justify-end text-on-surface-variant text-xs opacity-75">
                 Verified via TikTok
             </div>
         </div>
@@ -770,13 +799,13 @@
 <!-- 5. Commercial Client Reviews -->
 <section class="py-xl px-margin-mobile md:px-margin-desktop bg-surface-container-high">
 <div class="max-w-7xl mx-auto space-y-lg">
-<h2 class="font-headline-lg text-headline-lg text-inverse-surface text-center">Commercial Partnerships</h2>
+<h2 class="font-headline-lg text-headline-lg text-inverse-surface dark:text-white text-center">Commercial Partnerships</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <!-- Comm Card 1 -->
-<div class="bg-surface-container-lowest p-md rounded-xl card-shadow flex flex-col gap-md card-hover">
-<div class="flex items-center justify-between bg-surface p-sm rounded-lg border border-outline-variant/20">
+<div class="comm-card bg-surface-container-lowest p-md rounded-xl card-shadow flex flex-col gap-md card-hover">
+<div class="comm-header flex items-center justify-between bg-surface p-sm rounded-lg border border-outline-variant/20">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-3xl text-inverse-surface">storefront</span>
+<span class="comm-icon material-symbols-outlined text-3xl text-inverse-surface">storefront</span>
 <div class="font-label-md text-label-md">Retail Plaza Inc.</div>
 </div>
 <div class="text-xs text-primary font-bold bg-primary-container/20 px-2 py-1 rounded">22% IRR</div>
@@ -785,18 +814,18 @@
 <p class="font-body-md text-body-md text-on-surface-variant mb-sm italic flex-grow">"Solaris modeled our roof space perfectly. The commercial tax incentives were clearly explained, and the 24/7 monitoring gives our facilities team peace of mind."</p>
 <div class="mt-auto flex justify-between items-end border-t border-outline-variant/10 pt-sm">
 <div>
-<div class="font-label-md text-label-md text-inverse-surface">David Hayes</div>
+<div class="reviewer-name font-label-md text-label-md text-inverse-surface">David Hayes</div>
 <div class="text-xs text-on-surface-variant">Facilities Director</div>
 </div>
-<span class="material-symbols-outlined text-inverse-surface" title="Verified via LinkedIn">work</span>
+<span class="comm-verify-icon material-symbols-outlined text-inverse-surface" title="Verified via LinkedIn">work</span>
 </div>
 </div>
 </div>
 <!-- Comm Card 2 -->
-<div class="bg-surface-container-lowest p-md rounded-xl card-shadow flex flex-col gap-md card-hover">
-<div class="flex items-center justify-between bg-surface p-sm rounded-lg border border-outline-variant/20">
+<div class="comm-card bg-surface-container-lowest p-md rounded-xl card-shadow flex flex-col gap-md card-hover">
+<div class="comm-header flex items-center justify-between bg-surface p-sm rounded-lg border border-outline-variant/20">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-3xl text-inverse-surface">domain</span>
+<span class="comm-icon material-symbols-outlined text-3xl text-inverse-surface">domain</span>
 <div class="font-label-md text-label-md">TechPark Hub</div>
 </div>
 <div class="text-xs text-primary font-bold bg-primary-container/20 px-2 py-1 rounded">Year 3 Payback</div>
@@ -805,18 +834,18 @@
 <p class="font-body-md text-body-md text-on-surface-variant mb-sm italic flex-grow">"Integrating solar carports added massive value for our tenants while slashing common area electrical costs. Professional execution from day one."</p>
 <div class="mt-auto flex justify-between items-end border-t border-outline-variant/10 pt-sm">
 <div>
-<div class="font-label-md text-label-md text-inverse-surface">Amanda Lee</div>
+<div class="reviewer-name font-label-md text-label-md text-inverse-surface">Amanda Lee</div>
 <div class="text-xs text-on-surface-variant">VP of Operations</div>
 </div>
-<span class="material-symbols-outlined text-inverse-surface" title="Verified via LinkedIn">work</span>
+<span class="comm-verify-icon material-symbols-outlined text-inverse-surface" title="Verified via LinkedIn">work</span>
 </div>
 </div>
 </div>
 <!-- Comm Card 3 -->
-<div class="bg-surface-container-lowest p-md rounded-xl card-shadow flex flex-col gap-md card-hover">
-<div class="flex items-center justify-between bg-surface p-sm rounded-lg border border-outline-variant/20">
+<div class="comm-card bg-surface-container-lowest p-md rounded-xl card-shadow flex flex-col gap-md card-hover">
+<div class="comm-header flex items-center justify-between bg-surface p-sm rounded-lg border border-outline-variant/20">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-3xl text-inverse-surface">local_shipping</span>
+<span class="comm-icon material-symbols-outlined text-3xl text-inverse-surface">local_shipping</span>
 <div class="font-label-md text-label-md">GreenField Logistics</div>
 </div>
 <div class="text-xs text-primary font-bold bg-primary-container/20 px-2 py-1 rounded">24% IRR</div>
@@ -825,18 +854,18 @@
 <p class="font-body-md text-body-md text-on-surface-variant mb-sm italic flex-grow">"Decarbonizing our logistics network was a critical corporate goal. Solaris designed and executed a multi-site solar roadmap that exceeded our payback targets."</p>
 <div class="mt-auto flex justify-between items-end border-t border-outline-variant/10 pt-sm">
 <div>
-<div class="font-label-md text-label-md text-inverse-surface">Sarah Jenkins</div>
+<div class="reviewer-name font-label-md text-label-md text-inverse-surface">Sarah Jenkins</div>
 <div class="text-xs text-on-surface-variant">Director of Supply Chain</div>
 </div>
-<span class="material-symbols-outlined text-inverse-surface" title="Verified via LinkedIn">work</span>
+<span class="comm-verify-icon material-symbols-outlined text-inverse-surface" title="Verified via LinkedIn">work</span>
 </div>
 </div>
 </div>
 <!-- Comm Card 4 -->
-<div class="bg-surface-container-lowest p-md rounded-xl card-shadow flex flex-col gap-md card-hover">
-<div class="flex items-center justify-between bg-surface p-sm rounded-lg border border-outline-variant/20">
+<div class="comm-card bg-surface-container-lowest p-md rounded-xl card-shadow flex flex-col gap-md card-hover">
+<div class="comm-header flex items-center justify-between bg-surface p-sm rounded-lg border border-outline-variant/20">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-3xl text-inverse-surface">corporate_fare</span>
+<span class="comm-icon material-symbols-outlined text-3xl text-inverse-surface">corporate_fare</span>
 <div class="font-label-md text-label-md">Apex Office Towers</div>
 </div>
 <div class="text-xs text-primary font-bold bg-primary-container/20 px-2 py-1 rounded">4-Year Payback</div>
@@ -845,18 +874,18 @@
 <p class="font-body-md text-body-md text-on-surface-variant mb-sm italic flex-grow">"Our tenants love the covered parking spaces with solar canopy. Solaris made the financial modeling and local utility negotiations incredibly simple."</p>
 <div class="mt-auto flex justify-between items-end border-t border-outline-variant/10 pt-sm">
 <div>
-<div class="font-label-md text-label-md text-inverse-surface">Marcus Carter</div>
+<div class="reviewer-name font-label-md text-label-md text-inverse-surface">Marcus Carter</div>
 <div class="text-xs text-on-surface-variant">Asset Manager</div>
 </div>
-<span class="material-symbols-outlined text-inverse-surface" title="Verified via LinkedIn">work</span>
+<span class="comm-verify-icon material-symbols-outlined text-inverse-surface" title="Verified via LinkedIn">work</span>
 </div>
 </div>
 </div>
 <!-- Comm Card 5 -->
-<div class="bg-surface-container-lowest p-md rounded-xl card-shadow flex flex-col gap-md card-hover">
-<div class="flex items-center justify-between bg-surface p-sm rounded-lg border border-outline-variant/20">
+<div class="comm-card bg-surface-container-lowest p-md rounded-xl card-shadow flex flex-col gap-md card-hover">
+<div class="comm-header flex items-center justify-between bg-surface p-sm rounded-lg border border-outline-variant/20">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-3xl text-inverse-surface">local_hospital</span>
+<span class="comm-icon material-symbols-outlined text-3xl text-inverse-surface">local_hospital</span>
 <div class="font-label-md text-label-md">Metro Hospital Group</div>
 </div>
 <div class="text-xs text-primary font-bold bg-primary-container/20 px-2 py-1 rounded">26% IRR</div>
@@ -865,18 +894,18 @@
 <p class="font-body-md text-body-md text-on-surface-variant mb-sm italic flex-grow">"Hospital power must be resilient. Solaris designed a hybrid solar-battery system that integrates perfectly with our emergency diesel backups."</p>
 <div class="mt-auto flex justify-between items-end border-t border-outline-variant/10 pt-sm">
 <div>
-<div class="font-label-md text-label-md text-inverse-surface">Dr. Helen Vance</div>
+<div class="reviewer-name font-label-md text-label-md text-inverse-surface">Dr. Helen Vance</div>
 <div class="text-xs text-on-surface-variant">VP of Facilities</div>
 </div>
-<span class="material-symbols-outlined text-inverse-surface" title="Verified via LinkedIn">work</span>
+<span class="comm-verify-icon material-symbols-outlined text-inverse-surface" title="Verified via LinkedIn">work</span>
 </div>
 </div>
 </div>
 <!-- Comm Card 6 -->
-<div class="bg-surface-container-lowest p-md rounded-xl card-shadow flex flex-col gap-md card-hover">
-<div class="flex items-center justify-between bg-surface p-sm rounded-lg border border-outline-variant/20">
+<div class="comm-card bg-surface-container-lowest p-md rounded-xl card-shadow flex flex-col gap-md card-hover">
+<div class="comm-header flex items-center justify-between bg-surface p-sm rounded-lg border border-outline-variant/20">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-3xl text-inverse-surface">kitchen</span>
+<span class="comm-icon material-symbols-outlined text-3xl text-inverse-surface">kitchen</span>
 <div class="font-label-md text-label-md">Sovereign Cold Storage</div>
 </div>
 <div class="text-xs text-primary font-bold bg-primary-container/20 px-2 py-1 rounded">3.5-Yr Payback</div>
@@ -885,10 +914,10 @@
 <p class="font-body-md text-body-md text-on-surface-variant mb-sm italic flex-grow">"Cooling is a massive energy drain. Going solar with Solaris has stabilized our overhead costs and protected us from peak pricing spikes."</p>
 <div class="mt-auto flex justify-between items-end border-t border-outline-variant/10 pt-sm">
 <div>
-<div class="font-label-md text-label-md text-inverse-surface">Robert Miller</div>
+<div class="reviewer-name font-label-md text-label-md text-inverse-surface">Robert Miller</div>
 <div class="text-xs text-on-surface-variant">Operations Manager</div>
 </div>
-<span class="material-symbols-outlined text-inverse-surface" title="Verified via LinkedIn">work</span>
+<span class="comm-verify-icon material-symbols-outlined text-inverse-surface" title="Verified via LinkedIn">work</span>
 </div>
 </div>
 </div>
@@ -898,7 +927,7 @@
 <!-- 6. Industrial Client Reviews -->
 <section class="py-xl px-margin-mobile md:px-margin-desktop bg-inverse-surface text-surface">
 <div class="max-w-7xl mx-auto space-y-lg">
-<h2 class="font-headline-lg text-headline-lg text-surface-bright text-center">Industrial-Grade Deployments</h2>
+<h2 class="font-headline-lg text-headline-lg text-surface-bright dark:text-white text-center">Industrial-Grade Deployments</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <!-- Ind Card 1 -->
 <div class="industrial-card bg-surface/10 p-lg rounded-xl border border-surface/20 hover:bg-surface/20 transition-all card-hover flex flex-col justify-between">
@@ -906,17 +935,17 @@
 <div class="flex justify-between items-start mb-md">
 <div>
 <h3 class="ind-company font-headline-md text-headline-md text-primary-container">Global Logistics Co.</h3>
-<p class="text-sm text-surface-variant">Capacity: 2.4 MW Rooftop Array</p>
+<p class="ind-capacity text-sm text-surface-variant">Capacity: 2.4 MW Rooftop Array</p>
 </div>
-<span class="material-symbols-outlined text-surface" title="Verified via LinkedIn">work</span>
+<span class="ind-icon material-symbols-outlined text-surface" title="Verified via LinkedIn">work</span>
 </div>
-<p class="font-body-lg text-body-lg text-surface-bright mb-md font-light">"When dealing with multi-megawatt installations, engineering tolerance is everything. Solaris demonstrated unmatched technical rigor, navigating complex structural load requirements and grid interconnection hurdles seamlessly."</p>
+<p class="ind-body font-body-lg text-body-lg text-surface-bright mb-md font-light">"When dealing with multi-megawatt installations, engineering tolerance is everything. Solaris demonstrated unmatched technical rigor, navigating complex structural load requirements and grid interconnection hurdles seamlessly."</p>
 </div>
-<div class="flex items-center gap-sm border-t border-surface/10 pt-sm">
-<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-inverse-surface">RV</div>
+<div class="ind-border flex items-center gap-sm border-t border-surface/10 pt-sm">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-white">RV</div>
 <div>
-<div class="font-label-md text-label-md text-surface-bright">Robert Vance</div>
-<div class="text-xs text-surface-variant">Chief Engineer</div>
+<div class="ind-name font-label-md text-label-md text-surface-bright">Robert Vance</div>
+<div class="ind-role text-xs text-surface-variant">Chief Engineer</div>
 </div>
 </div>
 </div>
@@ -926,17 +955,17 @@
 <div class="flex justify-between items-start mb-md">
 <div>
 <h3 class="ind-company font-headline-md text-headline-md text-primary-container">AgriGrow Farms</h3>
-<p class="text-sm text-surface-variant">Capacity: 5.1 MW Ground Mount</p>
+<p class="ind-capacity text-sm text-surface-variant">Capacity: 5.1 MW Ground Mount</p>
 </div>
-<span class="material-symbols-outlined text-surface" title="Verified via Twitter">tag</span>
+<span class="ind-icon material-symbols-outlined text-surface" title="Verified via Twitter">tag</span>
 </div>
-<p class="font-body-lg text-body-lg text-surface-bright mb-md font-light">"Solaris transformed our unused acreage into a major revenue stream. Their geotechnical analysis and tracker system design optimized our yield far beyond initial projections."</p>
+<p class="ind-body font-body-lg text-body-lg text-surface-bright mb-md font-light">"Solaris transformed our unused acreage into a major revenue stream. Their geotechnical analysis and tracker system design optimized our yield far beyond initial projections."</p>
 </div>
-<div class="flex items-center gap-sm border-t border-surface/10 pt-sm">
-<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-inverse-surface">TW</div>
+<div class="ind-border flex items-center gap-sm border-t border-surface/10 pt-sm">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-white">TW</div>
 <div>
-<div class="font-label-md text-label-md text-surface-bright">Thomas Wright</div>
-<div class="text-xs text-surface-variant">Director of Sustainability</div>
+<div class="ind-name font-label-md text-label-md text-surface-bright">Thomas Wright</div>
+<div class="ind-role text-xs text-surface-variant">Director of Sustainability</div>
 </div>
 </div>
 </div>
@@ -946,17 +975,17 @@
 <div class="flex justify-between items-start mb-md">
 <div>
 <h3 class="ind-company font-headline-md text-headline-md text-primary-container">Apex Steelworks</h3>
-<p class="text-sm text-surface-variant">Capacity: 8.2 MW Grid-Tied System</p>
+<p class="ind-capacity text-sm text-surface-variant">Capacity: 8.2 MW Grid-Tied System</p>
 </div>
-<span class="material-symbols-outlined text-surface" title="Verified via LinkedIn">work</span>
+<span class="ind-icon material-symbols-outlined text-surface" title="Verified via LinkedIn">work</span>
 </div>
-<p class="font-body-lg text-body-lg text-surface-bright mb-md font-light">"With high-temperature furnaces running 24/7, our power demand is colossal. Solaris engineered a grid-interactive substation system that offset our grid dependence by 35%."</p>
+<p class="ind-body font-body-lg text-body-lg text-surface-bright mb-md font-light">"With high-temperature furnaces running 24/7, our power demand is colossal. Solaris engineered a grid-interactive substation system that offset our grid dependence by 35%."</p>
 </div>
-<div class="flex items-center gap-sm border-t border-surface/10 pt-sm">
-<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-inverse-surface">VK</div>
+<div class="ind-border flex items-center gap-sm border-t border-surface/10 pt-sm">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-white">VK</div>
 <div>
-<div class="font-label-md text-label-md text-surface-bright">Viktor Kovalenko</div>
-<div class="text-xs text-surface-variant">Plant Manager</div>
+<div class="ind-name font-label-md text-label-md text-surface-bright">Viktor Kovalenko</div>
+<div class="ind-role text-xs text-surface-variant">Plant Manager</div>
 </div>
 </div>
 </div>
@@ -966,17 +995,17 @@
 <div class="flex justify-between items-start mb-md">
 <div>
 <h3 class="ind-company font-headline-md text-headline-md text-primary-container">Pacifica Desalination</h3>
-<p class="text-sm text-surface-variant">Capacity: 4.0 MW Microgrid</p>
+<p class="ind-capacity text-sm text-surface-variant">Capacity: 4.0 MW Microgrid</p>
 </div>
-<span class="material-symbols-outlined text-surface" title="Verified via LinkedIn">work</span>
+<span class="ind-icon material-symbols-outlined text-surface" title="Verified via LinkedIn">work</span>
 </div>
-<p class="font-body-lg text-body-lg text-surface-bright mb-md font-light">"Resilience and environmental impact were our key criteria. Solaris delivered a ruggedized coastal solar microgrid that withstands high winds and salt fog, providing stable, green power."</p>
+<p class="ind-body font-body-lg text-body-lg text-surface-bright mb-md font-light">"Resilience and environmental impact were our key criteria. Solaris delivered a ruggedized coastal solar microgrid that withstands high winds and salt fog, providing stable, green power."</p>
 </div>
-<div class="flex items-center gap-sm border-t border-surface/10 pt-sm">
-<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-inverse-surface">CZ</div>
+<div class="ind-border flex items-center gap-sm border-t border-surface/10 pt-sm">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-white">CZ</div>
 <div>
-<div class="font-label-md text-label-md text-surface-bright">Clara Zhang</div>
-<div class="text-xs text-surface-variant">Operations Director</div>
+<div class="ind-name font-label-md text-label-md text-surface-bright">Clara Zhang</div>
+<div class="ind-role text-xs text-surface-variant">Operations Director</div>
 </div>
 </div>
 </div>
@@ -986,17 +1015,17 @@
 <div class="flex justify-between items-start mb-md">
 <div>
 <h3 class="ind-company font-headline-md text-headline-md text-primary-container">Titan Data Centers</h3>
-<p class="text-sm text-surface-variant">Capacity: 12.0 MW + 20 MWh Storage</p>
+<p class="ind-capacity text-sm text-surface-variant">Capacity: 12.0 MW + 20 MWh Storage</p>
 </div>
-<span class="material-symbols-outlined text-surface" title="Verified via LinkedIn">work</span>
+<span class="ind-icon material-symbols-outlined text-surface" title="Verified via LinkedIn">work</span>
 </div>
-<p class="font-body-lg text-body-lg text-surface-bright mb-md font-light">"Data centers require tier-4 reliability. Solaris's engineering team partnered with our engineers to deliver a custom industrial microgrid that has performed flawlessly through grid stress events."</p>
+<p class="ind-body font-body-lg text-body-lg text-surface-bright mb-md font-light">"Data centers require tier-4 reliability. Solaris's engineering team partnered with our engineers to deliver a custom industrial microgrid that has performed flawlessly through grid stress events."</p>
 </div>
-<div class="flex items-center gap-sm border-t border-surface/10 pt-sm">
-<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-inverse-surface">AV</div>
+<div class="ind-border flex items-center gap-sm border-t border-surface/10 pt-sm">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-white">AV</div>
 <div>
-<div class="font-label-md text-label-md text-surface-bright">Alistair Vance</div>
-<div class="text-xs text-surface-variant">Chief Technology Officer</div>
+<div class="ind-name font-label-md text-label-md text-surface-bright">Alistair Vance</div>
+<div class="ind-role text-xs text-surface-variant">Chief Technology Officer</div>
 </div>
 </div>
 </div>
@@ -1041,7 +1070,7 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <!-- Case Study 1 -->
 <div onclick="window.location.href='blog.html?id=delta'" class="bg-surface-container-lowest rounded-xl overflow-hidden card-shadow border border-outline-variant/20 flex flex-col cursor-pointer transition-all hover:scale-[1.02] hover:shadow-lg">
-<img alt="Case Study 1" class="h-48 w-full object-cover" src="assets/images/Gemini_Generated_Image_5c5epj5c5epj5c5e.png"/>
+<img alt="Case Study 1" class="h-48 w-full object-cover" src="assets/images/Gemini_Generated_Image_5c5epj5c5epj5c5.jpeg"/>
 <div class="p-md flex-grow flex flex-col">
 <div class="text-xs font-bold text-primary tracking-wider uppercase mb-xs">Commercial Warehouse</div>
 <h3 class="font-headline-md text-headline-md text-inverse-surface mb-sm">Delta Distribution</h3>
@@ -1057,7 +1086,7 @@
 </div>
 <!-- Case Study 2 -->
 <div onclick="window.location.href='blog.html?id=miller'" class="bg-surface-container-lowest rounded-xl overflow-hidden card-shadow border border-outline-variant/20 flex flex-col cursor-pointer transition-all hover:scale-[1.02] hover:shadow-lg">
-<img alt="Case Study 2" class="h-48 w-full object-cover" src="assets/images/Gemini_Generated_Image_w057igw057igw057.png"/>
+<img alt="Case Study 2" class="h-48 w-full object-cover" src="assets/images/Gemini_Generated_Image_w057igw057igw05.jpeg"/>
 <div class="p-md flex-grow flex flex-col">
 <div class="text-xs font-bold text-primary tracking-wider uppercase mb-xs">Residential Estate</div>
 <h3 class="font-headline-md text-headline-md text-inverse-surface mb-sm">The Miller Property</h3>
@@ -1073,7 +1102,7 @@
 </div>
 <!-- Case Study 3 -->
 <div onclick="window.location.href='blog.html?id=water'" class="bg-surface-container-lowest rounded-xl overflow-hidden card-shadow border border-outline-variant/20 flex flex-col cursor-pointer transition-all hover:scale-[1.02] hover:shadow-lg">
-<img alt="Case Study 3" class="h-48 w-full object-cover" src="assets/images/Gemini_Generated_Image_8mj5828mj5828mj5.png"/>
+<img alt="Case Study 3" class="h-48 w-full object-cover" src="assets/images/Gemini_Generated_Image_8mj5828mj5828mj.jpeg"/>
 <div class="p-md flex-grow flex flex-col">
 <div class="text-xs font-bold text-primary tracking-wider uppercase mb-xs">Municipal Facility</div>
 <h3 class="font-headline-md text-headline-md text-inverse-surface mb-sm">City Water Treatment</h3>
@@ -1093,30 +1122,30 @@
 <!-- 12. FAQ Section (moved up for flow, before CTAs) -->
 <section class="py-xl px-margin-mobile md:px-margin-desktop bg-surface-container-low">
 <div class="max-w-3xl mx-auto space-y-md">
-<h2 class="font-headline-lg text-headline-lg text-inverse-surface text-center mb-lg">Frequently Asked Questions</h2>
+<h2 class="font-headline-lg text-headline-lg text-inverse-surface dark:text-white text-center mb-lg">Frequently Asked Questions</h2>
 <div class="space-y-sm">
 <details class="group bg-surface-container-lowest p-md rounded-lg shadow-sm border border-outline-variant/20 cursor-pointer">
-<summary class="font-headline-md text-headline-md text-inverse-surface flex justify-between items-center outline-none list-none">
+<summary class="font-headline-md text-headline-md text-inverse-surface dark:text-white flex justify-between items-center outline-none list-none">
                     Are these reviews verified?
-                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    <span class="material-symbols-outlined text-inverse-surface dark:text-white/70 group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div class="pt-sm mt-sm border-t border-outline-variant/10 text-on-surface-variant font-body-md">
                     Yes. All reviews on our site are sourced from verified clients and cross-referenced with public platforms like Google, Facebook, and LinkedIn.
                 </div>
 </details>
 <details class="group bg-surface-container-lowest p-md rounded-lg shadow-sm border border-outline-variant/20 cursor-pointer">
-<summary class="font-headline-md text-headline-md text-inverse-surface flex justify-between items-center outline-none list-none">
+<summary class="font-headline-md text-headline-md text-inverse-surface dark:text-white flex justify-between items-center outline-none list-none">
                     Can I speak with a past client?
-                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    <span class="material-symbols-outlined text-inverse-surface dark:text-white/70 group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div class="pt-sm mt-sm border-t border-outline-variant/10 text-on-surface-variant font-body-md">
                     Absolutely. For commercial and industrial projects, we can arrange reference calls with clients who have similar energy profiles and system architectures.
                 </div>
 </details>
 <details class="group bg-surface-container-lowest p-md rounded-lg shadow-sm border border-outline-variant/20 cursor-pointer">
-<summary class="font-headline-md text-headline-md text-inverse-surface flex justify-between items-center outline-none list-none">
+<summary class="font-headline-md text-headline-md text-inverse-surface dark:text-white flex justify-between items-center outline-none list-none">
                     How long do installations typically take?
-                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    <span class="material-symbols-outlined text-inverse-surface dark:text-white/70 group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div class="pt-sm mt-sm border-t border-outline-variant/10 text-on-surface-variant font-body-md">
                     Residential projects generally take 1-3 days on-site. Commercial and industrial timelines vary based on scope, but we pride ourselves on rigorous project management to minimize disruption.
@@ -1128,8 +1157,8 @@
 <!-- 13. Final Quote Request CTA -->
 <section class="cta-inverse py-xl px-margin-mobile md:px-margin-desktop bg-inverse-surface text-surface text-center">
 <div class="max-w-4xl mx-auto space-y-md">
-<h2 class="font-display-lg text-display-lg text-surface-bright">Ready to Write Your Success Story?</h2>
-<p class="font-body-lg text-body-lg text-surface-variant max-w-2xl mx-auto mb-lg">Join the thousands of partners who have secured their energy future with Solaris. Get a custom engineering assessment and financial model today.</p>
+<h2 class="font-display-lg text-display-lg text-surface-bright dark:text-white">Ready to Write Your Success Story?</h2>
+<p class="font-body-lg text-body-lg text-surface-variant dark:text-slate-300 max-w-2xl mx-auto mb-lg">Join the thousands of partners who have secured their energy future with Solaris. Get a custom engineering assessment and financial model today.</p>
 <a href="https://calendly.com/webureaagency/30min" target="_blank" rel="noopener noreferrer" class="btn-gradient text-inverse-surface font-headline-md text-headline-md px-xl py-md rounded-xl shadow-xl transition-all font-bold inline-flex items-center justify-center hover:scale-105 hover:shadow-lg">
             Book a Call
         </a>

@@ -115,6 +115,10 @@
             border: 1px solid rgba(255, 255, 255, 0.4);
             box-shadow: 0 4px 20px rgba(9, 27, 54, 0.04);
         }
+        :root.dark .glass-card {
+            background: rgba(12, 35, 71, 0.7);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
         
         .hover-lift {
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -309,14 +313,14 @@
 <div class="glass-card rounded-xl p-md flex flex-col justify-center space-y-md border border-outline-variant/30">
 <div>
 <p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-xs">Total Capacity Installed</p>
-<p class="font-data-display text-data-display text-primary flex items-baseline gap-2">
+<p class="font-data-display text-data-display text-primary dark:text-primary-fixed-dim flex items-baseline gap-2">
                         1.4 <span class="font-headline-md text-headline-md text-on-surface-variant">GW</span>
 </p>
 </div>
 <div class="h-px bg-outline-variant/20 w-full"></div>
 <div>
 <p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-xs">CO2 Offset (Annual)</p>
-<p class="font-data-display text-data-display text-tertiary flex items-baseline gap-2">
+<p class="font-data-display text-data-display text-tertiary dark:text-tertiary-fixed-dim flex items-baseline gap-2">
                         2.1M <span class="font-headline-md text-headline-md text-on-surface-variant">Tons</span>
 </p>
 </div>
@@ -426,7 +430,7 @@
 </a>
 <!-- Project Card 6 (Storage) -->
 <a href="storage.html" class="project-card group relative h-[380px] rounded-xl overflow-hidden hover-lift cursor-pointer block" data-category="storage" data-date="2026-06-02" data-capacity="5000" data-yield="98.9">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Fortress storage battery arrays inside custom enclosures. Modern green energy aesthetic." style="background-image: url('assets/images/service-storage.png')"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Fortress storage battery arrays inside custom enclosures. Modern green energy aesthetic." style="background-image: url('assets/images/service-storag.jpeg')"></div>
 <div class="absolute inset-0 project-overlay flex flex-col justify-end p-md">
 <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
 <span class="inline-block bg-tertiary-container text-on-tertiary-container px-sm py-xs rounded-full font-label-md text-xs mb-sm">Storage</span>
